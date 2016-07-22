@@ -1,0 +1,16 @@
+==== 사용법 ====
+<code>
+vagrant init puppetlabs/centos-6.6-64-puppet; vagrant up --provider virtualbox
+
+vagrant up
+vagrant ssh
+
+vagrant box update
+
+</code>
+
+
+  * https://www.vagrantup.com/
+
+  * http://nukggul.tistory.com/15
+  * http://adhoc.tistory.com/entry/Vagrant-Box-%EB%A7%8C%EB%93%A4%EA%B8%B0

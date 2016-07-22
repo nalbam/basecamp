@@ -1,0 +1,35 @@
+==== 설치 ====
+<code>
+/data/wls12130
+</code>
+
+==== 포트 ====
+<code>
+7001 weblogic
+7011 jmx
+</code>
+
+==== 환경변수 ====
+<code bash>
+vi ~/.bash_profile
+
+export JAVA_HOME=/usr/java/default
+export MW_HOME=/data/wls12130
+export WLS_HOME=/data/wls12130/wlserver
+export USER_MEM_ARGS="-Xms384m -Xmx768m -XX:MaxPermSize=256m -XX:+UseG1GC"
+</code>
+
+<code bash>
+vi /data/wls12130/user_projects/domains/mydomain/bin/setDomainEnv.sh
+
+JAVA_OPTIONS="$JAVA_OPTIONS -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=7011"
+export JAVA_OPTIONS
+</code>
+
+==== 시작 ====
+<code bash>
+#!/bin/sh
+
+nohup /data/wls12130/user_projects/domains/mydomain/startWebLogic.sh > nohup.out &
+
+</code>

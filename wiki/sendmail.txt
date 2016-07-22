@@ -1,0 +1,115 @@
+=== 설치 ===
+<code>
+# yum -y install sendmail sendmail-cf
+</code>
+
+=== 릴레이 ===
+<code>
+# vi /etc/mail/access
+</code>
+<code>
+spic.kr                     RELAY
+spic.me                     RELAY
+nalbam.com                  RELAY
+</code>
+
+=== 최종수신자 ===
+<code>
+# vi /etc/mail/local-host-names
+</code>
+<code>
+spic.kr
+spic.me
+nalbam.com
+</code>
+
+=== spickr 계정 ===
+<code>
+# vi /etc/aliases
+</code>
+<code>
+spickr:     |/data/webapp/spickr/shell/mail.save.php
+</code>
+
+=== sendmail 설정 ===
+<code>
+# vi /etc/mail/sendmail.mc
+</code>
+<code>
+TRUST_AUTH_MECH(`EXTERNAL DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
+define(`confAUTH_MECHANISMS', `EXTERNAL GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
+
+FEATURE(`mailertable',`hash -o /etc/mail/mailertable.db')dnl
+FEATURE(`virtusertable',`hash -o /etc/mail/virtusertable.db')dnl
+
+DAEMON_OPTIONS(`Port=smtp, Name=MTA')dnl
+
+MASQUERADE_AS(`nalbam.com')dnl
+
+FEATURE(masquerade_envelope)dnl
+
+</code>
+
+=== sendmail 적용 ===
+<code>
+# m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf
+# service sendmail restart
+# service saslauthd restart
+</code>
+
+=== 모든 spic.kr 로 들어온 메일을 spickr 계정으로 전송 ===
+<code>
+# vi /etc/mail/virtusertable
+</code>
+
+<code>
+@spic.kr        spickr@spic.me
+</code>
+
+=== 재시작 ===
+<code>
+# service sendmail restart
+</code>
+
+=== 자동시작 ===
+<code>
+# chkconfig sendmail on
+# chkconfig saslauthd on
+</code>
+
+=== send ===
+<code>
+telnet nalbam.com 25
+
+mail from:mon@nalbam.com
+rcpt to:byforce@gmail.com
+data
+subject: hi!
+yo
+.
+
+</code>
+=== sendmail 에서 php 실행에 문제가 발생 했다면 ===
+<code>
+# ln -s /usr/bin/php /etc/smrsh/php
+# ln -s /data/webapp/spickr/shell/mail.save.php /etc/smrsh/mail.save.php
+</code>
+
+=== daemon MTA: cannot bind: Address already in use ===
+<code>
+# service postfix stop
+# chkconfig postfix off
+</code>
+
+=== php 파싱 ===
+<code>
+#!/usr/local/bin/php
+<?php
+$fp = fopen("php://stdin","r");
+while(!feof($fp)) {
+	$line = fgets($fp, 1024);
+	// 파싱..
+}
+fclose($fp);
+?>
+</code>

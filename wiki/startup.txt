@@ -1,0 +1,64 @@
+==== 런레벨 ====
+  * 런레벨
+    * 0 - halt
+    * 1 - Single user mode
+    * 2 - Multi user mode, without NFS
+    * 3 - Full muliuser mode
+      * /etc/rc.d/init.d/rc3.d
+    * 4 - unused
+    * 5 - X11
+      * /etc/rc.d/init.d/rc5.d
+    * 6 - reboot
+  * chkconfig: 345 90 20
+    * 345 : 런레벨
+    * 90 : booting 시  start, stop 순서
+    * 20 : halt 시  start, stop 순서
+
+==== 스크립트 ====
+<code>
+# vi /etc/rc.d/init.d/jira
+</code>
+
+<code>
+#!/bin/bash
+# chkconfig: 345 90 20
+
+SHELL_HOME=/data/webapp/app/jira
+
+case "$1" in
+start)
+    $SHELL_HOME/bin/start-jira.sh
+;;
+stop)
+    $SHELL_HOME/bin/stop-jira.sh
+;;
+restart)
+    $0 stop
+    $0 start
+;;
+*)
+    echo "Usage : $0 {start|stop|restart}"
+    exit 1
+esac
+
+exit 0
+
+</code>
+
+<code>
+# chmod 755 /etc/rc.d/init.d/jira
+</code>
+
+<code>
+# service jira start
+# service jira stop
+# service jira restart
+
+# chkconfig jira on
+</code>
+
+<code>
+# cd /etc/rc.d/rc3.d/
+# ll | grep jira 
+</code>
+

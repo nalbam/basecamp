@@ -1,0 +1,63 @@
+=== 설치 ===
+<code bash>
+yum -y install subversion mod_dav_svn openssl
+</code>
+
+=== 설정 use svn ===
+<code bash>
+mkdir /data/svn
+
+svnserve -d -r /data/svn/
+
+cd /data/svn
+svnadmin create --fs-type fsfs sample
+</code>
+
+=== 권한 ===
+<code bash>
+vi /data/svn/sample/conf/svnserve.conf
+</code>
+
+<code vim>
+[general]
+anon-access = read
+auth-access = write
+password-db = /data/svn/passwd
+realm = sample repository
+</code>
+
+=== 유저 설정 ===
+<code bash>
+vi /data/svn/passwd
+</code>
+
+<code vim>
+[users]
+sampleuser = samplepwd
+</code>
+
+=== 설정 use http ===
+<code bash>
+mkdir /var/www/svn
+cd /var/www/svn
+svnadmin create unity
+chown -R nalbam.nalbam unity
+chcon -R -t httpd_sys_content_t unity
+</code>
+
+<code vim>
+    <Location /svn>
+        DAV svn
+        SVNParentPath /var/www/svn
+
+        AuthName smileforge
+        AuthType Basic
+        AuthUserFile /data/passwd/.byforce
+        Require valid-user
+    </Location>
+</code>
+
+=== checkout ===
+<code bash>
+svn checkout svn://[server]/sample sample
+</code>

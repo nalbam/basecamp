@@ -1,0 +1,26 @@
+=== keygen ===
+<code bash>
+mkdir ~/.ssh/
+cd ~/.ssh/
+
+ssh-keygen -t dsa
+ssh-keygen -t rsa -C "me@nalbam.com"
+ssh-keygen -t rsa -C "jyyu@yanolja.in"
+
+cp id_dsa.pub id_dsa.pub.s1
+</code>
+
+=== copy ===
+<code bash>
+scp s1:/home/nalbam/.ssh/id_dsa.pub.s1 ~/.ssh/
+scp ~/.ssh/id_dsa.pub.s2 s1:/home/nalbam/.ssh/
+
+cd ~/.ssh/
+rm -rf authorized_keys
+
+cat id_dsa.pub.s1 >> authorized_keys
+cat id_dsa.pub.s2 >> authorized_keys
+
+chmod 700 authorized_keys
+
+</code>

@@ -1,0 +1,26 @@
+==== install ====
+<code>
+git clone https://github.com/RetroPie/RetroPie-Setup.git
+sudo ./RetroPie-Setup/retropie_setup.sh
+</code>
+<code>
+1  Binary-based installation (recommended)
+</code>
+
+==== setup ====
+<code>
+sudo ./RetroPie-Setup/retropie_setup.sh
+</code>
+
+==== snes ====
+<code>
+5  Install individual emulators from binary or source
+</code>
+<code>
+234  lr-snes9x-next - SNES emulator
+</code>
+
+==== shader ====
+<code>
+cd /opt/retropie/emulators/retroarch/shader
+</code>

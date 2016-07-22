@@ -1,0 +1,140 @@
+==== pixgrep.com ====
+
+=== menu ===
+<code>
+My Albums
+Subscribes
+---
+Photostream
+Commented
+Explore
+---
+Setting
+Notifications
+Sing Out
+
+</code>
+
+=== structure ===
+<code>
+p_user      [uno]
+p_album     [ano]         [uno]
+p_photo     [pno]         [uno]
+p_comment   [cno]         [pno]
+
+p_friend    [uno, fno]
+p_subscribe [ano, uno]
+p_scrap     [ano, pno]
+
+p_invite    [ino]         [email]
+p_notify    [nno]         [uno]
+
+</code>
+
+=== api ===
+<code>
+/oauth/request_token
+/oauth/authorize
+/oauth/access_token
+
+/api/ping
+/api/hello
+
+/api/user/login
+/api/user/signup
+/api/user/forgot
+/api/user/info
+/api/user/mod
+/api/user/passwd
+/api/user/profile
+/api/user/cover
+/api/user/search
+
+/api/friend/add
+/api/friend/del
+/api/friend/list
+
+/api/album/add
+/api/album/mod
+/api/album/del
+/api/album/info
+/api/album/list
+
+/api/subscribe/add
+/api/subscribe/auth
+/api/subscribe/del
+/api/subscribe/info
+/api/subscribe/list
+
+/api/photo/add
+/api/photo/mod
+/api/photo/del
+/api/photo/info
+/api/photo/list
+
+/api/photo/stream
+/api/photo/commented
+
+/api/scrap/add
+/api/scrap/del
+/api/scrap/list
+
+/api/comment/add
+/api/comment/del
+/api/comment/list
+
+/api/invite/add
+/api/invite/list
+
+/api/sms/send
+</code>
+
+=== service ===
+<code>
+/service/user
+/service/user_form
+/service/user_save
+/service/user_cover
+/service/user_profile
+
+/service/friend
+
+/service/album
+/service/album_form
+/service/album_save
+/service/album_del
+
+/service/favorite
+
+/service/photo
+/service/photo_form
+/service/photo_save
+/service/photo_del
+
+/service/scrap
+
+/service/comment_save
+/service/comment_del
+</code>
+
+=== Filter ===
+<code>
+GPUImageGrayscaleFilter : 흑백
+GPUImageColorInvertFilter : 역상
+GPUImageSepiaFilter : 세피아
+
+GPUImageGaussianSelectiveBlurFilter : 포커스 블러
+GPUImageTiltShiftFilter : 틸트 쉬프트
+GPUImageVignetteFilter : 비네팅
+
+GPUImageHalftoneFilter : 신문 출력
+GPUImageSketchFilter : 스케치
+GPUImageToonFilter : 만화
+GPUImagePosterizeFilter : 포스터
+GPUImageKuwaharaFilter : 물감
+
+GPUImageBulgeDistortionFilter : 볼록
+GPUImagePinchDistortionFilter : 올록
+GPUImageStretchDistortionFilter : 찌글
+
+</code>

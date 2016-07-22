@@ -1,0 +1,14 @@
+==== ip ====
+^ name ^ ip ^ 
+| a1 | 52.79.109.82 |
+
+==== domains ====
+  * http://nalbam.com/
+  * http://smartforge.kr/
+  * http://spic.kr/
+
+==== tools ====
+  * http://io.nalbam.com/munin/
+  * http://io.nalbam.com/mysql/
+  * http://io.nalbam.com/wiki/
+  * http://repo.nalbam.com/

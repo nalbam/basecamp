@@ -1,0 +1,68 @@
+==== 서버 정보 ====
+<code>
+# cat /proc/cpuinfo
+# cat /proc/meminfo
+</code>
+
+==== 설치 버전 ====
+<code>
+# uname -a
+</code>
+
+==== 시간 싱크 ====
+<code>
+# crontab -e
+
+0 0 * * * /usr/bin/rdate -s time.bora.net
+</code>
+
+==== 터미널 언어 ====
+<code>
+# vi /etc/sysconfig/i18n
+
+LANG="en_US.UTF-8"
+SYSFONT="latarcyrheb-sun16"
+
+# source /etc/sysconfig/i18n
+</code>
+
+==== sudo 권한 ====
+<code>
+# vi /etc/sudoers
+
+nalbam  ALL=(ALL)   ALL
+
+</code>
+
+==== root 로그인 금지 ====
+<code>
+# vi /etc/ssh/sshd_config
+
+#PermitRootLogin yes
+-->
+PermitRootLogin no
+
+# service sshd restart
+</code>
+
+==== hostname 변경 ====
+==== centos 6 ====
+<code>
+# cat /etc/sysconfig/network | grep HOSTNAME
+# vi /etc/sysconfig/network
+
+HOSTNAME=s1
+</code>
+
+==== centos 7 ====
+<code>
+# hostnamectl set-hostname s1
+# hostname
+</code>
+==== swap 사용율 변경 ====
+<code>
+# vi /etc/sysctl.conf
+
+vm.swappiness=10
+
+</code>

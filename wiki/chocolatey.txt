@@ -1,0 +1,18 @@
+  * http://chocolatey.org/
+
+<code>
+choco list -localonly
+
+chocolatey
+PowerShell
+
+7zip
+ccleaner
+filezilla
+Firefox
+javaruntime
+notepadplusplus
+paint.net
+putty
+
+</code>

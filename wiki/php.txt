@@ -1,0 +1,33 @@
+=== 설치 ===
+<code>
+# yum -y groupinstall "PHP Support"
+# yum -y install php-mcrypt
+
+# yum -y install php php-bcmath php-cli php-common php-gd php-ldap php-mbstring php-mcrypt \
+php-mysql php-odbc php-pdo php-pear php-php-gettext php-xml php-xmlrpc
+
+# yum -y install php55w php55w-gd php55w-mcrypt php55w-mbstring php55w-devel php55w-mysql
+
+# yum -y install php56w php56w-gd php56w-mcrypt php56w-mbstring php56w-devel php56w-mysql
+
+# yum -y install php70w php70w-gd php70w-mcrypt php70w-mbstring php70w-devel php70w-mysql
+
+</code>
+
+=== open_tag ===
+<code>
+# vi /etc/php.ini
+
+short_open_tag = On
+</code>
+
+=== session ===
+<code>
+# chmod 777 /var/lib/php/session
+</code>
+
+=== composer ===
+<code>
+$ curl -sS https://getcomposer.org/installer | php
+$ sudo mv composer.phar /usr/local/bin/composer
+</code>

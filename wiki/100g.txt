@@ -1,0 +1,84 @@
+==== 마트 상품 가격 수집기 ====
+
+<code>
+
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8801094017101
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8801094012007 1.8L 2,590원 (100ML당 144원)
+
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8801056061807
+
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8801448157002 20kg 45,000원 (100G당 225원)
+
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8809202978139
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8809202978146
+
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8801117762001 186g 3,520원 (100G당 1892원)
+
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8801051208863 3L 19,800원 (100ML당 660원)
+
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8809067231646 400g+400g 6,900원 (100G당 863원)
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8809067231622 800g/1손 14,900원 (100G당 1863원)
+
+http://m.lottemart.com/mobile/cate/PMWMCAT0004_New.do?ProductCD=8801117277611 311g 3,800원 (10G당 122원)
+
+
+
+http://m.lottemart.com/mobile/full/cate/PMWMCAT0001_List.do?CategoryID=C001
+
+http://m.lottemart.com/mobile/full/cate/PMWMCAT0001_Sub.do?CategoryID=C0010011
+
+http://m.lottemart.com/mobile/full/cate/PMWMCAT0001_Sub.do?CategoryID=C00100110001&depth=4
+
+http://m.lottemart.com/mobile/cate/PMWMCAT0003_New.do?CategoryID=C001001100010001&currentPage=1
+http://m.lottemart.com/mobile/cate/PMWMCAT0003_New.do?CategoryID=C001001100010001&currentPage=2
+http://m.lottemart.com/mobile/cate/PMWMCAT0003_New.do?CategoryID=C001001100010001&currentPage=3
+
+
+
+C0010011 쌀
+C0010012 채소
+C0010013 과일
+C0010014 정육/계란
+C0010015 생선/건해산물
+C0010016 냉장/냉동/간편식
+C0010017 가공식품
+C0010018 건강식품/친환경
+C0010019 커피/차/음료
+C0010020 과자
+C0010021 유아/출산용품
+C0010023 생활용품/세제/제지
+C0010024 헤어/바디/화장품
+
+C0010022 유아동패션/잡화
+C0010025 홈인테리어
+C0010026 주방/청소용품
+C0010027 문구/사무/자동차
+C0010028 패션의류/언더웨어
+C0010029 신발/잡화
+C0010030 스포츠/레저
+
+C0010034 소용량관
+C0010037 장난감
+C0010038 선물세트-식품
+C0010039 선물세트-화장품/잡화
+
+
+hg_tag
+ccd
+rcd
+name
+
+hg_pdt
+pcd
+name
+weight
+unit
+price
+origin
+
+hg_ref
+pcd
+ccd
+
+
+</code>

@@ -1,0 +1,29 @@
+=== 암호생성 ===
+<code>
+# htpasswd -c /data/passwd/.byforce byforce
+</code>
+
+=== 설정 ===
+<code>
+# vi /etc/httpd/conf.d/vhost-smileforge-wiki.conf
+</code>
+
+<code vim>
+    <Directory /data/webapp/smartforge/wiki>
+        Options FollowSymLinks
+        AllowOverride All
+        Order deny,allow
+        Allow from all
+        DirectoryIndex index.html index.php
+
+        AuthName smileforge
+        AuthType Basic
+        AuthUserFile /data/passwd/.byforce
+        Require valid-user
+    </Directory>
+</code>
+
+=== 재시작 ===
+<code>
+# service httpd restart
+</code>

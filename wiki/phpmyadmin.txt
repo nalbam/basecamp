@@ -1,0 +1,14 @@
+=== 설치 ===
+<code>
+# yum -y --enablerepo=remi install phpMyAdmin
+</code>
+
+=== 설정 ===
+<code>
+# vi /usr/share/phpMyAdmin/config.inc.php
+</code>
+
+=== 제거 ===
+<code>
+# yum --enablerepo=remi -y remove phpMyAdmin
+</code>

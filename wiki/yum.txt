@@ -6,7 +6,7 @@ yum -y groupinstall "Server Platform Development"
 
 ==== CentOS/RHEL 7 ====
 <code bash>
-rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 </code>
 

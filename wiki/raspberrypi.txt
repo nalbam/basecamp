@@ -20,6 +20,11 @@ sudo raspi-config
 sudo reboot
 </code>
 
+==== start-up ====
+<code>
+sudo vi /etc/rc.local
+</code>
+
 ==== usb ====
 <code>
 lsusb

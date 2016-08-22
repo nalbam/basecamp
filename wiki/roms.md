@@ -38,6 +38,7 @@
 | :-D | sonicwi3.zip | Aero Fighters 3 / Sonic Wings 3 |  9.0M |
 
 ### nes
+| --- | --- | --- |
 | :-D | Bomberman (USA).nes |  25K |
 | :-D | Bubble Bobble (USA).nes |  161K |
 | :-D | Bubble Bobble Part 2 (USA).nes |  257K |
@@ -98,6 +99,6 @@
 | :?: | snowbros.zip | Snow Bros. - Nick & Tom (set 1) |  283K |
 
 ### roms
-<code>
+```
 rsync -av s1:/home/pi/roms/ /home/pi/RetroPie/roms/
-</code>
+```

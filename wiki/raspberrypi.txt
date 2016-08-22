@@ -117,6 +117,11 @@ omxplayer video.mp4
  -b : blank
 </code>
 
+==== font ====
+<code>
+sudo dpkg-reconfigure console-setup
+</code>
+
 ==== alsa ====
 <code>
 sudoi vi /etc/modprobe.d/alsa-base.conf

@@ -1,23 +1,21 @@
-==== rpm 설치 ====
-<code bash>
+### rpm 설치 ###
+```
 # rpm -ivh --force jdk-8u67-linux-x64.rpm
 
 /usr/java/jdk1.8.0_67
+```
 
-</code>
-
-<code bash>
+```
 # vi /etc/profile
 
 export JAVA_HOME="/usr/java/jdk1.8.0_67"
 
 PATH=$JAVA_HOME/bin:$PATH
+```
 
-</code>
-
-==== mac path ====
-<code>
+### mac path ###
+```
 /Library/Java/JavaVirtualMachines/jdk1.8/Contents/Home
 /Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
 /Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home
-</code>
+```

@@ -1,6 +1,5 @@
-==== 단축키 ====
-<code>
-
+### 단축키
+```
 COMMAND + F3 : 모든 창 숨김
 
 COMMAND + H : 현재 창 숨김
@@ -13,25 +12,23 @@ COMMAND + W : 현재 창 닫기
 CONTROL + COMMAND + D : 사전
 
 OPTION + SHIFT + 볼륨 : 세밀하게 조절
+```
 
-</code>
-
-==== Homebrew - http://brew.sh/ ====
-<code>
+### Homebrew - http://brew.sh/
+```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install zsh
 brew install maven
 brew install archey
-</code>
+```
 
-==== 설치 USB ====
-<code>
+### 설치 USB
+```
 sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia --volume /Volumes/OSX --applicationpath /Applications/Install\ OS\ X\ Yosemite.app --nointeraction
+```
 
-</code>
-
-==== 권한 ====
-<code>
+### 권한
+```
 sudo chown -Rv nalbam /data
-</code>
+```

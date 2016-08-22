@@ -1,15 +1,15 @@
-=== 설치 ===
-<code bash>
+### 설치
+```
 yum -y install munin-node munin
 yum -y install munin-node
-</code>
+```
 
-=== 서버 설정 ===
-<code bash>
+### 서버 설정
+```
 vi /etc/munin/munin.conf
-</code>
+```
 
-<code properties>
+```
 contact.warmail.command php /data/webapp/shell/munin_noti.php "me@nalbam.com" "Munin warning [${var:host}] ${var:graph_title}" "warnings:  ${loop<,>:wfields ${var:label}=${var:value}}"
 contact.warmail.always_send warning
 
@@ -42,57 +42,53 @@ jmx_weblogic_memory.heap.Used.critical  768000000 # 768m
 
 jmx_weblogic_memory.pool_PS_Perm_Gen.usage.Used.warning   200000000 # 256m
 jmx_weblogic_memory.pool_PS_Perm_Gen.usage.Used.critical  256000000 # 256m
+```
 
-</code>
-
-=== 노드(클라이언트) 설정 - 서버지정 ===
-<code bash>
+### 노드(클라이언트) 설정 - 서버지정
+```
 vi /etc/munin/munin-node.conf
-</code>
-
-<code properties>
-
+```
+```
 allow ^127\.0\.0\.1$
 allow ^::1$
 allow ^218\.38\.12\.106$
+```
 
-</code>
-
-=== 노드(클라이언트) 시작 ===
-<code bash>
+### 노드(클라이언트) 시작
+```
 chkconfig munin-node on
 service munin-node restart
-</code>
+```
 
-=== 로그 ===
-<code bash>
+### 로그
+```
 tail -f -n 300 /var/log/munin/munin-update.log
-</code>
+```
 
-<code>
+```
 2009/10/14-17:35:01 CONNECT TCP Peer: "127.0.0.1:37109" Local: "127.0.0.1:4949"
 2009/10/14-17:40:01 CONNECT TCP Peer: "127.0.0.1:57802" Local: "127.0.0.1:4949"
-</code>
+```
 
-=== 플러그인 사용 ===
+### 플러그인 사용
 1. Apache
-<code bash>
+```
 # ln -s /usr/share/munin/plugins/apache_accesses /etc/munin/plugins/
 # ln -s /usr/share/munin/plugins/apache_processes /etc/munin/plugins/
 # ln -s /usr/share/munin/plugins/apache_volume /etc/munin/plugins/
-</code>
+```
 
-<code bash>
+```
 vi /etc/httpd/conf/httpd.conf
-</code>
+```
 
 <code properties>
 ExtendedStatus On
-</code>
+```
 
-<code bash>
+```
 vi /etc/httpd/conf.d/vhost-localhost.conf
-</code>
+```
 
 <code properties>
     <Location /server-status>
@@ -100,36 +96,36 @@ vi /etc/httpd/conf.d/vhost-localhost.conf
         Order deny,allow
         Deny  from all
     </Location>
-</code>
+```
 
 2. Mysql
-<code bash>
+```
 # ln -s /usr/share/munin/plugins/mysql_queries /etc/munin/plugins/
 # ln -s /usr/share/munin/plugins/mysql_slowqueries /etc/munin/plugins/
 # ln -s /usr/share/munin/plugins/mysql_threads /etc/munin/plugins/
 
 vi /etc/munin/plugin-conf.d/munin-node
-</code>
+```
 
 <code properties>
 [mysql_*]
 env.mysqlopts -u[username] -p[password]
-</code>
+```
 
 3. Sendmail
-<code bash>
+```
 ln -s /usr/share/munin/plugins/sendmail_* /etc/munin/plugins/
-</code>
+```
 
 4. JMX
-<code bash>
+```
 ln -s /usr/share/munin/plugins/jmx_ /etc/munin/plugins/jmx_jira_MultigraphAll
 ln -s /usr/share/munin/plugins/jmx_ /etc/munin/plugins/jmx_wiki_MultigraphAll
 
 vi /etc/munin/plugin-conf.d/munin-node
-</code>
+```
 
-<code properties>
+```
 [jmx_jira_*]
 env.ip   127.0.0.1
 env.port 8082
@@ -137,11 +133,10 @@ env.port 8082
 [jmx_wiki_*]
 env.ip   127.0.0.1
 env.port 8092
-
-</code>
+```
 
 5. Mongodb
-<code bash>
+```
 git clone git@github.com:pcdummy/mongomon.git
 
 cd mongomon
@@ -155,12 +150,10 @@ vi /etc/munin/plugin-conf.d/munin-node
 user nobody
 env.HOST 127.0.0.1
 env.PORT 27017
+```
 
-
-</code>
-
-=== 삭제 ===
-<code bash>
+### 삭제 ###
+```
 service munin-node stop
 
 yum -y erase munin munin-node
@@ -169,6 +162,6 @@ rm -rf /etc/munin/
 rm -rf /var/log/munin/
 rm -rf /var/run/munin/
 rm -rf /var/www/html/munin/
-</code>
+```
 
   * http://munin-monitoring.org/

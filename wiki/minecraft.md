@@ -1,6 +1,5 @@
-
-==== server.properties ====
-<code>
+### server.properties
+```
 pvp=false
 
 enable-command-block=true
@@ -8,21 +7,20 @@ op-permission-level=2
 
 level-seed=nalbam
 motd=nalbam server
+```
 
-</code>
-
-=== start ====
-<code>
+### start
+```
 screen -S "minecraft server"
 java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
 
 screen -r
 
 CTRL + A + D
-</code>
+```
 
-=== command ====
-<code>
+### command
+```
 /op nalbam
 
 /give @p 137
@@ -41,17 +39,15 @@ CTRL + A + D
 /spawnpoint
 
 /clear @p
+```
 
-</code>
-
-==== seed ====
-<code>
+### seed
+```
 -3521882891014546064
+```
 
-</code>
-
-==== items ====
-<code>
+### items
+```
 /give @p diamond_sword
 /give @p diamond_axe
 /give @p diamond_shovel
@@ -66,5 +62,4 @@ CTRL + A + D
 /give @p diamond_boots
 
 /give @p minecraft:golden_apple
-
-</code>
+```

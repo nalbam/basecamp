@@ -1,8 +1,5 @@
-==== 다운로드 ====
-  * http://tomcat.apache.org/download-connectors.cgi
-
-==== 설치 ====
-<code>
+### install ###
+```
 sudo yum install autoconf libtool
 
 cd /data/pds/tomcat-connectors-1.2.41-src/native/
@@ -10,9 +7,10 @@ cd /data/pds/tomcat-connectors-1.2.41-src/native/
 ./configure --with-apxs=/usr/bin/apxs
 make
 make install
-</code>
+```
 
-<code>
+### conf
+```
 # vi /etc/httpd/conf.d/modjk.conf
 
 LoadModule  jk_module  modules/mod_jk.so
@@ -25,9 +23,10 @@ LoadModule  jk_module  modules/mod_jk.so
 #   JkLogStampFormat "[%Y %a %b %d %H:%M:%S]"
     JkShmFile /data/logs/mod-jk.shm
 </IfModule>
-</code>
+```
 
-<code>
+### workers
+```
 # vi /etc/httpd/conf.d/workers.properties
 
 worker.list=ajpjira,ajpwiki
@@ -39,24 +38,26 @@ worker.ajpjira.port=8081
 worker.ajpwiki.type=ajp13
 worker.ajpwiki.host=localhost
 worker.ajpwiki.port=8091
-</code>
+```
 
-<code>
+```
 # vi /etc/httpd/conf.d/vhost-smartforge-jira.conf
 
 <ifModule jk_module>
     JkMount  /*  ajpjira
 </IfModule>
-</code>
+```
 
-<code>
+```
 # vi /data/webapp/app/jira/conf/server.xml
 
 <Connector port="8081" redirectPort="8443" enableLookups="false" protocol="AJP/1.3" URIEncoding="UTF-8"/>
-</code>
+```
 
-<code>
+```
 $ strings /etc/httpd/modules/mod_jk.so | grep mod_jk/
 
 mod_jk/1.2.40
-</code>
+```
+
+ * http://tomcat.apache.org/download-connectors.cgi

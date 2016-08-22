@@ -1,20 +1,20 @@
-=== 설치 ===
-<code>
+### 설치
+```
 # yum -y groupinstall "Web Server"
-</code>
+```
 
-=== 시작 ===
-<code>
+### 시작
+```
 # service httpd restart
-</code>
+```
 
-=== 자동시작 ===
-<code>
+### 자동
+```
 # chkconfig httpd on
-</code>
+```
 
-=== 설치경로 ===
-<code>
+### 경로
+```
 /usr/lib64/httpd
 /etc/httpd
-</code>
+```

@@ -1,5 +1,5 @@
-=== 설정 ===
-<code bash>
+### 설정 
+```
 iptables -F
 
 iptables -A INPUT  -i lo -j ACCEPT
@@ -32,21 +32,19 @@ service iptables save
 iptables -L
 
 service iptables restart
+```
 
-</code>
-
-=== 리셋 ===
-<code>
+### 리셋 
+```
 iptables -F
 service iptables save
 iptables -L
 
 service iptables restart
+```
 
-</code>
-
-=== Port Number (0~65536) ===
-<code>
+### Port Number (0~65536) 
+```
 20    FTP
 21    FTP
 22    SSH
@@ -71,4 +69,4 @@ service iptables restart
 25565 Minecraft
 27017 mongod
 28017 mongod http
-</code>
+```

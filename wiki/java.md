@@ -1,15 +1,15 @@
 ==== rpm 설치 ====
 <code bash>
-# rpm -ivh --force jdk-7u67-linux-x64.rpm
+# rpm -ivh --force jdk-8u67-linux-x64.rpm
 
-/usr/java/jdk1.7.0_67
+/usr/java/jdk1.8.0_67
 
 </code>
 
 <code bash>
 # vi /etc/profile
 
-export JAVA_HOME="/usr/java/jdk1.7.0_67"
+export JAVA_HOME="/usr/java/jdk1.8.0_67"
 
 PATH=$JAVA_HOME/bin:$PATH
 

@@ -1,14 +1,13 @@
-
-==== install ====
-<code bash>
+### install 
+```
 yum install docker-io
 
 service docker start
 chkconfig docker on
-</code>
+```
 
-==== docker ====
-<code bash>
+### docker 
+```
 docker pull centos:centos6
 docker pull ubuntu:latest
 
@@ -32,8 +31,7 @@ docker exec -it nalbam bash
 
 docker rm nalbam
 docker rmi nalbam:latest
-</code>
+```
 
-  * https://www.docker.com/
-  * https://registry.hub.docker.com/u/nalbam/nalbam-docker/
-
+ * https://www.docker.com/
+ * https://registry.hub.docker.com/u/nalbam/nalbam-docker/

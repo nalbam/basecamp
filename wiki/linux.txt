@@ -46,6 +46,7 @@ PermitRootLogin no
 </code>
 
 ==== hostname 변경 ====
+
 ==== centos 6 ====
 <code>
 # cat /etc/sysconfig/network | grep HOSTNAME

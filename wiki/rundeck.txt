@@ -1,7 +1,0 @@
- * http://rundeck.org/
-
-==== start ====
-<code>
-nohup java -jar rundeck-launcher-2.6.7.jar &
-
-</code>

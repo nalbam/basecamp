@@ -1,11 +1,12 @@
-==== Yum List ====
-<code bash>
+### Yum List
+```
 yum list
 yum grouplist
-</code>
 
-==== Install ====
-<code bash>
+```
+
+### Install
+```
 yum -y groupinstall "Web Server"
 
 yum -y groupinstall "PHP Support"
@@ -14,9 +15,9 @@ yum -y groupinstall "MySQL Database client"
 yum -y groupinstall "MySQL Database server"
  
 yum -y install phpMyAdmin
-</code>
+```
 
-==== Update ====
-<code bash>
+### Update
+```
 yum -y update
-</code>
+```

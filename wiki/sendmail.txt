@@ -8,9 +8,9 @@
 # vi /etc/mail/access
 </code>
 <code>
-spic.kr                     RELAY
-spic.me                     RELAY
-nalbam.com                  RELAY
+spic.kr     RELAY
+spic.me     RELAY
+nalbam.com  RELAY
 </code>
 
 === 최종수신자 ===
@@ -89,6 +89,7 @@ yo
 .
 
 </code>
+
 === sendmail 에서 php 실행에 문제가 발생 했다면 ===
 <code>
 # ln -s /usr/bin/php /etc/smrsh/php

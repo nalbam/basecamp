@@ -1,5 +1,5 @@
-==== setup ====
-<code>
+### setup 
+```
 sudo passwd
 sudo passwd ec2-user
 
@@ -33,26 +33,23 @@ y nalbam-saymoji cl
 y nalbam-smartforge cl
 y nalbam-spickr cl
 y nalbam-webapp cl
+```
 
-</code>
-
-==== aws ssh ====
-<code>
+### aws ssh 
+```
 ssh -i /Users/nalbam/Dropbox/keys/aws/nalbam-key.pem ec2-user@52.78.55.105
-</code>
+```
 
-==== aws cli ====
-<code>
+### aws cli 
+```
 aws configure
 
-aws s3 sync /data/work/nalbam/nalbam-kakaofish/src/main/webapp/s/ s3://s.spic.me/ --acl public-read
-aws s3 sync /data/work/nalbam/nalbam-smartforge/src/main/webapp/s/ s3://s.smartforge.kr/ --acl public-read
-aws s3 sync /data/work/nalbam/nalbam-webapp/src/main/webapp/s/ s3://s.nalbam.com/ --acl public-read
+aws s3 sync /data/work/smartforge/src/main/webapp/s/ s3://s.smartforge.kr/ --acl public-read
+aws s3 sync /data/work/nalbam/src/main/webapp/s/ s3://s.nalbam.com/ --acl public-read
+```
 
-</code>
-
-==== awslog ====
-<code>
+### awslog 
+```
 sudo yum install -y awslogs
 
 sudo vi /etc/awslogs/awscli.conf
@@ -63,5 +60,4 @@ aws_secret_access_key = <YOUR SECRET KEY>
 
 sudo service awslogs start
 sudo chkconfig awslogs on
-
-</code>
+```

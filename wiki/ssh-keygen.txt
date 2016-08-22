@@ -23,5 +23,4 @@ cat id_dsa.pub.s1 >> authorized_keys
 cat id_dsa.pub.s2 >> authorized_keys
 
 chmod 700 authorized_keys
-
 </code>

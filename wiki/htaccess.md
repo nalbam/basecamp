@@ -1,14 +1,14 @@
-=== 암호생성 ===
-<code>
-# htpasswd -c /data/passwd/.byforce byforce
-</code>
+### 암호생성 
+```
+htpasswd -c /data/passwd/.byforce byforce
+```
 
-=== 설정 ===
-<code>
-# vi /etc/httpd/conf.d/vhost-smileforge-wiki.conf
-</code>
+### 설정 
+```
+vi /etc/httpd/conf.d/vhost-smileforge-wiki.conf
+```
 
-<code vim>
+```
     <Directory /data/webapp/smartforge/wiki>
         Options FollowSymLinks
         AllowOverride All
@@ -21,9 +21,9 @@
         AuthUserFile /data/passwd/.byforce
         Require valid-user
     </Directory>
-</code>
+```
 
-=== 재시작 ===
-<code>
-# service httpd restart
-</code>
+### 재시작 
+```
+service httpd restart
+```

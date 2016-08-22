@@ -1,43 +1,41 @@
-  * https://www.elastic.co/
-
-==== install ====
-<code>
+### install 
+```
 $ rpm -ivh elasticsearch-1.7.1.noarch.rpm
 $ rpm -Uvh elasticsearch-1.7.1.noarch.rpm
-</code>
+```
 
-==== start ====
-<code>
+### start 
+```
 $ systemctl start elasticsearch.service
 $ systemctl enable elasticsearch.service
-</code>
+```
 
-==== plugin ====
-<code>
+### plugin 
+```
 $ cd /usr/share/elasticsearch
-</code>
-<code>
+```
+```
 $ bin/plugin -install lukas-vlcek/bigdesk
 http://localhost:9200/_plugin/bigdesk/
-</code>
-<code>
+```
+```
 $ bin/plugin -install mobz/elasticsearch-head
 http://localhost:9200/_plugin/head/
-</code>
-<code>
+```
+```
 $ bin/plugin -install karmi/elasticsearch-paramedic
 http://localhost:9200/_plugin/paramedic/
-</code>
+```
 
-==== search ====
-<code>
+### search 
+```
 http://localhost:9200/_search?q=name:변강쇠
 http://localhost:9200/test/_search?q=name:변강쇠 AND birth:1980*&sort=reg_time:desc&from=0&size=10
 http://localhost:9200/test/_search?source={"query":{"match":{"name":"변강쇠"}}}
-</code>
+```
 
-==== mapping ====
-<code>
+### mapping 
+```
 curl -XPUT http://localhost:9200/test -d '
 {
     "mappings": {
@@ -49,10 +47,10 @@ curl -XPUT http://localhost:9200/test -d '
     }
 }
 '
-</code>
+```
 
-==== geo search ====
-<code>
+### geo search 
+```
 curl -XGET 'http://localhost:9200/test/_search?pretty' -d '
 {
   "sort": [
@@ -85,4 +83,6 @@ curl -XGET 'http://localhost:9200/test/_search?pretty' -d '
   }
 }
 '
-</code>
+```
+
+ * https://www.elastic.co/

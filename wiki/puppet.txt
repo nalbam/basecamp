@@ -1,4 +1,3 @@
-
 <code>
 sudo yum install -y puppet-server
 sudo yum install -y puppet
@@ -26,4 +25,3 @@ puppet agent --server master.example.com --no-daemonize --verbose
 puppet module install puppetlabs-apache
 puppet module install puppetlabs-java
 </code>
-

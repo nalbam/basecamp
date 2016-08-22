@@ -1,4 +1,6 @@
 ### cps1 -> fba
+| status | filename | title | size |
+| --- | --- | --- | --- |
 | :-D | 1941.zip | 1941: Counter Attack (World) |  1.4M |
 | :-D | 3wonders.zip | Three Wonders (World 910520) |  2.4M |
 | LOL | dino.zip | Cadillacs and Dinosaurs (World 930201) |  3.9M |
@@ -9,6 +11,8 @@
 | :-D | wof.zip | Warriors of Fate (World 921002) |  3.8M |
 
 ### cps2 -> fba
+| status | filename | title | size |
+| --- | --- | --- | --- |
 | :-D | 1944.zip | 1944: The Loop Master (USA 000620) |  16M |
 | :?: | cscluba.zip | Capcom Sports Club (Asia 970722) |  6.4M |
 | LOL | ddsom.zip | Dungeons & Dragons: Shadow over Mystara (Euro 960619) |  17M |
@@ -22,6 +26,8 @@
 | :?: | vsav2.zip | Vampire Savior 2: The Lord of Vampire (Japan 970913) |  23M |
 
 ### neogeo -> fba
+| status | filename | title | size |
+| --- | --- | --- | --- |
 | :-D | aof.zip | Art of Fighting / Ryuuko no Ken |  6.4M |
 | :-D | aof2.zip | Art of Fighting 2 / Ryuuko no Ken 2 (Set 1) |  12M |
 | :-D | aof3.zip | Art of Fighting 3 / Ryuuko no Ken Gaiden |  17M |
@@ -38,6 +44,7 @@
 | :-D | sonicwi3.zip | Aero Fighters 3 / Sonic Wings 3 |  9.0M |
 
 ### nes
+| status | filename | size |
 | --- | --- | --- |
 | :-D | Bomberman (USA).nes |  25K |
 | :-D | Bubble Bobble (USA).nes |  161K |
@@ -53,6 +60,8 @@
 | :-D | Tetris (USA).nes |  49K |
 
 ### snes
+| status | filename | size |
+| --- | --- | --- |
 | :-D | Aero Fighters (USA).sfc |  1.3M |
 | :?: | Aladdin (USA).sfc |  1.3M |
 | :-D | Chrono Trigger (USA).sfc |  4.0M |
@@ -79,6 +88,8 @@
 | :-D | Tetris 2 (USA).sfc |  1.0M |
 
 ### psx
+| status | filename | size |
+| --- | --- | --- |
 | :-D | Bubble Bobble - featuring Rainbow Islands [U] [SLUS-00370].bin |  91M |
 | :-D | Galaga - Destination Earth [NTSC-U] [SLUS-01258].img |  393M |
 | :-D | Grand Theft Auto 2 [NTSC-U] [SLUS-00789].bin |  521M |
@@ -90,6 +101,8 @@
 | :?: | Vampire Savior - EX Edition (Japan).bin |  716M |
 
 ### mame
+| status | filename | title | size |
+| --- | --- | --- | --- |
 | :?: | boblbobl.zip | Bobble Bobble |  56K |
 | :?: | dragnblz.zip | Dragon Blaze |  16M |
 | :?: | pang.zip | Pang (World) |  408K |

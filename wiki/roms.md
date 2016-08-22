@@ -97,7 +97,7 @@
 | LOL | RayStorm [SLUS-00482].bin |  620M |
 | :-D | Street Fighter EX2 Plus [NTSC-U] [SLUS-01105].bin |  427M |
 | LOL | Strikers 1945 II (E) [SLES-03510].bin |  341M |
-| :-| | Tekken 3.bin |  657M |
+| :-( | Tekken 3.bin | 657M |
 | :?: | Vampire Savior - EX Edition (Japan).bin |  716M |
 
 ### mame

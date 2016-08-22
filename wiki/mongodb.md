@@ -59,10 +59,8 @@ pecl install mongo
 
 php -i | grep "mongo"
 php --re mongo
-
 ```
 
  * http://www.mongodb.org
  * http://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
  * http://docs.mongodb.org/manual/reference/default-mongodb-port/
-

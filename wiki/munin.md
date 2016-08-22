@@ -71,7 +71,7 @@ tail -f -n 300 /var/log/munin/munin-update.log
 ```
 
 ### 플러그인 사용
-1. Apache
+ * Apache
 ```
 # ln -s /usr/share/munin/plugins/apache_accesses /etc/munin/plugins/
 # ln -s /usr/share/munin/plugins/apache_processes /etc/munin/plugins/
@@ -82,7 +82,7 @@ tail -f -n 300 /var/log/munin/munin-update.log
 vi /etc/httpd/conf/httpd.conf
 ```
 
-<code properties>
+```
 ExtendedStatus On
 ```
 
@@ -90,7 +90,7 @@ ExtendedStatus On
 vi /etc/httpd/conf.d/vhost-localhost.conf
 ```
 
-<code properties>
+```
     <Location /server-status>
         SetHandler server-status
         Order deny,allow
@@ -98,7 +98,7 @@ vi /etc/httpd/conf.d/vhost-localhost.conf
     </Location>
 ```
 
-2. Mysql
+ * Mysql
 ```
 # ln -s /usr/share/munin/plugins/mysql_queries /etc/munin/plugins/
 # ln -s /usr/share/munin/plugins/mysql_slowqueries /etc/munin/plugins/
@@ -107,17 +107,17 @@ vi /etc/httpd/conf.d/vhost-localhost.conf
 vi /etc/munin/plugin-conf.d/munin-node
 ```
 
-<code properties>
+```
 [mysql_*]
 env.mysqlopts -u[username] -p[password]
 ```
 
-3. Sendmail
+ * Sendmail
 ```
 ln -s /usr/share/munin/plugins/sendmail_* /etc/munin/plugins/
 ```
 
-4. JMX
+ * JMX
 ```
 ln -s /usr/share/munin/plugins/jmx_ /etc/munin/plugins/jmx_jira_MultigraphAll
 ln -s /usr/share/munin/plugins/jmx_ /etc/munin/plugins/jmx_wiki_MultigraphAll
@@ -135,7 +135,7 @@ env.ip   127.0.0.1
 env.port 8092
 ```
 
-5. Mongodb
+ * Mongodb
 ```
 git clone git@github.com:pcdummy/mongomon.git
 

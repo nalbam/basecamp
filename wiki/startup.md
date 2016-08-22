@@ -1,4 +1,5 @@
 ### 런레벨
+```
   * 런레벨
     * 0 - halt
     * 1 - Single user mode
@@ -13,6 +14,7 @@
     * 345 : 런레벨
     * 90 : booting 시  start, stop 순서
     * 20 : halt 시  start, stop 순서
+```
 
 ### shell
 ```

@@ -65,5 +65,4 @@ HOSTNAME=s1
 # vi /etc/sysctl.conf
 
 vm.swappiness=10
-
 ```

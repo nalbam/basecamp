@@ -14,7 +14,6 @@ Maven Integration plugin
 
 Android Emulator Plugin
 Environment Injector Plugin
-
 ```
 
 ### Android 

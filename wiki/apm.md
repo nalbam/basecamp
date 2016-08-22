@@ -2,7 +2,6 @@
 ```
 yum list
 yum grouplist
-
 ```
 
 ### Install

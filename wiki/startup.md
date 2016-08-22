@@ -1,4 +1,4 @@
-==== 런레벨 ====
+### 런레벨
   * 런레벨
     * 0 - halt
     * 1 - Single user mode
@@ -14,23 +14,23 @@
     * 90 : booting 시  start, stop 순서
     * 20 : halt 시  start, stop 순서
 
-==== 스크립트 ====
-<code>
-# vi /etc/rc.d/init.d/jira
-</code>
+### shell
+```
+# vi /etc/rc.d/init.d/myapp
+```
 
-<code>
+```
 #!/bin/bash
 # chkconfig: 345 90 20
 
-SHELL_HOME=/data/webapp/app/jira
+SHELL_HOME=/data/webapp/app/myapp
 
 case "$1" in
 start)
-    $SHELL_HOME/bin/start-jira.sh
+    $SHELL_HOME/bin/start-myapp.sh
 ;;
 stop)
-    $SHELL_HOME/bin/stop-jira.sh
+    $SHELL_HOME/bin/stop-myapp.sh
 ;;
 restart)
     $0 stop
@@ -43,22 +43,21 @@ esac
 
 exit 0
 
-</code>
+```
 
-<code>
-# chmod 755 /etc/rc.d/init.d/jira
-</code>
+```
+# chmod 755 /etc/rc.d/init.d/myapp
+```
 
-<code>
-# service jira start
-# service jira stop
-# service jira restart
+```
+# service myapp start
+# service myapp stop
+# service myapp restart
 
-# chkconfig jira on
-</code>
+# chkconfig myapp on
+```
 
-<code>
+```
 # cd /etc/rc.d/rc3.d/
-# ll | grep jira 
-</code>
-
+# ll | grep myapp 
+```

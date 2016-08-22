@@ -1,9 +1,9 @@
-<code>
+```
 sudo yum install -y puppet-server
 sudo yum install -y puppet
-</code>
+```
 
-<code>
+```
 sudo vi /etc/puppet/puppet.conf
 
 [master]
@@ -11,9 +11,9 @@ sudo vi /etc/puppet/puppet.conf
 
 [agent]
     certname = s1.nalbam.com
-</code>
+```
 
-<code>
+```
 puppet master
 puppet master --no-daemonize --verbose --debug
 
@@ -24,4 +24,4 @@ puppet agent --server master.example.com --no-daemonize --verbose
 
 puppet module install puppetlabs-apache
 puppet module install puppetlabs-java
-</code>
+```

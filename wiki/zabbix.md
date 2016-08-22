@@ -1,5 +1,4 @@
-<code>
-
+```
 zabbix-release
 
 rpm -Uvh http://repo.zabbix.com/zabbix/2.2/rhel/6/x86_64/zabbix-release-2.2-1.el6.noarch.rpm
@@ -42,5 +41,4 @@ vi /etc/httpd/conf.d/zabbix.conf
 Alias  /zabbix  /usr/share/zabbix
 
 service httpd restart
-
-</code>
+```

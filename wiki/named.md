@@ -1,28 +1,27 @@
+### 설치 
 
-=== 설치 ===
-
-<code>
+```
 # yum -y install bind-*
-</code>
+```
 
-=== 설정 ===
+### 설정 
 
-<code>
+```
 # vi /etc/named.conf
-</code>
+```
 
-<code>
+```
 	// allow-query     { localhost; };
 	allow-query     { any; };
 
 	empty-zones-enable no;
-</code>
+```
 	
-<code>
+```
 # vi /etc/named.rfc1912.zones
-</code>
+```
 
-<code>
+```
 zone "91.52.117.in-addr.arpa" IN {
 	type master;
 	file "ns.nalbam.com.rev";
@@ -34,13 +33,13 @@ zone "nalbam.com" IN {
 	file "ns.nalbam.com.zone";
 	allow-update { none; };
 };
-</code>
+```
 
-<code>
+```
 # vi /var/named/ns.nalbam.com.rev
-</code>
+```
 
-<code>
+```
 $TTL 3h
 @       IN      SOA     ns.nalbam.com. root.nalbam.com. (
                         2014010101      ; Serial
@@ -53,13 +52,13 @@ $TTL 3h
         IN NS   ns.nalbam.com.
 00      IN PTR  ns.nalbam.com.
 
-</code>
+```
 
-<code>
+```
 # vi /var/named/ns.nalbam.com.zone
-</code>
+```
 
-<code>
+```
 $TTL 3h
 @       IN      SOA     ns.nalbam.com. root.nalbam.com. (
                         2014010101      ; Serial
@@ -91,32 +90,19 @@ mail    IN      CNAME   ghs.googlehosted.com.
 
 ; nalbam.com. IN TXT "v=spf1 ip4:117.52.91.225 ~all"
 nalbam.com. IN TXT "v=spf1 a mx include:aspmx.googlemail.com include:_spf.google.com ~all"
-</code>
+```
 
-=== 체크 ===
+### 체크 
 
-<code>
+```
 # named-checkconf /etc/named.rfc1912.zones
 # named-checkconf /etc/named.conf
 # named-checkzone nalbam.com /var/named/ns.nalbam.com.zone
-</code>
+```
 
-=== 시작 ===
+### 시작 
 
-<code>
+```
 # service named restart
 # chkconfig named on
-</code>
-
-
-
-
-
-
-
-
-
-
-
-
-
+```

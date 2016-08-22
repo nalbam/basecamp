@@ -1,10 +1,11 @@
-==== Download ====
-  * http://www.sublimetext.com/3 
+### Download
+ * http://www.sublimetext.com/3 
 
-==== Package Control ====
-  * https://packagecontrol.io/installation
+### Package Control
+ * https://packagecontrol.io/installation
 
-==== Package ====
+### Package
+```
   - BracketHighighter
   - SidebarEnhancements
   - SublimeCodeIntel
@@ -13,9 +14,10 @@
   - SFTP
   - TortoiseSVN [Update: alt + u, Commit: alt + c]
   - Emmet http://docs.emmet.io/
-​
-==== Config ====
-<code>
+​```
+
+### Config
+```
 {
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"font_size": 12,
@@ -38,5 +40,4 @@
 		"Vintage"
 	]
 }
-
-</code>
+```

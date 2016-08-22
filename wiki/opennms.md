@@ -1,4 +1,4 @@
-<code>
+```
 rpm -Uvh http://yum.opennms.org/repofiles/opennms-repo-stable-rhel6.noarch.rpm
 
 yum -y install opennms iplike
@@ -24,5 +24,4 @@ service opennms start
 
 perl /opt/opennms/bin/send-event.pl --interface 1.234.27.75 uei.opennms.org/internal/discovery/newSuspect
 perl /opt/opennms/bin/send-event.pl --interface 114.207.113.217 uei.opennms.org/internal/discovery/newSuspect
-
-</code>
+```

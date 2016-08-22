@@ -1,13 +1,12 @@
-==== zsh for linux ====
-<code>
+### zsh for linux ###
+```
 yum -y install zsh
 
 chsh -s /bin/zsh
+```
 
-</code>
-
-==== zsh for mac ====
-<code>
+### zsh for mac ###
+```
 brew install zsh
 sudo vim /etc/shells
 
@@ -16,11 +15,10 @@ sudo vim /etc/shells
 chsh -s /usr/local/bin/zsh
 
 chsh -s /bin/zsh
+```
 
-</code>
-
-==== oh-my-zsh ====
-<code>
+### oh-my-zsh ###
+```
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 vi .zshrc
@@ -28,11 +26,10 @@ vi .zshrc
 ZSH_THEME="dpoggi"
 
 source ~/.nalbam/zshrc.sh
+```
 
-</code>
-
-==== config ====
-<code>
+### config ###
+```
 cd /data/work/nalbam
 
 git clone git@github.com:nalbam/nalbam-shell.git
@@ -41,5 +38,4 @@ ln -s /data/work/nalbam/nalbam-shell/cygwin/.nalbam
 ln -s /data/work/nalbam/nalbam-shell/linux/.nalbam
 
 ln -s /Users/nalbam/work/nalbam/nalbam-shell/macos/.nalbam
-
-</code>
+```

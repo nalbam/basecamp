@@ -1,41 +1,41 @@
-=== 설치 ===
-<code>
+### 설치
+```
 # yum -y install sendmail sendmail-cf
-</code>
+```
 
-=== 릴레이 ===
-<code>
+### 릴레이
+```
 # vi /etc/mail/access
-</code>
-<code>
+```
+```
 spic.kr     RELAY
 spic.me     RELAY
 nalbam.com  RELAY
-</code>
+```
 
-=== 최종수신자 ===
-<code>
+### 최종 수신자
+```
 # vi /etc/mail/local-host-names
-</code>
-<code>
+```
+```
 spic.kr
 spic.me
 nalbam.com
-</code>
+```
 
-=== spickr 계정 ===
-<code>
+### spickr 계정
+```
 # vi /etc/aliases
-</code>
-<code>
+```
+```
 spickr:     |/data/webapp/spickr/shell/mail.save.php
-</code>
+```
 
-=== sendmail 설정 ===
-<code>
+### sendmail 설정
+```
 # vi /etc/mail/sendmail.mc
-</code>
-<code>
+```
+```
 TRUST_AUTH_MECH(`EXTERNAL DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
 define(`confAUTH_MECHANISMS', `EXTERNAL GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
 
@@ -47,38 +47,37 @@ DAEMON_OPTIONS(`Port=smtp, Name=MTA')dnl
 MASQUERADE_AS(`nalbam.com')dnl
 
 FEATURE(masquerade_envelope)dnl
+```
 
-</code>
-
-=== sendmail 적용 ===
-<code>
+### sendmail 적용
+```
 # m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf
 # service sendmail restart
 # service saslauthd restart
-</code>
+```
 
-=== 모든 spic.kr 로 들어온 메일을 spickr 계정으로 전송 ===
-<code>
+### 모든 spic.kr 로 들어온 메일을 spickr 계정으로 전송
+```
 # vi /etc/mail/virtusertable
-</code>
+```
 
-<code>
-@spic.kr        spickr@spic.me
-</code>
+```
+@spic.kr  spickr@spic.me
+```
 
-=== 재시작 ===
-<code>
+### 재시작
+```
 # service sendmail restart
-</code>
+```
 
-=== 자동시작 ===
-<code>
+### 자동시작
+```
 # chkconfig sendmail on
 # chkconfig saslauthd on
-</code>
+```
 
-=== send ===
-<code>
+### send
+```
 telnet nalbam.com 25
 
 mail from:mon@nalbam.com
@@ -87,23 +86,22 @@ data
 subject: hi!
 yo
 .
+```
 
-</code>
-
-=== sendmail 에서 php 실행에 문제가 발생 했다면 ===
-<code>
+### sendmail 에서 php 실행에 문제가 발생 했다면
+```
 # ln -s /usr/bin/php /etc/smrsh/php
 # ln -s /data/webapp/spickr/shell/mail.save.php /etc/smrsh/mail.save.php
-</code>
+```
 
-=== daemon MTA: cannot bind: Address already in use ===
-<code>
+### daemon MTA: cannot bind: Address already in use
+```
 # service postfix stop
 # chkconfig postfix off
-</code>
+```
 
-=== php 파싱 ===
-<code>
+### php 파싱
+```
 #!/usr/local/bin/php
 <?php
 $fp = fopen("php://stdin","r");
@@ -113,4 +111,4 @@ while(!feof($fp)) {
 }
 fclose($fp);
 ?>
-</code>
+```

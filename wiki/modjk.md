@@ -29,27 +29,41 @@ LoadModule  jk_module  modules/mod_jk.so
 ```
 # vi /etc/httpd/conf.d/workers.properties
 
-worker.list=ajpjira,ajpwiki
+# workers.properties
 
-worker.ajpjira.type=ajp13
-worker.ajpjira.host=localhost
-worker.ajpjira.port=8081
+worker.list=ajp00,ajp01,ajp02,ajp03,ajplb
 
-worker.ajpwiki.type=ajp13
-worker.ajpwiki.host=localhost
-worker.ajpwiki.port=8091
+worker.ajp00.type=ajp13
+worker.ajp00.host=localhost
+worker.ajp00.port=8100
+
+worker.ajp01.type=ajp13
+worker.ajp01.host=localhost
+worker.ajp01.port=8101
+
+worker.ajp02.type=ajp13
+worker.ajp02.host=localhost
+worker.ajp02.port=8102
+
+worker.ajp03.type=ajp13
+worker.ajp03.host=localhost
+worker.ajp03.port=8103
+
+worker.ajplb.type=lb
+worker.ajplb.balance_workers=ajp01,ajp02
+worker.ajplb.sticky_session=1
 ```
 
 ```
-# vi /etc/httpd/conf.d/vhost-smartforge-jira.conf
+# vi /etc/httpd/conf.d/vhost-smartforge-wiki.conf
 
 <ifModule jk_module>
-    JkMount  /*  ajpjira
+    JkMount  /*  ajplb
 </IfModule>
 ```
 
 ```
-# vi /data/webapp/app/jira/conf/server.xml
+# vi /data/webapp/app/wiki/conf/server.xml
 
 <Connector port="8081" redirectPort="8443" enableLookups="false" protocol="AJP/1.3" URIEncoding="UTF-8"/>
 ```

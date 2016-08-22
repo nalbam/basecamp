@@ -1,4 +1,4 @@
-==== cps1 -> fba ====
+### cps1 -> fba
 | :-D | 1941.zip | 1941: Counter Attack (World) |  1.4M |
 | :-D | 3wonders.zip | Three Wonders (World 910520) |  2.4M |
 | LOL | dino.zip | Cadillacs and Dinosaurs (World 930201) |  3.9M |
@@ -8,7 +8,7 @@
 | :-D | kod.zip | The King of Dragons (World 910711) |  2.3M |
 | :-D | wof.zip | Warriors of Fate (World 921002) |  3.8M |
 
-==== cps2 -> fba ====  
+### cps2 -> fba
 | :-D | 1944.zip | 1944: The Loop Master (USA 000620) |  16M |
 | :?: | cscluba.zip | Capcom Sports Club (Asia 970722) |  6.4M |
 | LOL | ddsom.zip | Dungeons & Dragons: Shadow over Mystara (Euro 960619) |  17M |
@@ -21,7 +21,7 @@
 | :?: | vhunt2.zip | Vampire Hunter 2: Darkstalkers Revenge (Japan 970929) |  22M |
 | :?: | vsav2.zip | Vampire Savior 2: The Lord of Vampire (Japan 970913) |  23M |
 
-==== neogeo -> fba ====
+### neogeo -> fba
 | :-D | aof.zip | Art of Fighting / Ryuuko no Ken |  6.4M |
 | :-D | aof2.zip | Art of Fighting 2 / Ryuuko no Ken 2 (Set 1) |  12M |
 | :-D | aof3.zip | Art of Fighting 3 / Ryuuko no Ken Gaiden |  17M |
@@ -37,7 +37,7 @@
 | :-D | sonicwi2.zip | Aero Fighters 2 / Sonic Wings 2 |  5.3M |
 | :-D | sonicwi3.zip | Aero Fighters 3 / Sonic Wings 3 |  9.0M |
 
-==== nes ====
+### nes
 | :-D | Bomberman (USA).nes |  25K |
 | :-D | Bubble Bobble (USA).nes |  161K |
 | :-D | Bubble Bobble Part 2 (USA).nes |  257K |
@@ -51,7 +51,7 @@
 | :-D | Super Mario Bros. 3 (USA).nes |  385K |
 | :-D | Tetris (USA).nes |  49K |
 
-==== snes ====
+### snes
 | :-D | Aero Fighters (USA).sfc |  1.3M |
 | :?: | Aladdin (USA).sfc |  1.3M |
 | :-D | Chrono Trigger (USA).sfc |  4.0M |
@@ -77,7 +77,7 @@
 | :-D | Super Mario World 2 - Yoshi's Island (USA).sfc |  2.0M |
 | :-D | Tetris 2 (USA).sfc |  1.0M |
 
-==== psx ====
+### psx
 | :-D | Bubble Bobble - featuring Rainbow Islands [U] [SLUS-00370].bin |  91M |
 | :-D | Galaga - Destination Earth [NTSC-U] [SLUS-01258].img |  393M |
 | :-D | Grand Theft Auto 2 [NTSC-U] [SLUS-00789].bin |  521M |
@@ -88,7 +88,7 @@
 | :-| | Tekken 3.bin |  657M |
 | :?: | Vampire Savior - EX Edition (Japan).bin |  716M |
 
-==== mame ====
+### mame
 | :?: | boblbobl.zip | Bobble Bobble |  56K |
 | :?: | dragnblz.zip | Dragon Blaze |  16M |
 | :?: | pang.zip | Pang (World) |  408K |
@@ -97,7 +97,7 @@
 | :?: | snowbro2.zip | Snow Bros. 2 - With New Elves / Otenki Paradise |  1.8M |
 | :?: | snowbros.zip | Snow Bros. - Nick & Tom (set 1) |  283K |
 
-==== roms ====
+### roms
 <code>
 rsync -av s1:/home/pi/roms/ /home/pi/RetroPie/roms/
 </code>

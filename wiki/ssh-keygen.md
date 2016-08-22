@@ -1,5 +1,5 @@
-=== keygen ===
-<code bash>
+### keygen
+```
 mkdir ~/.ssh/
 cd ~/.ssh/
 
@@ -9,10 +9,10 @@ ssh-keygen -t rsa -C "jyyu@yanolja.in"
 ssh-keygen -t rsa -C "toast@yanolja.in"
 
 cp id_dsa.pub id_dsa.pub.s1
-</code>
+```
 
-=== copy ===
-<code bash>
+### copy
+```
 scp s1:/home/nalbam/.ssh/id_dsa.pub.s1 ~/.ssh/
 scp ~/.ssh/id_dsa.pub.s2 s1:/home/nalbam/.ssh/
 
@@ -23,4 +23,4 @@ cat id_dsa.pub.s1 >> authorized_keys
 cat id_dsa.pub.s2 >> authorized_keys
 
 chmod 700 authorized_keys
-</code>
+```

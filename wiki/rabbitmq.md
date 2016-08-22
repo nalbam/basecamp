@@ -1,5 +1,5 @@
-==== erlang ====
-<code>
+### erlang
+```
 wget https://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
 sudo rpm -Uvh erlang-solutions-1.0-1.noarch.rpm
 
@@ -15,6 +15,4 @@ gpgkey=https://packages.erlang-solutions.com/rpm/erlang_solutions.asc
 enabled=1
 
 sudo yum install erlang --enablerepo=erlang-solutions
-
-</code>
-
+```

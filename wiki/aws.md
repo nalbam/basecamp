@@ -34,8 +34,8 @@ ssh -i /Users/nalbam/Dropbox/keys/aws/nalbam-key.pem ec2-user@52.78.55.23
 ```
 aws configure
 
-aws s3 sync /data/work/smartforge/src/main/webapp/s/ s3://s.smartforge.kr/ --acl public-read
-aws s3 sync /data/work/nalbam/src/main/webapp/s/ s3://s.nalbam.com/ --acl public-read
+aws s3 sync /data/work/cdn.smartforge.kr/ s3://cdn.smartforge.kr/ --acl public-read
+aws s3 sync s3://cdn.smartforge.kr/ /data/work/cdn.smartforge.kr/
 ```
 
 ### awslog 

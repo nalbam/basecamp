@@ -10,8 +10,7 @@ sudo yum install -y git vim wget zsh
 
 sudo mkdir /data
 sudo mkdir /data/apps
-sudo mkdir /data/webapp
-sudo mkdir /data/webapp/app
+sudo mkdir /data/logs
 sudo mkdir /data/work
 sudo mkdir /data/work/nalbam
 
@@ -20,9 +19,6 @@ sudo chown -R ec2-user.ec2-user /data
 cd /data/work/nalbam
 git clone git@github.com:nalbam/nalbam-shell.git
 ln -s /data/work/nalbam/nalbam-shell/linux/.nalbam ~/
-
-sudo yum install -y java-1.8.0-openjdk
-sudo yum remove -y java-1.7.0-openjdk
 ```
 
 ### aws ssh 

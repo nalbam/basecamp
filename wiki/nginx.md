@@ -2,7 +2,7 @@
 ```
 sudo yum install nginx
 sudo service nginx start
-sudo  chkconfig nginx on
+sudo chkconfig nginx on
 ```
 
 ### install (compile)
@@ -19,5 +19,5 @@ sudo make & make install
 ```
 sudo yum install php56-fpm
 sudo service php-fpm start
-sudo  chkconfig php-fpm on
+sudo chkconfig php-fpm on
 ```

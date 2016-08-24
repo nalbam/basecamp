@@ -1,16 +1,16 @@
 ### 설치
 ```
-# yum -y groupinstall "Web Server"
+sudo yum groupinstall -y "Web Server"
 ```
 
 ### 시작
 ```
-# service httpd restart
+sudo  service httpd restart
 ```
 
 ### 자동
 ```
-# chkconfig httpd on
+sudo  chkconfig httpd on
 ```
 
 ### 경로

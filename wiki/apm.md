@@ -1,22 +1,22 @@
 ### Yum List
 ```
-yum list
-yum grouplist
+sudo yum list
+sudo yum grouplist
 ```
 
 ### Install
 ```
-yum -y groupinstall "Web Server"
+sudo yum -y groupinstall "Web Server"
 
-yum -y groupinstall "PHP Support"
+sudo yum -y groupinstall "PHP Support"
 
-yum -y groupinstall "MySQL Database client"
-yum -y groupinstall "MySQL Database server"
+sudo yum -y groupinstall "MySQL Database client"
+sudo yum -y groupinstall "MySQL Database server"
  
-yum -y install phpMyAdmin
+sudo yum -y install phpMyAdmin
 ```
 
 ### Update
 ```
-yum -y update
+sudo yum -y update
 ```

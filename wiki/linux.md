@@ -31,6 +31,7 @@ SYSFONT="latarcyrheb-sun16"
 # vi /etc/sudoers
 
 nalbam  ALL=(ALL)   ALL
+nalbam  ALL=(ALL)   NOPASSWD: ALL
 ```
 
 ### root 로그인 금지

@@ -160,7 +160,7 @@ sudo hcitool scan
 gpio readall
 gpio -g read 18
 
-gcc -o motor motor.c -lwiringPi
+gcc motor.c -o motor -lwiringPi
 ```
 
 ### apm

@@ -55,6 +55,11 @@ iface default inet dhcp
 ```
 sudo service networking restart
 ```
+```
+sudo ifdown wlan0 && sudo ifup wlan0
+
+sudo wpa_cli scan && sleep 5 && sudo wpa_cli scan_results
+```
 
 ### update
 ```

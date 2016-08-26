@@ -25,9 +25,10 @@ sudo reboot
 sudo vi /etc/rc.local
 ```
 
-### usb
+### usb / module
 ```
 lsusb
+lsmod
 ```
 
 ### wi-fi

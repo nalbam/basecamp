@@ -5,12 +5,12 @@ sudo yum groupinstall -y "Web Server"
 
 ### 시작
 ```
-sudo  service httpd restart
+sudo service httpd start
 ```
 
 ### 자동
 ```
-sudo  chkconfig httpd on
+sudochkconfig httpd on
 ```
 
 ### 경로

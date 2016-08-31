@@ -1,7 +1,7 @@
 ### 설치
 ```
-yum -y install munin-node munin
-yum -y install munin-node
+yum install -y munin-node munin
+yum install -y munin-node
 ```
 
 ### 서버 설정
@@ -56,8 +56,8 @@ allow ^218\.38\.12\.106$
 
 ### 노드(클라이언트) 시작
 ```
-chkconfig munin-node on
-service munin-node restart
+sudo chkconfig munin-node on
+sudo service munin-node start
 ```
 
 ### 로그

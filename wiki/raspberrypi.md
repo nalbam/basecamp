@@ -36,7 +36,7 @@ lsusb
 lsmod
 ```
 
-### wi-fi
+### network
 ```
 iwconfig
 iwlist wlan0 scan

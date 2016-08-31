@@ -25,6 +25,7 @@ sudo reboot
 echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
 echo "dwc2" | sudo tee -a /etc/modules
 echo "g_ether" | sudo tee -a /etc/modules
+echo "g_hid" | sudo tee -a /etc/modules
 ```
 
 ### usb / module

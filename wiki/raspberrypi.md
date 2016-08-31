@@ -21,13 +21,8 @@ sudo reboot
 ```
 
 ### zero otg
-```
-config.txt
-dtoverlay=dwc2
-
-cmdline.txt
-modules-load=dwc2,g_ether
-```
+ * https://gist.github.com/gbaman/50b6cca61dd1c3f88f41
+ * https://gist.github.com/gbaman/975e2db164b3ca2b51ae11e45e8fd40a
 ```
 echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
 echo "dwc2" | sudo tee -a /etc/modules

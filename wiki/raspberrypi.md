@@ -22,6 +22,13 @@ sudo reboot
 
 ### zero otg
 ```
+config.txt
+dtoverlay=dwc2
+
+cmdline.txt
+modules-load=dwc2,g_ether
+```
+```
 echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
 echo "dwc2" | sudo tee -a /etc/modules
 echo "g_ether" | sudo tee -a /etc/modules

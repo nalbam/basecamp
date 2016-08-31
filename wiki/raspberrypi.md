@@ -85,7 +85,7 @@ sudo apt-get -y install python-bluez
 git clone https://github.com/nalbam/nalbam-shell.git
 ```
 
-### waveshare 5inch hdmi
+### 5inch LCD
 ```
 sudo vi /boot/config.txt
 ```

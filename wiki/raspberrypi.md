@@ -20,9 +20,15 @@ sudo raspi-config
 sudo reboot
 ```
 
-### start-up
+### zero otg
 ```
-sudo vi /etc/rc.local
+sudo vi /boot/config.txt
+
+dtoverlay=dwc2
+
+sudo vi /boot/cmdline.txt
+
+modules-load=dwc2,g_ether
 ```
 
 ### usb / module

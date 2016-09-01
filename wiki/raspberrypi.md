@@ -9,10 +9,7 @@ respberry
 sudo raspi-config
 ```
 ```
-1. Expand Filesystem
-5. Internationalisation Option -> I1 Change Locale
 5. Internationalisation Option -> I3 Change Keyboard Layout
-7. Overclock -> Pi2
 8. Advanced Options -> A3 Memory Split -> 512
 8. Advanced Options -> A9 Audio
 ```
@@ -82,9 +79,9 @@ sudo apt-get -y install python-serial
 sudo apt-get -y install python-bluez
 ```
 
-### nalbam-shell
+### nalbam-rpi
 ```
-git clone https://github.com/nalbam/nalbam-shell.git
+git clone https://github.com/nalbam/nalbam-rpi.git
 ```
 
 ### 5inch LCD

@@ -152,7 +152,6 @@ arecord -D plughw:1,0 test.wav
 ```
 espeak "hi, pi"
 espeak "hi, pi" -w hi.wav
-
 ```
 
 ### bluetooth
@@ -164,7 +163,8 @@ sudo hcitool scan
 ```
 gpio readall
 gpio -g read 18
-
+```
+```
 gcc motor.c -o motor -lwiringPi
 ```
 
@@ -182,7 +182,8 @@ cd /etc/apache2/
 wget https://nodejs.org/dist/v4.4.1/node-v4.4.1-linux-armv7l.tar.gz
 tar -xvf node-v4.4.1-linux-armv7l.tar.gz
 cd node-v4.4.1-linux-armv7l
-
+```
+```
 sudo cp -R * /usr/local/
 ```
 
@@ -190,7 +191,8 @@ sudo cp -R * /usr/local/
 ```
 sudo apt-get -y install chromium x11-xserver-utils unclutter
 sudo apt-get -y install midori x11-xserver-utils matchbox unclutter
-
+```
+```
 vi ~/kiosk.sh
 
 unclutter &
@@ -198,7 +200,8 @@ matchbox-window-manager &
 midori -e Fullscreen -a http://localhost/
 
 chmod 755 ~/kiosk.sh
-
+```
+```
 sudo vi ~/.config/lxsession/LXDE-pi/autostart
 
 @xset s off
@@ -213,7 +216,8 @@ sudo vi /etc/lightdm/lightdm.conf
 
 [SeatDefaults]
 xserver-command=X -s 0 -dpms
-
+```
+```
 sudo vi /etc/X11/xinit/xinitrc
 
 xset s off         # don’t activate screensaver

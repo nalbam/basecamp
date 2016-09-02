@@ -35,13 +35,20 @@ lsmod
 
 ### network
 ```
-iwconfig
-iwlist wlan0 scan
+sudo iwconfig
+sudo iwlist wlan0 scan
+```
+```
+sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
+
+network={
+  ssid="SSID"
+  psk="PASSWORD"
+}
 ```
 ```
 sudo vi /etc/network/interfaces
-```
-```
+
 auto lo
 iface lo inet loopback
 
@@ -57,8 +64,7 @@ iface default inet dhcp
 ```
 ```
 sudo service networking restart
-```
-```
+
 sudo ifdown wlan0 && sudo ifup wlan0
 
 sudo wpa_cli scan && sleep 5 && sudo wpa_cli scan_results

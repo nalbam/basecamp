@@ -4,27 +4,11 @@ pi
 respberry
 ```
 
-### config
+### keyboard
 ```
-sudo raspi-config
-```
-```
-5. Internationalisation Option -> I3 Change Keyboard Layout
-8. Advanced Options -> A3 Memory Split -> 512
-8. Advanced Options -> A9 Audio
-```
-```
-sudo reboot
-```
+sudo vi /etc/default/keyboard
 
-### zero otg
- * https://gist.github.com/gbaman/50b6cca61dd1c3f88f41
- * https://gist.github.com/gbaman/975e2db164b3ca2b51ae11e45e8fd40a
-```
-echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
-echo "dwc2" | sudo tee -a /etc/modules
-echo "g_ether" | sudo tee -a /etc/modules
-echo "g_hid" | sudo tee -a /etc/modules
+XKBLAYOUT="us"
 ```
 
 ### usb / module
@@ -70,6 +54,16 @@ sudo ifdown wlan0 && sudo ifup wlan0
 sudo wpa_cli scan && sleep 5 && sudo wpa_cli scan_results
 ```
 
+### zero otg
+ * https://gist.github.com/gbaman/50b6cca61dd1c3f88f41
+ * https://gist.github.com/gbaman/975e2db164b3ca2b51ae11e45e8fd40a
+```
+echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
+echo "dwc2" | sudo tee -a /etc/modules
+echo "g_ether" | sudo tee -a /etc/modules
+echo "g_hid" | sudo tee -a /etc/modules
+```
+
 ### update
 ```
 sudo apt-get -y update
@@ -106,9 +100,6 @@ hdmi_cvt 800 480 60 6 0 0 0
 # Next two lines forces audio through the jack - HDMI-audio crashes the display!
 hdmi_drive=1
 hdmi_ignore_edid_audio=1
-```
-```
-sudo reboot
 ```
 
 ### image

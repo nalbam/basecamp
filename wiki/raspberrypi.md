@@ -117,7 +117,7 @@ fbi image.jpg
 
 ### video
 ```
-omxplayer video.mp4
+omxplayer /opt/vc/src/hello_pi/hello_video/test.h264
  -b : blank
 ```
 

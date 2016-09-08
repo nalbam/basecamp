@@ -118,12 +118,6 @@ fbi image.jpg
  -d /dev/fb0 : 화면 지정
 ```
 
-### video
-```
-omxplayer /opt/vc/src/hello_pi/hello_video/test.h264
- -b : blank
-```
-
 ### font
 ```
 sudo dpkg-reconfigure console-setup
@@ -148,6 +142,7 @@ alsamixer
 
 aplay -l
 aplay -D plughw:0,0 hi.wav
+aplay -D plughw:0,0 /usr/share/scratch/Media/Sounds/Vocals/Singer1.wav
 
 arecord -l
 arecord -D plughw:0,0 hi.wav
@@ -157,6 +152,12 @@ arecord -D plughw:0,0 hi.wav
 ```
 espeak "hi, pi"
 espeak "hi, pi" -w hi.wav
+```
+
+### video
+```
+omxplayer /opt/vc/src/hello_pi/hello_video/test.h264
+ -b : blank
 ```
 
 ### bluetooth

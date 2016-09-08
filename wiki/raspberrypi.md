@@ -158,6 +158,7 @@ espeak "hi, pi" -w hi.wav
 ```
 omxplayer /opt/vc/src/hello_pi/hello_video/test.h264
  -b : blank
+ -o : output [local,hdmi,both]
 ```
 
 ### bluetooth

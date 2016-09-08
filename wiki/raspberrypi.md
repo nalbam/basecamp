@@ -129,7 +129,7 @@ omxplayer /opt/vc/src/hello_pi/hello_video/test.h264
 sudo dpkg-reconfigure console-setup
 ```
 
-### alsa
+### usb-audio
 ```
 sudoi vi /etc/modprobe.d/alsa-base.conf
 ```
@@ -141,14 +141,16 @@ options snd_bcm2835 index=1
 # Does the reordering.
 options snd slots=snd-usb-audio,snd-bcm2835
 ```
+
+### sound
 ```
 alsamixer
 
 aplay -l
-aplay -D plughw:1,0 test.wav
+aplay -D plughw:0,0 hi.wav
 
 arecord -l
-arecord -D plughw:1,0 test.wav
+arecord -D plughw:0,0 hi.wav
 ```
 
 ### espeak

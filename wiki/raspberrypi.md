@@ -69,9 +69,12 @@ echo "g_hid" | sudo tee -a /etc/modules
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-sudo apt-get -y install vim git dialog ttf-unfonts-core fbi
+sudo apt-get -y install vim git dialog fbi wiringpi
 
-sudo apt-get -y install wiringpi
+sudo apt-get -y install espeak
+
+sudo apt-get -y install ttf-unfonts-core
+
 sudo apt-get -y install python-rpi.gpio
 
 sudo apt-get -y install bluetooth blueman bluez

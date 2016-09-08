@@ -71,8 +71,6 @@ sudo apt-get -y upgrade
 
 sudo apt-get -y install vim git dialog fbi wiringpi
 
-sudo apt-get -y install espeak
-
 sudo apt-get -y install ttf-unfonts-core
 
 sudo apt-get -y install python-rpi.gpio
@@ -150,8 +148,17 @@ arecord -D plughw:0,0 hi.wav
 
 ### espeak
 ```
+sudo apt-get -y install espeak
+
 espeak "hi, pi"
 espeak "hi, pi" -w hi.wav
+```
+
+### mp3
+```
+sudo apt-get -y install mpg321
+
+mpg321 -o alsa -a plughw:0,0 /usr/share/scratch/Media/Sounds/Vocals/Sing-me-a-song.mp3
 ```
 
 ### video
@@ -159,6 +166,8 @@ espeak "hi, pi" -w hi.wav
 omxplayer /opt/vc/src/hello_pi/hello_video/test.h264
  -b : blank
  -o : output [local,hdmi,both]
+ 
+ not support usb audio
 ```
 
 ### bluetooth

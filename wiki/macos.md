@@ -23,12 +23,12 @@ brew install maven
 brew install archey
 ```
 
-### 설치 USB
+### SD Card
 ```
-sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia --volume /Volumes/OSX --applicationpath /Applications/Install\ OS\ X\ Yosemite.app --nointeraction
-```
+diskutil list
 
-### 권한
-```
-sudo chown -Rv nalbam /data
+diskutil unmountDisk /dev/disk3
+
+sudo dd bs=1m if=2016-09-23-raspbian-jessie.img of=/dev/disk3
+
 ```

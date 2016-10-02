@@ -31,4 +31,5 @@ diskutil unmountDisk /dev/disk3
 
 sudo dd bs=1m if=2016-09-23-raspbian-jessie.img of=/dev/disk3
 
+진행상황 : ctrl + t
 ```

@@ -30,29 +30,6 @@ network={
   psk="PASSWORD"
 }
 ```
-```
-sudo vi /etc/network/interfaces
-
-auto lo
-iface lo inet loopback
-
-iface eth0 inet dhcp
-
-auto wlan0
-allow-hotplug wlan0
-iface wlan0 inet dhcp
-wpa-ssid "ssid"
-wpa-psk "password"
-
-iface default inet dhcp
-```
-```
-sudo service networking restart
-
-sudo ifdown wlan0 && sudo ifup wlan0
-
-sudo wpa_cli scan && sleep 5 && sudo wpa_cli scan_results
-```
 
 ### zero otg
  * https://gist.github.com/gbaman/50b6cca61dd1c3f88f41

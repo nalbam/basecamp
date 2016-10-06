@@ -93,11 +93,6 @@ fbi image.jpg
  -d /dev/fb0 : 화면 지정
 ```
 
-### font
-```
-sudo dpkg-reconfigure console-setup
-```
-
 ### usb-audio
 ```
 sudoi vi /etc/modprobe.d/alsa-base.conf
@@ -182,15 +177,17 @@ sudo cp -R * /usr/local/
 
 ### kiosk
 ```
-sudo apt-get -y install chromium x11-xserver-utils unclutter
-sudo apt-get -y install midori x11-xserver-utils matchbox unclutter
+sudo apt-get -y install x11-xserver-utils matchbox unclutter
 ```
 ```
 vi ~/kiosk.sh
 
 unclutter &
 matchbox-window-manager &
-midori -e Fullscreen -a http://localhost/
+chromium-browser --noerrdialogs \
+                 --disable-session-crashed-bubble \
+                 --disable-infobars \
+                 --kiosk http://kiosk.nalbam.com/index.php?location=LOCATION
 
 chmod 755 ~/kiosk.sh
 ```

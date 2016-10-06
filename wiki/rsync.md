@@ -84,4 +84,6 @@ rsync -av --delete --exclude=*.txt --bwlimit=1024 s3:/data/webapp/spickr/ /backu
 rsync -av --bwlimit=2048 s3:/backup/data/userfile/spickr/ /backup/data/userfile/spickr/
 
 rsync -av s1.nalbam.com:/home/pi/RetroPie/roms/ /home/pi/RetroPie/roms/
+
+rsync -av /Users/nalbam/Downloads/roms/ pi@192.168.100.104:/home/pi/RetroPie/roms/
 ```

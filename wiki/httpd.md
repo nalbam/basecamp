@@ -10,7 +10,7 @@ sudo service httpd start
 
 ### 자동
 ```
-sudochkconfig httpd on
+sudo chkconfig httpd on
 ```
 
 ### 경로

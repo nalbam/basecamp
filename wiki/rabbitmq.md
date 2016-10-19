@@ -22,6 +22,12 @@ sudo chkconfig rabbitmq-server on
 sudo service rabbitmq-server start
 ```
 
+### user
+```
+sudo rabbitmqctl add_user rabbitmq password
+sudo rabbitmqctl set_user_tags rabbitmq administrator
+```
+
 ### management gui
 ```
 sudo rabbitmq-plugins enable rabbitmq_management

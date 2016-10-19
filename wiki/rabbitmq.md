@@ -1,18 +1,23 @@
 ### erlang
 ```
-wget https://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
+wget http://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
 sudo rpm -Uvh erlang-solutions-1.0-1.noarch.rpm
 
-sudo rpm --import https://packages.erlang-solutions.com/rpm/erlang_solutions.asc
+sudo yum install -y erlang
+```
 
-sudo vi /etc/yum.repos.d/erlang_solutions.repo
+### rabbitmq
+```
+sudo yum install -y socat
 
-[erlang-solutions]
-name=Centos $releasever - $basearch - Erlang Solutions
-baseurl=https://packages.erlang-solutions.com/rpm/centos/$releasever/$basearch
-gpgcheck=1
-gpgkey=https://packages.erlang-solutions.com/rpm/erlang_solutions.asc
-enabled=1
+sudo rpm --import http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
 
-sudo yum install erlang --enablerepo=erlang-solutions
+wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.5/rabbitmq-server-3.6.5-1.noarch.rpm
+sudo rpm -Uvh rabbitmq-server-3.6.5-1.noarch.rpm
+```
+
+### start
+```
+sudo chkconfig rabbitmq-server on
+sudo service rabbitmq-server start
 ```

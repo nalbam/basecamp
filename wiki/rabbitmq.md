@@ -22,12 +22,6 @@ sudo chkconfig rabbitmq-server on
 sudo service rabbitmq-server start
 ```
 
-### user
-```
-sudo rabbitmqctl add_user rabbitmq password
-sudo rabbitmqctl set_user_tags rabbitmq administrator
-```
-
 ### management gui
 ```
 sudo rabbitmq-plugins enable rabbitmq_management
@@ -39,4 +33,10 @@ cd /usr/lib/rabbitmq/lib/rabbitmq_server-3.6.1/plugins
 wget http://www.rabbitmq.com/community-plugins/v3.6.x/rabbitmq_delayed_message_exchange-0.0.1.ez
 
 sudo rabbitmq-plugins enable rabbitmq_delayed_message_exchange
+```
+
+### user
+```
+sudo rabbitmqctl add_user rabbitmq password
+sudo rabbitmqctl set_user_tags rabbitmq administrator
 ```

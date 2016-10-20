@@ -4,6 +4,11 @@ yum install -y munin-node munin
 yum install -y munin-node
 ```
 
+### 모니터 유저
+```
+sudo htpasswd -c /etc/munin/munin-htpasswd username
+```
+
 ### 서버 설정
 ```
 vi /etc/munin/munin.conf

@@ -1,7 +1,7 @@
 ### 설치
 ```
-yum install -y munin-node munin
-yum install -y munin-node
+sudo yum install -y munin-node munin
+sudo yum install -y munin-node
 ```
 
 ### 모니터 유저
@@ -11,7 +11,7 @@ sudo htpasswd -c /etc/munin/munin-htpasswd username
 
 ### 서버 설정
 ```
-vi /etc/munin/munin.conf
+sudo vi /etc/munin/munin.conf
 ```
 
 ```
@@ -51,7 +51,7 @@ jmx_weblogic_memory.pool_PS_Perm_Gen.usage.Used.critical  256000000 # 256m
 
 ### 노드(클라이언트) 설정 - 서버지정
 ```
-vi /etc/munin/munin-node.conf
+sudo vi /etc/munin/munin-node.conf
 ```
 ```
 allow ^127\.0\.0\.1$
@@ -84,7 +84,7 @@ tail -f -n 300 /var/log/munin/munin-update.log
 ```
 
 ```
-vi /etc/httpd/conf/httpd.conf
+sudo vi /etc/httpd/conf/httpd.conf
 ```
 
 ```
@@ -92,7 +92,7 @@ ExtendedStatus On
 ```
 
 ```
-vi /etc/httpd/conf.d/vhost-localhost.conf
+sudo vi /etc/httpd/conf.d/vhost-localhost.conf
 ```
 
 ```
@@ -109,7 +109,7 @@ vi /etc/httpd/conf.d/vhost-localhost.conf
 # ln -s /usr/share/munin/plugins/mysql_slowqueries /etc/munin/plugins/
 # ln -s /usr/share/munin/plugins/mysql_threads /etc/munin/plugins/
 
-vi /etc/munin/plugin-conf.d/munin-node
+sudo sudo vi /etc/munin/plugin-conf.d/munin-node
 ```
 
 ```
@@ -119,7 +119,7 @@ env.mysqlopts -u[username] -p[password]
 
  * Sendmail
 ```
-ln -s /usr/share/munin/plugins/sendmail_* /etc/munin/plugins/
+sudo ln -s /usr/share/munin/plugins/sendmail_* /etc/munin/plugins/
 ```
 
  * JMX
@@ -127,7 +127,7 @@ ln -s /usr/share/munin/plugins/sendmail_* /etc/munin/plugins/
 ln -s /usr/share/munin/plugins/jmx_ /etc/munin/plugins/jmx_jira_MultigraphAll
 ln -s /usr/share/munin/plugins/jmx_ /etc/munin/plugins/jmx_wiki_MultigraphAll
 
-vi /etc/munin/plugin-conf.d/munin-node
+sudo vi /etc/munin/plugin-conf.d/munin-node
 ```
 
 ```
@@ -149,8 +149,10 @@ cp mongo* /usr/share/munin/plugins/
 
 ln -s /usr/share/munin/plugins/mongo_* /etc/munin/plugins/
 
-vi /etc/munin/plugin-conf.d/munin-node
+sudo vi /etc/munin/plugin-conf.d/munin-node
+```
 
+```
 [mongo_*]
 user nobody
 env.HOST 127.0.0.1
@@ -159,14 +161,14 @@ env.PORT 27017
 
 ### 삭제 ###
 ```
-service munin-node stop
+sudo service munin-node stop
 
-yum -y erase munin munin-node
+sudo yum -y erase munin munin-node
 
-rm -rf /etc/munin/
-rm -rf /var/log/munin/
-rm -rf /var/run/munin/
-rm -rf /var/www/html/munin/
+sudo rm -rf /etc/munin/
+sudo rm -rf /var/log/munin/
+sudo rm -rf /var/run/munin/
+sudo rm -rf /var/www/html/munin/
 ```
 
   * http://munin-monitoring.org/

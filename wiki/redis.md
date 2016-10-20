@@ -1,21 +1,22 @@
 ### install
 ```
-yum -y --enablerepo=remi install redis
+sudo yum install -y redis
 ```
 
 ```
-chkconfig redis on
-service redis restart
+sudo chkconfig redis on
+sudo service redis restart
 ```
 
 ### conf
 ```
-vi /etc/redis.conf
-
+sudo vi /etc/redis.conf
+```
+```
 bind 127.0.0.1
 bind 114.207.113.217
 
-requirepass ya1234
+requirepass password
 ```
 
 ### remove

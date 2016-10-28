@@ -6,6 +6,8 @@ git config --global user.email "me@nalbam.com"
 git config --global user.name "nalbam-ya"
 git config --global user.email "jyyu@yanolja.in"
 
+git config --global core.eol lf
+
 git config --list
 ```
 

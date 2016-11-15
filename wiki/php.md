@@ -12,6 +12,9 @@ sudo yum -y install php70w php70w-gd php70w-mcrypt php70w-mbstring php70w-devel 
 sudo vi /etc/php.ini
 
 short_open_tag = On
+expose_php = Off
+
+date.timezone = Asia/Seoul
 ```
 
 ### session 

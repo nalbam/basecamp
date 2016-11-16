@@ -18,3 +18,6 @@ sudo chkconfig httpd on
 /usr/lib64/httpd
 /etc/httpd
 ```
+
+  * https://www.softwarecollections.org/en/scls/rhscl/httpd24/
+  

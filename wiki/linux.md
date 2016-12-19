@@ -47,7 +47,7 @@ PermitRootLogin no
 
 ### hostname 변경
 
-### centos 6
+  * centos 6
 ```
 # cat /etc/sysconfig/network | grep HOSTNAME
 # vi /etc/sysconfig/network
@@ -55,7 +55,7 @@ PermitRootLogin no
 HOSTNAME=s1
 ```
 
-### centos 7
+  * centos 7
 ```
 # hostnamectl set-hostname s1
 # hostname

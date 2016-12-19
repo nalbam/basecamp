@@ -61,9 +61,16 @@ HOSTNAME=s1
 # hostname
 ```
 
-### swap 사용율 변경
+### Network
 ```
-# vi /etc/sysctl.conf
+# nmcli d
+# nmtui
+# ip addr
+```
 
-vm.swappiness=10
+### Desktop
+```
+# yum -y groupinstall "GNOME Desktop" "Graphical Administration Tools"
+
+# ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
 ```

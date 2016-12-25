@@ -48,6 +48,8 @@ CTRL + A + D
 
 ### items
 ```
+/give @p diamond_sword 1 0 {ench:[{id:16,lvl:30000}]}
+
 /give @p diamond_sword
 /give @p diamond_axe
 /give @p diamond_shovel

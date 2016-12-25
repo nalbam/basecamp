@@ -55,13 +55,15 @@ CTRL + A + D
 /give @p diamond_shovel
 /give @p diamond_pickaxe
 
-/give @p ladder 64
-/give @p torch 64
-
 /give @p diamond_helmet
 /give @p diamond_chestplate
 /give @p diamond_leggings
 /give @p diamond_boots
 
 /give @p minecraft:golden_apple
+
+/give @p ladder 64
+/give @p torch 64
+
+/give @p dirt 64
 ```

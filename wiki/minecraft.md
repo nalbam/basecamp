@@ -69,4 +69,5 @@ CTRL + A + D
 /give @p torch 64
 
 /give @p dirt 64
+/give @p wood 64
 ```

@@ -14,6 +14,14 @@ Blue Ocean beta
 Maven Integration plugin
 GitHub Authentication plugin
 
+Checkstyle Plug-in
+Cobertura
+DRY Plug-in
+FindBugs Plug-in
+PMD Plug-in
+
+Slack Notification Plugin
+
 Android Emulator Plugin
 Environment Injector Plugin
 ```

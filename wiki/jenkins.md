@@ -10,7 +10,9 @@ t 00 deploy jenkins
 
 ### Plugin 
 ```
+Blue Ocean beta
 Maven Integration plugin
+GitHub Authentication plugin
 
 Android Emulator Plugin
 Environment Injector Plugin

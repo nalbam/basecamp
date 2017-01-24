@@ -19,6 +19,7 @@ Cobertura
 DRY Plug-in
 FindBugs Plug-in
 PMD Plug-in
+Task Scanner Plug-in
 
 Slack Notification Plugin
 

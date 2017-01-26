@@ -15,7 +15,7 @@ Maven Integration plugin
 GitHub Authentication plugin
 
 Checkstyle Plug-in
-Cobertura
+Cobertura Plugin
 DRY Plug-in
 FindBugs Plug-in
 PMD Plug-in

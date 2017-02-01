@@ -1,36 +1,36 @@
 ### install 
 ```
-yum install docker-io
+sudo yum install -y docker
 
-service docker start
-chkconfig docker on
+sudo service docker start
+sudo chkconfig docker on
 ```
 
 ### docker 
 ```
-docker pull centos:centos6
-docker pull ubuntu:latest
+sudo docker pull centos:centos6
+sudo docker pull ubuntu:latest
 
-docker pull nalbam/nalbam-docker
+sudo docker pull nalbam/nalbam-docker
 
-docker images
+sudo docker images
 
-docker run -i -t --name centos centos /bin/bash
-docker run -i -t --name ubuntu ubuntu /bin/bash
+sudo docker run -i -t --name centos centos /bin/bash
+sudo docker run -i -t --name ubuntu ubuntu /bin/bash
 
-docker run -i -t -p 8080:80 --name nalbam nalbam/nalbam-docker /bin/bash
+sudo docker run -d -t -p 8080:80 --name nalbam nalbam/nalbam-docker /bin/bash
 
-docker ps
-docker ps -a
+sudo docker ps
+sudo docker ps -a
 
-docker stop nalbam
-docker start nalbam
-docker attach nalbam
+sudo docker stop nalbam
+sudo docker start nalbam
+sudo docker attach nalbam
 
-docker exec -it nalbam bash
+sudo docker exec -it nalbam bash
 
-docker rm nalbam
-docker rmi nalbam:latest
+sudo docker rm nalbam
+sudo docker rmi nalbam:latest
 ```
 
  * https://www.docker.com/

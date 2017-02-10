@@ -19,6 +19,7 @@ OPTION + SHIFT + 볼륨 : 세밀하게 조절
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install zsh
+brew install wget
 brew install maven
 brew install archey
 brew install groovy

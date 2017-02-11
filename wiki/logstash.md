@@ -11,12 +11,12 @@ wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.0.tar.gz
 input {
   file {
     path => "/data/logs/*.json"
-    type => "apache"
+    type => "json"
   }
 }
 filter {
   geoip {
-    source => "client"
+    source => "clientip"
     target => "geoip"
     database => "/data/pds/GeoLite2-City.mmdb"
   }

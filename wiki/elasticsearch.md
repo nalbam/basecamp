@@ -1,30 +1,13 @@
 ### install 
 ```
-$ rpm -ivh elasticsearch-1.7.1.noarch.rpm
-$ rpm -Uvh elasticsearch-1.7.1.noarch.rpm
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.0.zip
+unzip elasticsearch-5.2.0.zip -d /data/apps/
 ```
 
 ### start 
 ```
-$ systemctl start elasticsearch.service
-$ systemctl enable elasticsearch.service
-```
-
-### plugin 
-```
-$ cd /usr/share/elasticsearch
-```
-```
-$ bin/plugin -install lukas-vlcek/bigdesk
-http://localhost:9200/_plugin/bigdesk/
-```
-```
-$ bin/plugin -install mobz/elasticsearch-head
-http://localhost:9200/_plugin/head/
-```
-```
-$ bin/plugin -install karmi/elasticsearch-paramedic
-http://localhost:9200/_plugin/paramedic/
+/data/apps/elasticsearch-5.2.0/bin/elasticsearch
+/data/apps/elasticsearch-5.2.0/bin/elasticsearch -d
 ```
 
 ### search 
@@ -85,4 +68,4 @@ curl -XGET 'http://localhost:9200/test/_search?pretty' -d '
 '
 ```
 
- * https://www.elastic.co/
+ * https://www.elastic.co/kr/products/elasticsearch

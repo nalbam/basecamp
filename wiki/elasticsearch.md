@@ -6,6 +6,17 @@
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.0.zip
 ```
 
+### config
+```
+# cors
+http.cors.enabled: true
+http.cors.allow-origin: /https?:\/\/localhost(:[0-9]+)?/
+
+# cors X-Pack
+http.cors.allow-credentials: true
+http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type, Content-Length, Authorization
+```
+
 ### start
 ```
 bin/elasticsearch -d

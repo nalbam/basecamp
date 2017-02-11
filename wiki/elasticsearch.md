@@ -6,19 +6,28 @@
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.0.zip
 ```
 
-### start 
+### start
 ```
 bin/elasticsearch -d
 ```
 
-### search 
+### plugin
+```
+git clone git://github.com/mobz/elasticsearch-head.git
+cd elasticsearch-head
+npm install
+grunt server
+open http://localhost:9100/
+```
+
+### search
 ```
 http://localhost:9200/_search?q=name:변강쇠
 http://localhost:9200/test/_search?q=name:변강쇠 AND birth:1980*&sort=reg_time:desc&from=0&size=10
 http://localhost:9200/test/_search?source={"query":{"match":{"name":"변강쇠"}}}
 ```
 
-### mapping 
+### mapping
 ```
 curl -XPUT http://localhost:9200/test -d '
 {
@@ -33,7 +42,7 @@ curl -XPUT http://localhost:9200/test -d '
 '
 ```
 
-### geo search 
+### geo search
 ```
 curl -XGET 'http://localhost:9200/test/_search?pretty' -d '
 {

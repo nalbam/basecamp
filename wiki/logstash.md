@@ -10,7 +10,7 @@ wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.0.tar.gz
 ```
 input {
   exec {
-    command => "free | grep 'Mem: ' | awk '{print int($3/($3+$4)*100)}'"
+    command => "free | grep 'Mem: ' | awk '{print int($3/$2*100)}'"
     interval => "10"
     type => "mem"
   }

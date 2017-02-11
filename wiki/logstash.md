@@ -20,7 +20,8 @@ filter {
     target => "geoip"
     database => "/data/pds/GeoLite2-City.mmdb"
   }
-}output {
+}
+output {
   elasticsearch {
     hosts => ["localhost:9200"]
   }

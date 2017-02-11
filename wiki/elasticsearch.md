@@ -14,7 +14,7 @@ http.cors.allow-origin: /https?:\/\/localhost(:[0-9]+)?/
 
 # cors X-Pack
 http.cors.allow-credentials: true
-http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type, Content-Length, Authorization
+http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization
 ```
 
 ### start

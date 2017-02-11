@@ -25,7 +25,7 @@ input {
     type => "hdd"
   }
   file {
-    path => "/var/log/httpd/access.log"
+    path => "/var/log/httpd/access_log"
     type => "apache"
   }
 }

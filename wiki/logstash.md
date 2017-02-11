@@ -11,8 +11,11 @@ wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.0.tar.gz
 input {
   file {
     path => "/var/log/httpd/access.log"
-    type => "httpd"
+    type => "apache"
   }
+}
+filter {
+  geoip {source => “clientip”}
 }
 output {
   elasticsearch { hosts => ["localhost:9200"] }

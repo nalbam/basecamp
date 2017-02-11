@@ -1,13 +1,16 @@
-### install 
+
+ * https://www.elastic.co/kr/products
+
+### download
 ```
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.0.zip
-unzip elasticsearch-5.2.0.zip -d /data/apps/
+wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.0.tar.gz
+wget https://artifacts.elastic.co/downloads/kibana/kibana-5.2.0-linux-x86_64.tar.gz
 ```
 
 ### start 
 ```
-/data/apps/elasticsearch-5.2.0/bin/elasticsearch
-/data/apps/elasticsearch-5.2.0/bin/elasticsearch -d
+.bin/elasticsearch -d
 ```
 
 ### search 
@@ -67,5 +70,3 @@ curl -XGET 'http://localhost:9200/test/_search?pretty' -d '
 }
 '
 ```
-
- * https://www.elastic.co/kr/products/elasticsearch

@@ -9,31 +9,21 @@ wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.0.tar.gz
 ### config
 ```
 input {
-  exec {
-    command => "free | grep 'Mem: ' | awk '{print int($3/$2*100)}'"
-    interval => "10"
-    type => "mem"
-  }
-  exec {
-    command => "cat /proc/stat | grep 'cpu ' | awk '{print int(($2+$3+$4)/($2+$3+$4+$5)*100)}'"
-    interval => "10"
-    type => "cpu"
-  }
-  exec {
-    command => "df -k | grep '/dev/sda3 ' | awk '{print ($5*1)}'"
-    interval => "10"
-    type => "hdd"
-  }
   file {
-    path => "/var/log/httpd/access_log"
+    path => "/data/logs/*.json"
     type => "apache"
   }
 }
 filter {
-  geoip {source => “clientip”}
-}
-output {
-  elasticsearch { hosts => ["localhost:9200"] }
+  geoip {
+    source => "client"
+    target => "geoip"
+    database => "/data/pds/GeoLite2-City.mmdb"
+  }
+}output {
+  elasticsearch {
+    hosts => ["localhost:9200"]
+  }
   stdout { codec => rubydebug }
 }
 ```

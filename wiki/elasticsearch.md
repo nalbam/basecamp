@@ -10,7 +10,7 @@ wget https://artifacts.elastic.co/downloads/kibana/kibana-5.2.0-linux-x86_64.tar
 
 ### start 
 ```
-.bin/elasticsearch -d
+bin/elasticsearch -d
 ```
 
 ### search 

@@ -4,6 +4,7 @@
 ### download
 ```
 wget https://artifacts.elastic.co/downloads/kibana/kibana-5.2.1-linux-x86_64.tar.gz
+wget https://download.elastic.co/kibana/kibana/kibana-4.6.4-linux-x86_64.tar.gz
 ```
 
 ### config

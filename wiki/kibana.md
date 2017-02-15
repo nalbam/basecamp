@@ -3,7 +3,7 @@
 
 ### download
 ```
-wget https://artifacts.elastic.co/downloads/kibana/kibana-5.2.0-linux-x86_64.tar.gz
+wget https://artifacts.elastic.co/downloads/kibana/kibana-5.2.1-linux-x86_64.tar.gz
 ```
 
 ### config

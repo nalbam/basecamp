@@ -3,7 +3,7 @@
 
 ### download
 ```
-wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.0.tar.gz
+wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.1.tar.gz
 ```
 
 ### config
@@ -17,8 +17,6 @@ input {
 filter {
   geoip {
     source => "clientip"
-    target => "geoip"
-    database => "/data/pds/GeoLite2-City.mmdb"
   }
 }
 output {

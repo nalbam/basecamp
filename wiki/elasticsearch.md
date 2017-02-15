@@ -6,6 +6,22 @@
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.1.zip
 ```
 
+### env
+```
+sudo vi /etc/security/limits.conf
+
+ec2-user hard nofile 65536
+ec2-user soft nofile 65536
+ec2-user hard nproc 65536
+ec2-user soft nproc 65536
+
+sudo vi /etc/rc.local
+
+echo 1048575 > /proc/sys/vm/max_map_count
+
+sudo reboot 0
+```
+
 ### config
 ```
 # network

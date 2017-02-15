@@ -4,6 +4,7 @@
 ### download
 ```
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.1.zip
+wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.4.4/elasticsearch-2.4.4.zip
 ```
 
 ### env

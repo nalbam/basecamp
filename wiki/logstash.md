@@ -33,3 +33,8 @@ output {
 ```
 nohup bin/logstash -f logstash.conf &
 ```
+
+### clear
+```
+curl -XDELETE http://localhost:9200/logstash*
+```

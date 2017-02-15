@@ -8,6 +8,9 @@ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.1.zi
 
 ### config
 ```
+# network
+network.host: 0.0.0.0
+
 # cors
 http.cors.enabled: true
 http.cors.allow-origin: /https?:\/\/localhost(:[0-9]+)?/

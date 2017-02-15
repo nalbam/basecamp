@@ -17,3 +17,8 @@ elasticsearch.url: "http://localhost:9200"
 ```
 nohup bin/kibana &
 ```
+
+### status
+```
+ps -ef | grep node
+```

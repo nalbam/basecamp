@@ -3,7 +3,7 @@
 
 ### download
 ```
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.0.zip
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.1.zip
 ```
 
 ### config

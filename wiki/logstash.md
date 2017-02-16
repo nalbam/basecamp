@@ -11,7 +11,8 @@ wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.1.tar.gz
 input {
   file {
     path => "/data/logs/*.json"
-    type => "json"
+    type => apache
+    codec => json
   }
 }
 filter {

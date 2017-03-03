@@ -25,6 +25,11 @@ brew install archey
 brew install groovy
 ```
 
+### find mv
+```
+find . -iname "*.mp3" -exec mv {} mp3 \;
+```
+
 ### SD Card
 ```
 diskutil list

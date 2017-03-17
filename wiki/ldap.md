@@ -19,10 +19,16 @@ dc: nalbam
 objectClass: top
 objectClass: domain
 
-dn: ou=dev,dc=nalbam,dc=com
-ou: dev
+dn: ou=People,dc=nalbam,dc=com
+ou: People
 objectClass: top
 objectClass: organizationalUnit
+
+dn: ou=Group,dc=nalbam,dc=com
+ou: Group
+objectClass: top
+objectClass: organizationalUnit
+
 ```
 
 ### slapd.conf
@@ -67,4 +73,33 @@ chkconfig slapd on
 ### test
 ```
 ldapsearch -x -b dc=nalbam,dc=com
+```
+
+### add user
+```
+vi user.ldif
+```
+```
+dn: uid=nalbam,ou=dev,dc=nalbam,dc=com
+cn: nalbam
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: top
+uidNumber: 500
+gidNumber: 500
+homeDirectory: /home/nalbam
+loginShell: /bin/bash
+shadowLastChange: 11192
+shadowMin: -1
+shadowMax: 99999
+shadowWarning: 7
+shadowInactive: -1
+shadowExpire: -1
+shadowFlag: 134538308
+uid: nalbam
+userPassword: {SSHA}oefxYlmRGyMWvgH0oO5I14M+1qRN48de
+```
+```
+ldapadd -x -D 'cn=Manager,dc=nalbam,dc=com' -W -f user.ldif
 ```

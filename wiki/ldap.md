@@ -80,15 +80,15 @@ ldapsearch -x -b dc=nalbam,dc=com
 vi user.ldif
 ```
 ```
-dn: uid=nalbam,ou=dev,dc=nalbam,dc=com
-cn: nalbam
+dn: uid=test,ou=dev,dc=nalbam,dc=com
+cn: test
 objectClass: account
 objectClass: posixAccount
 objectClass: shadowAccount
 objectClass: top
 uidNumber: 500
 gidNumber: 500
-homeDirectory: /home/nalbam
+homeDirectory: /home/test
 loginShell: /bin/bash
 shadowLastChange: 11192
 shadowMin: -1
@@ -102,4 +102,20 @@ userPassword: {SSHA}xxxxxxxx
 ```
 ```
 ldapadd -x -D 'cn=Manager,dc=nalbam,dc=com' -W -f user.ldif
+```
+
+### add group
+```
+vi group.ldif
+```
+```
+dn: cn=test,ou=dev,dc=nalbam,dc=com
+cn: test
+objectclass: posixGroup
+objectclass: top
+gidNumber: 500
+memberUid: test
+```
+```
+ldapadd -x -D 'cn=Manager,dc=nalbam,dc=com' -W -f group.ldif
 ```

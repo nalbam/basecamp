@@ -53,6 +53,7 @@ service iptables restart
 37    RDATE
 80    HTTP
 110   POP3
+389   LDAP
 443   HTTPS
 873   RSYNC
 3306  Mysql

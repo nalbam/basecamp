@@ -47,7 +47,7 @@ suffix          "dc=nalbam,dc=com"
 checkpoint      1024 15
 rootdn          "cn=Manager,dc=nalbam,dc=com"
 
-rootpw          {crypt}xxxxxxxxxx
+rootpw          {crypt}xxxxxxxx
 ```
 
 ### config
@@ -98,7 +98,7 @@ shadowInactive: -1
 shadowExpire: -1
 shadowFlag: 134538308
 uid: nalbam
-userPassword: {SSHA}oefxYlmRGyMWvgH0oO5I14M+1qRN48de
+userPassword: {SSHA}xxxxxxxx
 ```
 ```
 ldapadd -x -D 'cn=Manager,dc=nalbam,dc=com' -W -f user.ldif

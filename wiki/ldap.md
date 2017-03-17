@@ -57,3 +57,14 @@ slaptest -f /etc/openldap/slapd.conf -F /etc/openldap/slapd.d
 chown ldap.ldap -Rf /etc/openldap/slapd.d/*
 chown ldap.ldap -Rf /var/lib/ldap/*
 ```
+
+### start
+```
+service slapd start
+chkconfig slapd on
+```
+
+### test
+```
+ldapsearch -x -b dc=nalbam,dc=com
+```

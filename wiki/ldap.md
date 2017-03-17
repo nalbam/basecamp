@@ -72,6 +72,7 @@ chkconfig slapd on
 
 ### test
 ```
+ldapsearch -x -d 1
 ldapsearch -x -b dc=nalbam,dc=com
 ```
 

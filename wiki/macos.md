@@ -23,6 +23,7 @@ brew install wget
 brew install maven
 brew install archey
 brew install groovy
+brew cask install rdm
 ```
 
 ### find mv

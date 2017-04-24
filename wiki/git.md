@@ -1,6 +1,6 @@
 ### 설정 
 ```
-git config --global user.name "nalbam-me"
+git config --global user.name "nalbam"
 git config --global user.email "me@nalbam.com"
 
 git config --global user.name "nalbam-ya"

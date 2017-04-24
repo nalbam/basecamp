@@ -17,7 +17,7 @@ input {
 }
 filter {
   geoip {
-    source => "clientip"
+    source => "clientIp"
   }
 }
 output {

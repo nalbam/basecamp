@@ -4,7 +4,7 @@ git config --global user.name "nalbam"
 git config --global user.email "me@nalbam.com"
 
 git config --global user.name "nalbam-ya"
-git config --global user.email "jyyu@yanolja.in"
+git config --global user.email "jyyu@yanolja.com"
 
 git config --global core.eol lf
 

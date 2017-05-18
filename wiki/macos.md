@@ -27,6 +27,16 @@ brew install groovy
 brew cask install rdm
 ```
 
+### ₩ -> `
+```
+vi /Users/nalbam/Library/KeyBindings/DefaultkeyBinding.dict
+```
+```
+{
+    "₩" = ("insertText:", "`");
+}
+```
+
 ### find mv
 ```
 find . -iname "*.mp3" -exec mv {} mp3 \;

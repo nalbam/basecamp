@@ -1,6 +1,11 @@
+### Right margin
+```
+Preferences > Editor > Code Style > Right margin : 300
+```
+
 ### ECMAScript 6
 ```
-Preferences > Languages & Frameworks > JavaScript
+Preferences > Languages & Frameworks > JavaScript : ECMAScript 6
 ```
 
 ### Clean

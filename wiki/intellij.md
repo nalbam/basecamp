@@ -8,6 +8,11 @@ Preferences > Editor > Code Style > Right margin : 300
 Preferences > Languages & Frameworks > JavaScript : ECMAScript 6
 ```
 
+## Plugin
+```
+lombok
+```
+
 ### Clean
 ```
 rm -rf ~/Library/Preferences/IntelliJ*

@@ -8,7 +8,7 @@ Preferences > Editor > Code Style > Right margin : 300
 Preferences > Languages & Frameworks > JavaScript : ECMAScript 6
 ```
 
-### Logbok
+### Lombok
 ```
 Preferences > Plugins > Browse repositories > Lombok > Install > Restart
 Preferences > Compiler > Annotation Processors > Enable annotaion processing

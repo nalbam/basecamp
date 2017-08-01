@@ -1,4 +1,4 @@
-### setup 
+### setup
 ```
 sudo passwd
 sudo passwd ec2-user
@@ -21,12 +21,12 @@ git clone git@github.com:nalbam/nalbam-shell.git
 ln -s /data/work/nalbam/nalbam-shell/linux/.nalbam ~/
 ```
 
-### aws ssh 
+### aws ssh
 ```
 ssh -i /Users/nalbam/Dropbox/keys/aws/nalbam-key.pem ec2-user@52.78.55.23
 ```
 
-### aws cli 
+### aws cli
 ```
 aws configure
 
@@ -34,7 +34,7 @@ aws s3 sync /data/work/cdn.smartforge.kr/ s3://cdn.smartforge.kr/ --acl public-r
 aws s3 sync s3://cdn.smartforge.kr/ /data/work/cdn.smartforge.kr/
 ```
 
-### awslog 
+### awslog
 ```
 sudo yum install -y awslogs
 

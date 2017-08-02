@@ -16,7 +16,11 @@ cd certbot
 
 ### Amazon Linux
 ```
-sudo ./certbot-auto --debug
+sudo ./certbot-auto --apache --debug
+
+sudo ./certbot-auto --nginx --debug
+
+sudo ./certbot-auto certonly --standalone --debug -d nalbam.toast.sh
 
 sudo ./certbot-auto renew --debug
 ```

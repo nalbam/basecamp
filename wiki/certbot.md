@@ -2,25 +2,25 @@
 ```
 git clone https://github.com/certbot/certbot
 
-cd certbot
+~/certbot/certbot-auto --help all
 
-./certbot-auto --help all
+sudo yum install -y augeas-libs libffi-devel python27-tools system-rpm-config
 ```
 
 ### Let's Encrypt
 ```
-./certbot-auto --apache -d nalbam.com -d www.nalbam.com
+~/certbot/certbot-auto --email me@nalbam.com -d demo.nalbam.com
 
-./certbot-auto certonly --standalone --email admin@nalbam.com -d nalbam.com -d www.nalbam.com
+~/certbot/certbot-auto certonly --standalone --email me@nalbam.com -d demo.nalbam.com
 ```
 
 ### Amazon Linux
 ```
-sudo ./certbot-auto --apache --debug
+sudo ~/certbot/certbot-auto --email me@nalbam.com --debug
 
-sudo ./certbot-auto --nginx --debug
+sudo ~/certbot/certbot-auto --nginx --email me@nalbam.com --debug
 
-sudo ./certbot-auto certonly --standalone --debug -d nalbam.toast.sh
+sudo ~/certbot/certbot-auto certonly --standalone --debug --email me@nalbam.com -d demo.nalbam.com
 
-sudo ./certbot-auto renew --debug
+sudo ~/certbot/certbot-auto renew --debug
 ```

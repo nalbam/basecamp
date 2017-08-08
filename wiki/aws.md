@@ -11,27 +11,27 @@ sudo yum install -y git vim wget zsh
 sudo mkdir /data
 sudo mkdir /data/apps
 sudo mkdir /data/logs
-sudo mkdir /data/work
-sudo mkdir /data/work/nalbam
+sudo mkdir /data/site
 
 sudo chown -R ec2-user.ec2-user /data
-
-cd /data/work/nalbam
-git clone git@github.com:nalbam/nalbam-shell.git
-ln -s /data/work/nalbam/nalbam-shell/linux/.nalbam ~/
 ```
 
 ### aws ssh
 ```
-ssh -i /Users/nalbam/Dropbox/keys/aws/nalbam-key.pem ec2-user@52.78.55.23
+ssh -i /Users/nalbam/Dropbox/keys/aws/nalbam-key.pem ec2-user@11.22.33.44
 ```
 
 ### aws cli
 ```
 aws configure
 
-aws s3 sync /data/work/cdn.smartforge.kr/ s3://cdn.smartforge.kr/ --acl public-read
-aws s3 sync s3://cdn.smartforge.kr/ /data/work/cdn.smartforge.kr/
+aws s3 sync /data/site/cdn.nalbam.com/ s3://cdn.nalbam.com/ --acl public-read
+aws s3 sync s3://cdn.nalbam.com/ /data/work/cdn.nalbam.com/
+```
+
+### log
+```
+cat /var/log/eb-activity.log
 ```
 
 ### awslog

@@ -32,6 +32,7 @@ aws s3 sync s3://cdn.nalbam.com/ /data/site/cdn.nalbam.com/
 ### log
 ```
 cat /var/log/eb-activity.log
+tail -f -n 1000 /var/log/eb-activity.log
 ```
 
 ### awslog

@@ -26,7 +26,7 @@ ssh -i /Users/nalbam/Dropbox/keys/aws/nalbam-key.pem ec2-user@11.22.33.44
 aws configure
 
 aws s3 sync /data/site/cdn.nalbam.com/ s3://cdn.nalbam.com/ --acl public-read
-aws s3 sync s3://cdn.nalbam.com/ /data/work/cdn.nalbam.com/
+aws s3 sync s3://cdn.nalbam.com/ /data/site/cdn.nalbam.com/
 ```
 
 ### log

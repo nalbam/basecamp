@@ -57,5 +57,8 @@ sudo dd bs=1m if=retropie-4.0.2-rpi2_rpi3.img of=/dev/disk3
 
 ### macOS Sierra USB
 ```
-sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/macOS\ Sierra --applicationpath /Applications/Install\ macOS\ Sierra.app --nointeraction
+sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia \
+    --volume /Volumes/macOS\ Sierra
+    --applicationpath /Applications/Install\ macOS\ Sierra.app
+    --nointeraction
 ```

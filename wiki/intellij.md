@@ -14,6 +14,11 @@ Preferences > Plugins > Browse repositories > Lombok > Install > Restart
 Preferences > Compiler > Annotation Processors > Enable annotaion processing
 ```
 
+### Save Actions
+```
+Preferences > Plugins > Browse repositories > Save Actions
+```
+
 ### Clean
 ```
 rm -rf ~/Library/Preferences/IntelliJ*

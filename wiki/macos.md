@@ -22,6 +22,7 @@ brew install zsh
 brew install wget
 brew install httpie
 brew install graphviz
+brew install terraform
 
 brew install maven
 brew install archey

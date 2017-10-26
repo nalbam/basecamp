@@ -21,8 +21,12 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install zsh
 brew install wget
 brew install httpie
-brew install graphviz
+
 brew install terraform
+brew install graphviz
+
+brew install consul
+brew install vault
 
 brew install maven
 brew install archey

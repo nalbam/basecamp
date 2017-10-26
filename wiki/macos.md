@@ -25,9 +25,6 @@ brew install httpie
 brew install terraform
 brew install graphviz
 
-brew install consul
-brew install vault
-
 brew install maven
 brew install archey
 brew install groovy

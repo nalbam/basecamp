@@ -20,6 +20,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 brew install zsh
 brew install wget
+brew install telnet
 brew install httpie
 
 brew install terraform

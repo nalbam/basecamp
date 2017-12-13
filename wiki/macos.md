@@ -21,12 +21,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install git zsh wget telnet httpie
 
 brew cask install iterm2
+brew cask install font-hack-nerd-font
 
 brew install terraform graphviz
-
-brew install maven
-brew install archey
-brew install groovy
 
 brew cask install rdm
 ```

@@ -7,6 +7,8 @@ git config --global user.name "nalbam-ya"
 git config --global user.email "jyyu@yanolja.com"
 
 git config --global core.eol lf
+git config --global core.precomposeunicode true
+git config --global core.quotepath false
 
 git config --list
 ```

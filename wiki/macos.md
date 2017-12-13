@@ -20,6 +20,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 brew install git zsh wget telnet httpie
 
+brew cask install iterm2
+
 brew install terraform graphviz
 
 brew install maven

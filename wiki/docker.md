@@ -8,12 +8,14 @@ sudo chkconfig docker on
 
 ### docker 
 ```
-sudo docker pull redis:latest
+sudo docker pull mysql
+sudo docker pull redis
 
 sudo docker pull nalbam/nalbam-docker
 
 sudo docker images
 
+sudo docker run -d -t -p 3306:3306 --name mysql mysql
 sudo docker run -d -t -p 6379:6379 --name redis redis
 
 sudo docker run -d -t -p 8888:80 --name nalbam nalbam/nalbam-docker /bin/bash

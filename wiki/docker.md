@@ -30,6 +30,8 @@ sudo docker attach nalbam
 sudo docker exec -it nalbam bash
 
 sudo docker rm nalbam
+sudo docker rm $(docker ps -a -q)
+
 sudo docker rmi nalbam:latest
 ```
 

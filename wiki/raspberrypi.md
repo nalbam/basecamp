@@ -8,7 +8,7 @@ respberry
 ```
 sudo raspi-config
 
-- Interfaceing config
+- Interfacing Options
 - SSH enable
 ```
 

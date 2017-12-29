@@ -227,4 +227,5 @@ xset s noblank     # don’t blank the video device
  * http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
 ```
 ./LCD-show
+./LCD-show 90
 ```

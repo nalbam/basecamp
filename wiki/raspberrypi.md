@@ -4,6 +4,14 @@ pi
 respberry
 ```
 
+### ssh enable
+```
+sudo raspi-config
+
+- Interfaceing config
+- SSH enable
+```
+
 ### keyboard
 ```
 sudo vi /etc/default/keyboard
@@ -215,4 +223,8 @@ xset -dpms         # disable DPMS (Energy Star) features.
 xset s noblank     # don’t blank the video device
 ```
 
+### LCD 3.5
  * http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
+```
+./LCD-show
+```

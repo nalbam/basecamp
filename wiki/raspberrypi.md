@@ -192,7 +192,7 @@ vi ~/kiosk.sh
 
 unclutter &
 matchbox-window-manager &
-chromium-browser --noerrdialogs \
+chromium-browser --noerrdialogs --incognito \
                  --disable-session-crashed-bubble \
                  --disable-infobars \
                  --kiosk http://kiosk.nalbam.com/index.php?location=LOCATION

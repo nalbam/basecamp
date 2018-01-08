@@ -25,17 +25,10 @@ vi .zshrc
 
 ZSH_THEME="dpoggi"
 
-source ~/.nalbam/zshrc.sh
+source ~/nsh/macos/zshrc.sh
 ```
 
 ### config ###
 ```
-cd /data/work/nalbam
-
-git clone git@github.com:nalbam/nalbam-shell.git
-
-ln -s /data/work/nalbam/nalbam-shell/cygwin/.nalbam
-ln -s /data/work/nalbam/nalbam-shell/linux/.nalbam
-
-ln -s /Users/nalbam/work/nalbam/nalbam-shell/macos/.nalbam
+curl -s toast.sh/nsh/install | bash
 ```

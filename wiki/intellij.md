@@ -1,5 +1,6 @@
 ### Editor
 ```
+Preferences > Editor > Font > Font : Monaco, 14
 Preferences > Editor > Code Style > Right margin : 300
 ```
 
@@ -11,7 +12,7 @@ Preferences > Languages & Frameworks > JavaScript : ECMAScript 6
 ### Lombok
 ```
 Preferences > Plugins > Browse repositories > Lombok
-Preferences > Compiler > Annotation Processors > Enable annotaion processing
+Preferences > Build > Compiler > Annotation Processors > Enable annotaion processing
 ```
 
 ### Save Actions

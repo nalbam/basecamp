@@ -10,7 +10,7 @@ Preferences > Languages & Frameworks > JavaScript : ECMAScript 6
 
 ### Lombok
 ```
-Preferences > Plugins > Browse repositories > Lombok > Install > Restart
+Preferences > Plugins > Browse repositories > Lombok
 Preferences > Compiler > Annotation Processors > Enable annotaion processing
 ```
 

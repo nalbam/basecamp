@@ -20,11 +20,10 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 brew install git zsh wget telnet httpie
 
-brew cask install iterm2
-brew cask install java
-
 brew install terraform graphviz
 
+brew cask install iterm2
+brew cask install java
 brew cask install rdm
 ```
 

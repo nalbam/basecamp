@@ -56,7 +56,8 @@ pgrep -a qtumd
 ### wallet encrypt
 ```
 ~/qtum-wallet/bin/qtum-cli -stdin encryptwallet
-
+```
+```
 red dog blue cat
 <CTRL-D>
 ```
@@ -76,7 +77,8 @@ sudo systemctl start qtumd.service
 ### wallet unlock
 ```
 ~/qtum-wallet/bin/qtum-cli -stdin walletpassphrase
-
+```
+```
 red dog blue cat
 99999999
 true

@@ -53,7 +53,7 @@ pgrep -a qtumd
 ~/qtum-wallet/bin/qtum-cli getstakinginfo
 ```
 
-### encrypt wallet
+### wallet encrypt
 ```
 ~/qtum-wallet/bin/qtum-cli -stdin encryptwallet
 
@@ -61,7 +61,7 @@ red dog blue cat
 <CTRL-D>
 ```
 
-### backup wallet
+### wallet backup
 ```
 $ cp ~/.qtum/wallet.dat ./nalbam-qtum-backup.dat
 ```

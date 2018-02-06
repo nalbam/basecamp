@@ -5,8 +5,6 @@ cd ~/.ssh/
 
 ssh-keygen -t dsa
 ssh-keygen -t rsa -C "me@nalbam.com"
-ssh-keygen -t rsa -C "jyyu@yanolja.in"
-ssh-keygen -t rsa -C "toast@yanolja.in"
 
 cp id_dsa.pub id_dsa.pub.s1
 ```

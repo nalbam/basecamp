@@ -30,10 +30,10 @@ sudo docker attach nalbam
 sudo docker exec -it nalbam bash
 
 sudo docker rm nalbam
-sudo docker rm $(docker ps -a -q)
+sudo docker rm $(sudo docker ps -a -q)
 
 sudo docker rmi nalbam:latest
-sudo docker rmi $(docker images -q)
+sudo docker rmi $(sudo docker images -q)
 ```
 
 ## elk

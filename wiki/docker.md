@@ -33,8 +33,6 @@ sudo docker rm nalbam
 sudo docker rm $(docker ps -a -q)
 
 sudo docker rmi nalbam:latest
-
-sudo docker rm $(docker ps -a -q)
 sudo docker rmi $(docker images -q)
 ```
 

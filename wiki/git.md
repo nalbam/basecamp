@@ -3,6 +3,9 @@
 git config --global user.name "nalbam"
 git config --global user.email "me@nalbam.com"
 
+git config --global user.name "Jungyoul Yu"
+git config --global user.email "jungyoul.yu@bespinglobal.com"
+
 git config --global core.eol lf
 git config --global core.precomposeunicode true
 git config --global core.quotepath false

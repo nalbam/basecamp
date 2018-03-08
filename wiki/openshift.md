@@ -1,17 +1,56 @@
 ### install
 ```
-sudo yum -u update
-sudo yum install -y wget git net-tools bind-utils iptables-services bridge-utils bash-completion kexec-tools sos psacct
+sudo yum update -y
+sudo yum install -y docker
 
-sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-sudo sed -i -e "s/^enabled=1/enabled=0/" /etc/yum.repos.d/epel.repo
-sudo yum install -y --enablerepo=epel ansible pyOpenSSL
+sudo service docker start
+sudo chkconfig docker on
 
-git clone https://github.com/openshift/openshift-ansible
+wget https://github.com/openshift/origin/releases/download/v3.7.1/openshift-origin-server-v3.7.1-ab0f056-linux-64bit.tar.gz
+tar -xvzf openshift-origin-server-v3.7.1-ab0f056-linux-64bit.tar.gz
+sudo cp openshift-origin-server-v3.7.1-ab0f056-linux-64bit/oc /usr/local/bin/
 
-cd openshift-ansible
+sudo vi /etc/sysconfig/docker
+OPTIONS="--default-ulimit nofile=1024:4096 --insecure-registry 172.30.0.0/16"
+
+sudo service docker restart
+
+sudo mount --make-shared /
+sudo sed -i.bak -e \
+ 's:^\(\ \+\)"$unshare" -m -- nohup:\1"$unshare" -m --propagation shared -- nohup:' \
+ /etc/init.d/docker
+
+sudo /usr/local/bin/oc cluster up --routing-suffix=13.124.112.3.nip.io --public-hostname=13.124.112.3.nip.io
+
+sudo /usr/local/bin/oc cluster down
+```
+
+```
+sudo yum update -y
+sudo yum install -y git wget docker
+
+sudo service docker start
+sudo chkconfig docker on
+
+sudo pip install -Iv ansible
+
+git clone https://github.com/openshift/openshift-ansible.git
+
+pushd openshift-ansible
 git checkout release-3.7
+popd
 
-sudo ansible-playbook -i inventory/hosts.localhost playbooks/prerequisites.yml
-sudo ansible-playbook -i inventory/hosts.localhost playbooks/deploy_cluster.yml
+export DOMAIN=${DOMAIN:="$(curl ipinfo.io/ip).nip.io"}
+export USERNAME=${USERNAME:="$(whoami)"}
+export PASSWORD=${PASSWORD:=password}
+export VERSION=${VERSION:="v3.7.1"}
+
+export IP="$(ip route get 8.8.8.8 | awk '{print $NF; exit}')"
+
+ansible-playbook -i inventory.ini openshift-ansible/playbooks/byo/config.yml
+
+htpasswd -b /etc/origin/master/htpasswd $USERNAME $PASSWORD
+oc adm policy add-cluster-role-to-user cluster-admin $USERNAME
+
+
 ```

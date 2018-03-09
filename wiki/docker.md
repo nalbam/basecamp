@@ -15,6 +15,8 @@ sudo docker pull nalbam/nalbam-docker
 
 sudo docker images
 
+sudo docker run -d --name ubuntu ubuntu/latest /bin/bash
+
 sudo docker run -d --name nalbam nalbam/docker /bin/bash
 
 sudo docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest

@@ -16,7 +16,7 @@ sudo docker pull nalbam/docker
 
 sudo docker images
 
-sudo docker run -d --name centos -d centos:7
+sudo docker run -d --name centos -d centos:latest /bin/bash
 sudo docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
 sudo docker run -p 6379:6379 --name redis -d redis:latest
 

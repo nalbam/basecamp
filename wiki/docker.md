@@ -15,10 +15,10 @@ sudo docker pull nalbam/docker
 
 sudo docker images
 
-sudo docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
-sudo docker run -p 6379:6379 --name redis -d redis:latest
+sudo docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+sudo docker run --name redis -p 6379:6379 -d redis:latest
 
-sudo docker run -p 80:80 --name nalbam -d nalbam/docker /bin/bash
+sudo docker run --name nalbam -p 80:80 -d nalbam/docker /bin/bash
 
 sudo docker ps
 sudo docker ps -a

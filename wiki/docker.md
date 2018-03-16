@@ -4,6 +4,8 @@ sudo yum install -y docker
 
 sudo service docker start
 sudo chkconfig docker on
+
+sudo usermod -aG docker $USER
 ```
 
 ### docker 

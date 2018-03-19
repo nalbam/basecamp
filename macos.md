@@ -22,9 +22,6 @@ brew install git zsh curl wget telnet httpie
 
 brew install terraform graphviz
 
-brew install mysql
-brew install redis
-
 brew cask install iterm2
 brew cask install java intellij-idea
 

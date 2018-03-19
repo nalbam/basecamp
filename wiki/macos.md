@@ -22,11 +22,13 @@ brew install git zsh wget telnet httpie
 
 brew install terraform graphviz
 
+brew install docker
 brew install mysql
 brew install redis
 
 brew cask install iterm2
 brew cask install java
+brew cask install intellij-idea
 brew cask install rdm
 ```
 

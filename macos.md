@@ -22,7 +22,6 @@ brew install git zsh wget telnet httpie
 
 brew install terraform graphviz
 
-brew install docker
 brew install mysql
 brew install redis
 

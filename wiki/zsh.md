@@ -8,9 +8,6 @@ chsh -s /bin/zsh
 ### zsh for mac ###
 ```
 brew install zsh
-sudo vim /etc/shells
-
-/bin/zsh
 
 chsh -s /bin/zsh
 ```

@@ -18,7 +18,7 @@ OPTION + SHIFT + 볼륨 : 세밀하게 조절
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install git zsh wget telnet httpie
+brew install git zsh curl wget telnet httpie
 
 brew install terraform graphviz
 
@@ -26,8 +26,11 @@ brew install mysql
 brew install redis
 
 brew cask install iterm2
-brew cask install java
-brew cask install intellij-idea
+brew cask install java intellij-idea
+
+brew cask install vagrant
+brew cask install virtualbox
+
 brew cask install rdm
 ```
 

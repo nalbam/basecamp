@@ -10,9 +10,7 @@ chsh -s /bin/zsh
 brew install zsh
 sudo vim /etc/shells
 
-/usr/local/bin/zsh
-
-chsh -s /usr/local/bin/zsh
+/bin/zsh
 
 chsh -s /bin/zsh
 ```
@@ -24,11 +22,4 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 vi .zshrc
 
 ZSH_THEME="dpoggi"
-
-source ~/nsh/macos/zshrc.sh
-```
-
-### config ###
-```
-curl -s toast.sh/nsh/install | bash
 ```

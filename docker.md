@@ -38,6 +38,15 @@ sudo docker rmi -f nalbam:latest
 sudo docker rmi -f $(sudo docker images -q)
 ```
 
+## prune
+```
+docker system prune
+docker container prune
+docker image prune
+docker volume prune
+docker network prune
+```
+
 ## elk
 ```
 sudo docker pull sebp/elk
@@ -45,4 +54,4 @@ sudo docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk sebp/elk
 ```
 
  * https://www.docker.com/
- * https://registry.hub.docker.com/u/nalbam/nalbam-docker/
+ * https://registry.hub.docker.com/u/nalbam/

@@ -30,16 +30,16 @@ sudo docker start nalbam
 sudo docker attach nalbam
 
 sudo docker exec -it nalbam bash
+```
 
+## cleanup
+```
 sudo docker rm nalbam
 sudo docker rm $(sudo docker ps -a -q)
 
 sudo docker rmi -f nalbam:latest
 sudo docker rmi -f $(sudo docker images -q)
-```
 
-## prune
-```
 sudo docker system prune
 sudo docker container prune
 sudo docker image prune

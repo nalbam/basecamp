@@ -31,8 +31,12 @@ brew cask install virtualbox
 brew cask install rdm
 ```
 
-### hyperkit
+### docker-machine
 ```
+brew install docker-machine-driver-xhyve
+
+or
+
 curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-hyperkit && \
   chmod +x docker-machine-driver-hyperkit && \
   sudo mv docker-machine-driver-hyperkit /usr/local/bin/ && \

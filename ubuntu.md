@@ -34,3 +34,11 @@ minishift start
 ```
  * https://docs.openshift.org/latest/minishift/getting-started/quickstart.html
  * https://github.com/minishift/minishift/issues/2121
+
+## spinnaker
+```
+docker-machine create spinnaker
+
+DOCKER_IP=`docker-machine ip spinnaker` docker-compose up -d
+```
+ * https://github.com/spinnaker/spinnaker/tree/master/experimental/docker-compose

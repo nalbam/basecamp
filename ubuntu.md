@@ -30,8 +30,19 @@ sudo apt-get install virt-manager
 
 sudo curl -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm -o /usr/local/bin/docker-machine-driver-kvm
 sudo chmod +x /usr/local/bin/docker-machine-driver-kvm
+
+sudo curl -L https://github.com/kubernetes/minikube/releases/download/v0.25.0/docker-machine-driver-kvm2 -o /usr/local/bin/docker-machine-driver-kvm2
+sudo chmod +x /usr/local/bin/docker-machine-driver-kvm2
 ```
  * https://help.ubuntu.com/community/KVM/Installation
+
+## docker-machine
+```
+curl -L https://github.com/docker/machine/releases/download/v0.14.0/docker-machine-`uname -s`-`uname -m` > /tmp/docker-machine
+sudo install /tmp/docker-machine /usr/local/bin/docker-machine
+
+docker-machine ls
+```
 
 ## kubectl
 ```
@@ -42,9 +53,6 @@ sudo chmod +x /usr/local/bin/kubectl
 
 ## minikube
 ```
-sudo curl -L https://github.com/kubernetes/minikube/releases/download/v0.25.0/docker-machine-driver-kvm2 -o /usr/local/bin/docker-machine-driver-kvm2
-sudo chmod +x /usr/local/bin/docker-machine-driver-kvm2
-
 sudo curl -L minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 -o /usr/local/bin/minikube
 sudo chmod +x /usr/local/bin/minikube
 ```
@@ -65,12 +73,6 @@ minishift start
 
 ## spinnaker
 ```
-curl -L https://github.com/docker/machine/releases/download/v0.14.0/docker-machine-`uname -s`-`uname -m` > /tmp/docker-machine
-sudo install /tmp/docker-machine /usr/local/bin/docker-machine
-
-docker-machine ls
-docker-machine create spinnaker
-
 DOCKER_IP=`docker-machine ip spinnaker` docker-compose up -d
 ```
  * https://github.com/spinnaker/spinnaker/tree/master/experimental/docker-compose

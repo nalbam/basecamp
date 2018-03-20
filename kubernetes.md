@@ -14,6 +14,8 @@ sudo chmod +x /usr/local/bin/minikube
 
 minikube start --vm-driver kvm2
 
+minikube dashboard
+
 minikube docker-env
 
 eval $(minikube docker-env)

@@ -57,6 +57,8 @@ sudo chmod +x /usr/local/bin/kubectl
 ```
 sudo curl -L minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 -o /usr/local/bin/minikube
 sudo chmod +x /usr/local/bin/minikube
+
+minikube start --vm-driver kvm2
 ```
  * https://kubernetes.io/docs/tasks/tools/install-minikube/
 

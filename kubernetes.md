@@ -31,6 +31,8 @@ docker ps
 kubectl run sample-node --image=nalbam/sample-node:latest --port=3000
 kubectl expose deployment sample-node --type=LoadBalancer
 
+kubectl set image deployment/sample-node sample-node=nalbam/sample-node:latest
+
 kubectl get pods
 kubectl describe pod sample-node
 

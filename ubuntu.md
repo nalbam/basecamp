@@ -35,15 +35,15 @@ sudo chmod +x /usr/local/bin/docker-machine-driver-kvm
 
 ## kubectl
 ```
-curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-chmod +x ./kubectl
-sudo mv ./kubectl /usr/local/bin/kubectl
+curl -L https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl
+sudo chmod +x /usr/local/bin/kubectl
 ```
  * https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 ## minikube
 ```
-https://github.com/kubernetes/minikube/releases/download/v0.25.0/docker-machine-driver-kvm2
+sudo curl -L https://github.com/kubernetes/minikube/releases/download/v0.25.0/docker-machine-driver-kvm2 -o /usr/local/bin/docker-machine-driver-kvm2
+sudo chmod +x /usr/local/bin/docker-machine-driver-kvm2
 
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 ```

@@ -1,3 +1,10 @@
+## prepare
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git curl wget zip sudo apt-get update
+```
+
 ## Hangul
 * http://hochulshin.com/ubuntu-1604-hangul/
 
@@ -20,6 +27,9 @@ sudo ls -la /var/run/libvirt/libvirt-sock
 ls -l /dev/kvm
 
 sudo apt-get install virt-manager
+
+sudo curl -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm -o /usr/local/bin/docker-machine-driver-kvm
+sudo chmod +x /usr/local/bin/docker-machine-driver-kvm
 ```
  * https://help.ubuntu.com/community/KVM/Installation
 
@@ -41,9 +51,6 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minik
 
 ## minishift
 ```
-sudo curl -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm -o /usr/local/bin/docker-machine-driver-kvm
-sudo chmod +x /usr/local/bin/docker-machine-driver-kvm
-
 minishift config set skip-check-kvm-driver true
 
 minishift start

@@ -12,8 +12,8 @@ curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/${KUB
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && \
   chmod +x minikube && sudo mv minikube /usr/local/bin/
 
-minikube start --vm-driver=kvm2 # ubuntu
-minikube start --vm-driver=hyperkit # mac
+minikube start --vm-driver=kvm2  # ubuntu
+minikube start --vm-driver=xhyve # mac
 
 minikube dashboard
 

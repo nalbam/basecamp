@@ -2,7 +2,7 @@
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install git curl wget zip sudo apt-get update
+sudo apt-get install git curl wget zip docker.io
 ```
 
 ## Hangul

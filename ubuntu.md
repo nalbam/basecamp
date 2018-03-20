@@ -46,3 +46,10 @@ docker-machine create spinnaker
 DOCKER_IP=`docker-machine ip spinnaker` docker-compose up -d
 ```
  * https://github.com/spinnaker/spinnaker/tree/master/experimental/docker-compose
+
+## skaffold
+```
+curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin
+```
+ * https://github.com/GoogleCloudPlatform/skaffold
+

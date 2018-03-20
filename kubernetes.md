@@ -1,7 +1,8 @@
 ## kubectl
 ```
-sudo curl -L https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl
-sudo chmod +x /usr/local/bin/kubectl
+curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
+  chmod +x kubectl && \
+  sudo mv kubectl /usr/local/bin/
 ```
  * https://kubernetes.io/docs/tasks/tools/install-kubectl/
  * https://kubernetes.io/docs/setup/independent/install-kubeadm/
@@ -9,8 +10,9 @@ sudo chmod +x /usr/local/bin/kubectl
 
 ## minikube
 ```
-sudo curl -L minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 -o /usr/local/bin/minikube
-sudo chmod +x /usr/local/bin/minikube
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && \
+  chmod +x minikube && \
+  sudo mv minikube /usr/local/bin/
 
 minikube start --vm-driver kvm2
 

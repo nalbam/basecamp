@@ -48,19 +48,6 @@ sudo install /tmp/docker-machine /usr/local/bin/docker-machine
 docker-machine ls
 ```
 
-## minishift
-```
-wget https://github.com/minishift/minishift/releases/download/v1.14.0/minishift-1.14.0-linux-amd64.tgz
-tar zxvf minishift-1.14.0-linux-amd64.tgz
-sudo mv minishift-1.14.0-linux-amd64/minishift /usr/local/bin/
-
-minishift config set skip-check-kvm-driver true
-
-minishift start
-```
- * https://docs.openshift.org/latest/minishift/getting-started/quickstart.html
- * https://github.com/minishift/minishift/issues/2121
-
 ## spinnaker
 ```
 DOCKER_IP=`docker-machine ip spinnaker` docker-compose up -d

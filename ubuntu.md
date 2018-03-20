@@ -45,7 +45,8 @@ sudo chmod +x /usr/local/bin/kubectl
 sudo curl -L https://github.com/kubernetes/minikube/releases/download/v0.25.0/docker-machine-driver-kvm2 -o /usr/local/bin/docker-machine-driver-kvm2
 sudo chmod +x /usr/local/bin/docker-machine-driver-kvm2
 
-curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+sudo curl -L minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 -o /usr/local/bin/minikube
+sudo chmod +x /usr/local/bin/minikube
 ```
  * https://kubernetes.io/docs/tasks/tools/install-minikube/
 

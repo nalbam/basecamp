@@ -30,5 +30,7 @@ kubectl expose deployment sample-node --type=LoadBalancer
 
 kubectl get pods
 
+kubectl describe pod sample-node
+
 minikube service hello-node
 ```

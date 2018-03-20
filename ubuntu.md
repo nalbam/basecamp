@@ -37,6 +37,7 @@ minishift start
 
 ## spinnaker
 ```
+docker-machine ls
 docker-machine create spinnaker
 
 DOCKER_IP=`docker-machine ip spinnaker` docker-compose up -d

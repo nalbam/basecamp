@@ -42,6 +42,9 @@ kubectl delete deployment sample-node
 kubectl delete service sample-node
 ```
 
+## kops
+ * https://github.com/kubernetes/kops
+
 ## skaffold
 ```
 curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \

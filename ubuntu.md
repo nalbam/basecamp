@@ -2,7 +2,7 @@
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install git curl wget zip docker.io
+sudo apt-get install git curl wget zip docker.io golang-go
 ```
 
 ## Hangul
@@ -61,6 +61,12 @@ sudo curl -L minikube https://storage.googleapis.com/minikube/releases/v0.25.0/m
 sudo chmod +x /usr/local/bin/minikube
 
 minikube start --vm-driver kvm2
+
+minikube docker-env
+
+minikube docker-env
+
+docker ps
 ```
  * https://kubernetes.io/docs/tasks/tools/install-minikube/
 

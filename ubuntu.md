@@ -51,6 +51,10 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minik
 
 ## minishift
 ```
+wget https://github.com/minishift/minishift/releases/download/v1.14.0/minishift-1.14.0-linux-amd64.tgz
+tar zxvf minishift-1.14.0-linux-amd64.tgz
+sudo mv minishift-1.14.0-linux-amd64/minishift /usr/local/bin/
+
 minishift config set skip-check-kvm-driver true
 
 minishift start

@@ -20,6 +20,8 @@ sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
 sudo adduser `id -un` libvirtd
 sudo adduser `id -un` kvm
 
+sudo usermod -a -G libvirtd $(whoami)
+
 virsh list --all
 
 sudo ls -la /var/run/libvirt/libvirt-sock

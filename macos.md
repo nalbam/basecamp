@@ -31,6 +31,15 @@ brew cask install virtualbox
 brew cask install rdm
 ```
 
+### hyperkit
+```
+curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-hyperkit \
+  && chmod +x docker-machine-driver-hyperkit \
+  && sudo mv docker-machine-driver-hyperkit /usr/local/bin/ \
+  && sudo chown root:wheel /usr/local/bin/docker-machine-driver-hyperkit \
+  && sudo chmod u+s /usr/local/bin/docker-machine-driver-hyperkit
+```
+
 ### ₩ -> `
 ```
 vi /Users/nalbam/Library/KeyBindings/DefaultkeyBinding.dict

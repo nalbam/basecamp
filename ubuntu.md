@@ -69,6 +69,7 @@ curl $(minikube service hello-minikube --url)
 ```
  * https://kubernetes.io/docs/tasks/tools/install-kubectl/
  * https://kubernetes.io/docs/setup/independent/install-kubeadm/
+ * https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/
 
 ## minikube
 ```

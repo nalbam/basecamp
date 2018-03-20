@@ -40,11 +40,11 @@ sudo docker rmi -f $(sudo docker images -q)
 
 ## prune
 ```
-docker system prune
-docker container prune
-docker image prune
-docker volume prune
-docker network prune
+sudo docker system prune
+sudo docker container prune
+sudo docker image prune
+sudo docker volume prune
+sudo docker network prune
 ```
 
 ## elk

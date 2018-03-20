@@ -19,4 +19,15 @@ ls -l /dev/kvm
 sudo apt-get install virt-manager
 ```
  * https://help.ubuntu.com/community/KVM/Installation
- * http://naturax.tistory.com/15
+
+## minishift
+```
+sudo curl -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm -o /usr/local/bin/docker-machine-driver-kvm
+sudo chmod +x /usr/local/bin/docker-machine-driver-kvm
+
+minishift config set skip-check-kvm-driver true
+
+minishift start
+```
+ * https://docs.openshift.org/latest/minishift/getting-started/quickstart.html
+ * https://github.com/minishift/minishift/issues/2121

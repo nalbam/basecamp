@@ -21,6 +21,7 @@ sudo adduser `id -un` libvirtd
 sudo adduser `id -un` kvm
 
 sudo usermod -a -G libvirtd $(whoami)
+newgrp libvirtd
 
 virsh list --all
 
@@ -37,6 +38,7 @@ sudo curl -L https://github.com/kubernetes/minikube/releases/download/v0.25.0/do
 sudo chmod +x /usr/local/bin/docker-machine-driver-kvm2
 ```
  * https://help.ubuntu.com/community/KVM/Installation
+ * https://github.com/kubernetes/minikube/blob/master/docs/drivers.md
 
 ## docker-machine
 ```

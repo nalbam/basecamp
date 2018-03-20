@@ -10,10 +10,10 @@ sudo apt-get install git curl wget zip docker.io
 
 ## KVM
 ```
+uname -m
 egrep -c '(vmx|svm)' /proc/cpuinfo
 egrep -c ' lm ' /proc/cpuinfo
 kvm-ok
-uname -m
 
 sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
 

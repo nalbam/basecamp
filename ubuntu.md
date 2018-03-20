@@ -1,3 +1,6 @@
+## Hangul
+* http://hochulshin.com/ubuntu-1604-hangul/
+
 ## KVM
 ```
 egrep -c '(vmx|svm)' /proc/cpuinfo

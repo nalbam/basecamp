@@ -47,6 +47,22 @@ DOCKER_IP=`docker-machine ip spinnaker` docker-compose up -d
 ```
  * https://github.com/spinnaker/spinnaker/tree/master/experimental/docker-compose
 
+## kubectl
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+```
+ * https://kubernetes.io/docs/tasks/tools/install-kubectl/
+
+## minikube
+```
+https://github.com/kubernetes/minikube/releases/download/v0.25.0/docker-machine-driver-kvm2
+
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+```
+ * https://kubernetes.io/docs/tasks/tools/install-minikube/
+
 ## skaffold
 ```
 curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && chmod +x skaffold && sudo mv skaffold /usr/local/bin

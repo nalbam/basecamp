@@ -6,7 +6,6 @@ curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(cur
 ```
  * https://kubernetes.io/docs/tasks/tools/install-kubectl/
  * https://kubernetes.io/docs/setup/independent/install-kubeadm/
- * https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/
 
 ## minikube
 ```
@@ -26,6 +25,7 @@ eval $(minikube docker-env)
 docker ps
 ```
  * https://kubernetes.io/docs/tasks/tools/install-minikube/
+ * https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/
 
 ## sample
 ```

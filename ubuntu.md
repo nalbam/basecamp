@@ -31,11 +31,11 @@ ls -l /dev/kvm
 
 sudo apt-get install virt-manager
 
-sudo curl -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm -o /usr/local/bin/docker-machine-driver-kvm
-sudo chmod +x /usr/local/bin/docker-machine-driver-kvm
+curl -LO https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm && \
+  chmod +x docker-machine-driver-kvm && sudo mv docker-machine-driver-kvm /usr/local/bin/
 
-sudo curl -L https://github.com/kubernetes/minikube/releases/download/v0.25.0/docker-machine-driver-kvm2 -o /usr/local/bin/docker-machine-driver-kvm2
-sudo chmod +x /usr/local/bin/docker-machine-driver-kvm2
+curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2 && \
+  chmod +x docker-machine-driver-kvm2 && sudo mv docker-machine-driver-kvm2 /usr/local/bin/
 ```
  * https://help.ubuntu.com/community/KVM/Installation
  * https://github.com/kubernetes/minikube/blob/master/docs/drivers.md

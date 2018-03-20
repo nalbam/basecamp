@@ -14,7 +14,8 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
   chmod +x minikube && \
   sudo mv minikube /usr/local/bin/
 
-minikube start --vm-driver kvm2
+minikube start --vm-driver=kvm2  # ubuntu
+minikube start --vm-driver=xhyve # mac
 
 minikube dashboard
 

@@ -37,6 +37,9 @@ kubectl get pods
 kubectl describe pod sample-node
 
 minikube service sample-node
+
+kubectl delete deployment sample-node
+kubectl delete service sample-node
 ```
 
 ## skaffold

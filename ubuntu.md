@@ -60,6 +60,12 @@ deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
 apt-get install -y kubelet kubeadm kubectl
+
+kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080
+kubectl expose deployment hello-minikube --type=NodePort
+kubectl get pods
+kubectl describe deployment hello-minikube
+curl $(minikube service hello-minikube --url)
 ```
  * https://kubernetes.io/docs/tasks/tools/install-kubectl/
  * https://kubernetes.io/docs/setup/independent/install-kubeadm/

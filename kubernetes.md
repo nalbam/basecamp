@@ -28,12 +28,10 @@ docker ps
 
 ## sample
 ```
-kubectl run sample-node --image=nalbam/sample-node:latest --port=8080
-
+kubectl run sample-node --image=nalbam/sample-node:latest --port=3000
 kubectl expose deployment sample-node --type=LoadBalancer
 
 kubectl get pods
-
 kubectl describe pod sample-node
 
 minikube service sample-node

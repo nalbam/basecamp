@@ -52,5 +52,17 @@ ansible-playbook -i inventory.ini openshift-ansible/playbooks/byo/config.yml
 htpasswd -b /etc/origin/master/htpasswd $USERNAME $PASSWORD
 oc adm policy add-cluster-role-to-user cluster-admin $USERNAME
 
-
 ```
+
+## minishift
+```
+wget https://github.com/minishift/minishift/releases/download/v1.14.0/minishift-1.14.0-linux-amd64.tgz
+tar zxvf minishift-1.14.0-linux-amd64.tgz
+sudo mv minishift-1.14.0-linux-amd64/minishift /usr/local/bin/
+
+minishift config set skip-check-kvm-driver true
+
+minishift start
+```
+ * https://docs.openshift.org/latest/minishift/getting-started/quickstart.html
+ * https://github.com/minishift/minishift/issues/2121

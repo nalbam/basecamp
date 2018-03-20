@@ -64,7 +64,7 @@ minikube start --vm-driver kvm2
 
 minikube docker-env
 
-minikube docker-env
+eval $(minikube docker-env)
 
 docker ps
 ```

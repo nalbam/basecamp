@@ -10,8 +10,8 @@ uname -m
 
 sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
 
-sudo adduser `id -un` kvm
 sudo adduser `id -un` libvirtd
+sudo adduser `id -un` kvm
 
 virsh list --all
 
@@ -22,6 +22,22 @@ ls -l /dev/kvm
 sudo apt-get install virt-manager
 ```
  * https://help.ubuntu.com/community/KVM/Installation
+
+## kubectl
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+```
+ * https://kubernetes.io/docs/tasks/tools/install-kubectl/
+
+## minikube
+```
+https://github.com/kubernetes/minikube/releases/download/v0.25.0/docker-machine-driver-kvm2
+
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+```
+ * https://kubernetes.io/docs/tasks/tools/install-minikube/
 
 ## minishift
 ```
@@ -46,22 +62,6 @@ docker-machine create spinnaker
 DOCKER_IP=`docker-machine ip spinnaker` docker-compose up -d
 ```
  * https://github.com/spinnaker/spinnaker/tree/master/experimental/docker-compose
-
-## kubectl
-```
-curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-chmod +x ./kubectl
-sudo mv ./kubectl /usr/local/bin/kubectl
-```
- * https://kubernetes.io/docs/tasks/tools/install-kubectl/
-
-## minikube
-```
-https://github.com/kubernetes/minikube/releases/download/v0.25.0/docker-machine-driver-kvm2
-
-curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
-```
- * https://kubernetes.io/docs/tasks/tools/install-minikube/
 
 ## skaffold
 ```

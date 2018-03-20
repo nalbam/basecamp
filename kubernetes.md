@@ -32,5 +32,5 @@ kubectl get pods
 
 kubectl describe pod sample-node
 
-minikube service hello-node
+minikube service sample-node
 ```

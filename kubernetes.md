@@ -42,6 +42,14 @@ kubectl delete deployment sample-node
 kubectl delete service sample-node
 ```
 
+## helm
+```
+
+helm install stable/jenkins
+```
+ * https://helm.sh/
+ * https://github.com/kubernetes/helm
+
 ## kops
 ```
 export KOPS_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)

@@ -49,6 +49,7 @@ curl -LO https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION}/ko
   chmod +x kops-linux-amd64 && sudo mv kops-linux-amd64 /usr/local/bin/kops
 ```
  * https://github.com/kubernetes/kops
+ * https://kubernetes.io/docs/getting-started-guides/kops/
 
 ## skaffold
 ```

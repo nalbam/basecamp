@@ -44,8 +44,7 @@ kubectl delete service sample-node
 
 ## helm
 ```
-
-helm install stable/jenkins
+helm install --name nalbam stable/jenkins
 ```
  * https://helm.sh/
  * https://github.com/kubernetes/helm

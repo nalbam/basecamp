@@ -2,7 +2,7 @@
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install git curl wget zip docker.io golang-go
+sudo apt-get install git curl wget zip awscli docker.io golang-go
 ```
 
 ## Hangul

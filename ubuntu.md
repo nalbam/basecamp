@@ -31,7 +31,8 @@ ls -l /dev/kvm
 
 sudo apt-get install virt-manager
 
-curl -LO https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm && \
+export VERSION=$(curl -s https://api.github.com/repos/dhiltgen/docker-machine-kvm/releases/latest | grep tag_name | cut -d '"' -f 4)
+curl -LO https://github.com/dhiltgen/docker-machine-kvm/releases/download/${VERSION}/docker-machine-driver-kvm && \
   chmod +x docker-machine-driver-kvm && sudo mv docker-machine-driver-kvm /usr/local/bin/
 
 curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2 && \
@@ -42,7 +43,8 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-
 
 ## docker-machine
 ```
-curl -L https://github.com/docker/machine/releases/download/v0.14.0/docker-machine-`uname -s`-`uname -m` > /tmp/docker-machine
+export VERSION=$(curl -s https://api.github.com/repos/docker/machine/releases/latest | grep tag_name | cut -d '"' -f 4)
+curl -L https://github.com/docker/machine/releases/download/${VERSION}/docker-machine-`uname -s`-`uname -m` > /tmp/docker-machine
 sudo install /tmp/docker-machine /usr/local/bin/docker-machine
 
 docker-machine ls

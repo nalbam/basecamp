@@ -20,8 +20,6 @@ minikube start --vm-driver=xhyve # mac
 
 minikube dashboard
 
-minikube docker-env
-
 eval $(minikube docker-env)
 
 docker ps

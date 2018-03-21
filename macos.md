@@ -21,6 +21,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install zsh wget telnet httpie
 
 brew install terraform graphviz
+brew install kubernetes-cli kubernetes-helm kops
 
 brew cask install iterm2
 brew cask install java intellij-idea

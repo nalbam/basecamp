@@ -26,8 +26,8 @@ brew install kubernetes-cli kubernetes-helm kops
 brew cask install iterm2
 brew cask install java intellij-idea
 
-brew cask install vagrant
-brew cask install virtualbox
+brew cask install minikube
+brew cask install minishift
 
 brew cask install rdm
 ```

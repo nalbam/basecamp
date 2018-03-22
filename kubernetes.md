@@ -13,7 +13,8 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
   chmod +x minikube && sudo mv minikube /usr/local/bin/
 
 minikube config set cpus 4
-minikube config set memory 4096
+minikube config set memory 8192
+minikube config set vm-driver kvm2
 
 minikube start --vm-driver=kvm2  # ubuntu
 minikube start --vm-driver=xhyve # mac

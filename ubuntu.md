@@ -55,3 +55,10 @@ docker-machine ls
 DOCKER_IP=`docker-machine ip spinnaker` docker-compose up -d
 ```
  * https://github.com/spinnaker/spinnaker/tree/master/experimental/docker-compose
+
+### java
+```
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update
+sudo apt install oracle-java8-installer
+```

@@ -49,6 +49,6 @@ smtphost = 'smtp.gmail.com'
 smtpport = 465
 use_ssl  = true
 
-username = 'mon@smartforge.kr'
+username = 'mon@nalbam.com'
 password = 'password'
 ```

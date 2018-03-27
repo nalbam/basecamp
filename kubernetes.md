@@ -1,5 +1,5 @@
 ## kubectl
-```
+```bash
 export KUBE_VERSION=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
 curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/${KUBE_VERSION}/bin/linux/amd64/kubectl && \
   chmod +x kubectl && sudo mv kubectl /usr/local/bin/
@@ -8,7 +8,7 @@ curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/${KUB
  * https://kubernetes.io/docs/setup/independent/install-kubeadm/
 
 ## minikube
-```
+```bash
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && \
   chmod +x minikube && sudo mv minikube /usr/local/bin/
 
@@ -29,7 +29,7 @@ docker ps
  * https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/
 
 ## sample
-```
+```bash
 kubectl run sample-node --image=nalbam/sample-node:latest --port=3000
 kubectl expose deployment sample-node --type=LoadBalancer
 
@@ -45,7 +45,7 @@ kubectl delete service sample-node
 ```
 
 ## helm
-```
+```bash
 curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz
 
 helm init
@@ -55,7 +55,7 @@ helm install --name nalbam stable/jenkins
  * https://github.com/kubernetes/helm
 
 ## kops
-```
+```bash
 export KOPS_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)
 curl -LO https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION}/kops-linux-amd64 && \
   chmod +x kops-linux-amd64 && sudo mv kops-linux-amd64 /usr/local/bin/kops
@@ -64,7 +64,7 @@ curl -LO https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION}/ko
  * https://kubernetes.io/docs/getting-started-guides/kops/
 
 ## skaffold
-```
+```bash
 curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \
   chmod +x skaffold && sudo mv skaffold /usr/local/bin/
 ```

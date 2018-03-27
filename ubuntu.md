@@ -1,5 +1,5 @@
 ## prepare
-```
+```bash
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install git curl wget zip awscli docker.io golang-go
@@ -9,7 +9,7 @@ sudo apt-get install git curl wget zip awscli docker.io golang-go
 * http://hochulshin.com/ubuntu-1604-hangul/
 
 ## KVM
-```
+```bash
 uname -m
 egrep -c '(vmx|svm)' /proc/cpuinfo
 egrep -c ' lm ' /proc/cpuinfo
@@ -42,7 +42,7 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-
  * https://github.com/kubernetes/minikube/blob/master/docs/drivers.md
 
 ## docker-machine
-```
+```bash
 export VERSION=$(curl -s https://api.github.com/repos/docker/machine/releases/latest | grep tag_name | cut -d '"' -f 4)
 curl -L https://github.com/docker/machine/releases/download/${VERSION}/docker-machine-`uname -s`-`uname -m` > /tmp/docker-machine
 sudo install /tmp/docker-machine /usr/local/bin/docker-machine
@@ -51,13 +51,13 @@ docker-machine ls
 ```
 
 ## spinnaker
-```
+```bash
 DOCKER_IP=`docker-machine ip spinnaker` docker-compose up -d
 ```
  * https://github.com/spinnaker/spinnaker/tree/master/experimental/docker-compose
 
 ### java
-```
+```bash
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt update
 sudo apt install oracle-java8-installer

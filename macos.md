@@ -15,7 +15,7 @@ OPTION + SHIFT + 볼륨 : 세밀하게 조절
 ```
 
 ### Homebrew - http://brew.sh/
-```
+```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install zsh wget telnet httpie
@@ -33,7 +33,7 @@ brew cask install rdm
 ```
 
 ### docker-machine
-```
+```bash
 brew install docker-machine-driver-xhyve
 
 or
@@ -46,7 +46,7 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-
 ```
 
 ### ₩ -> `
-```
+```bash
 vi /Users/nalbam/Library/KeyBindings/DefaultkeyBinding.dict
 ```
 ```
@@ -56,12 +56,12 @@ vi /Users/nalbam/Library/KeyBindings/DefaultkeyBinding.dict
 ```
 
 ### find mv
-```
+```bash
 find . -iname "*.mp3" -exec mv {} mp3 \;
 ```
 
 ### SD Card
-```
+```bash
 diskutil list
 
 diskutil unmountDisk /dev/disk2
@@ -70,11 +70,11 @@ diskutil unmountDisk /dev/disk3
 sudo dd bs=1m if=2017-11-29-raspbian-stretch.img of=/dev/disk2
 sudo dd bs=1m if=retropie-4.0.2-rpi2_rpi3.img of=/dev/disk3
 
-진행상황 : ctrl + t
+# 진행상황 : ctrl + t
 ```
 
 ### macOS Sierra USB
-```
+```bash
 sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia \
     --volume /Volumes/macOS\ Sierra \
     --applicationpath /Applications/Install\ macOS\ Sierra.app \

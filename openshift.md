@@ -1,14 +1,15 @@
 ### install
-```
+```bash
 sudo yum update -y
 sudo yum install -y docker
 
 sudo service docker start
 sudo chkconfig docker on
 
-wget https://github.com/openshift/origin/releases/download/v3.7.1/openshift-origin-server-v3.7.1-ab0f056-linux-64bit.tar.gz
-tar -xvzf openshift-origin-server-v3.7.1-ab0f056-linux-64bit.tar.gz
-sudo cp openshift-origin-server-v3.7.1-ab0f056-linux-64bit/oc /usr/local/bin/
+export URL=$(curl -s https://api.github.com/repos/openshift/origin/releases/latest | grep browser_download_url | grep linux | grep server | cut -d '"' -f 4)
+wget ${URL}
+tar -xvzf openshift-origin-server-*-linux-64bit.tar.gz
+sudo cp openshift-origin-server-*-linux-64bit/oc /usr/local/bin/
 
 sudo vi /etc/sysconfig/docker
 OPTIONS="--default-ulimit nofile=1024:4096 --insecure-registry 172.30.0.0/16"
@@ -25,7 +26,7 @@ sudo /usr/local/bin/oc cluster up --routing-suffix=13.124.112.3.nip.io --public-
 sudo /usr/local/bin/oc cluster down
 ```
 
-```
+```bash
 sudo yum update -y
 sudo yum install -y git wget docker
 
@@ -55,10 +56,11 @@ oc adm policy add-cluster-role-to-user cluster-admin $USERNAME
 ```
 
 ## minishift
-```
-wget https://github.com/minishift/minishift/releases/download/v1.14.0/minishift-1.14.0-linux-amd64.tgz
-tar zxvf minishift-1.14.0-linux-amd64.tgz
-sudo mv minishift-1.14.0-linux-amd64/minishift /usr/local/bin/
+```bash
+export URL=$(curl -s https://api.github.com/repos/minishift/minishift/releases/latest | grep browser_download_url | grep linux | cut -d '"' -f 4)
+wget ${URL}
+tar zxvf minishift-*-linux-amd64.tgz
+sudo mv minishift-*-linux-amd64/minishift /usr/local/bin/
 
 minishift config set skip-check-kvm-driver true
 

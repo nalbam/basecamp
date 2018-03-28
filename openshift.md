@@ -52,7 +52,6 @@ ansible-playbook -i inventory.ini openshift-ansible/playbooks/byo/config.yml
 
 htpasswd -b /etc/origin/master/htpasswd ${USERNAME} ${PASSWORD}
 oc adm policy add-cluster-role-to-user cluster-admin ${USERNAME}
-
 ```
 
 ## minishift
@@ -64,9 +63,11 @@ sudo mv minishift-*-linux-amd64/minishift /usr/local/bin/
 
 minishift config set cpus 4
 minishift config set memory 8192
+minishift config set metrics true
 minishift config set skip-check-kvm-driver true
 
 minishift start
+minishift console
 
 eval $(minishift oc-env)
 eval $(minishift docker-env)
@@ -74,7 +75,6 @@ eval $(minishift docker-env)
 oc login -u system:admin
 
 oc get all
-
 ```
  * https://docs.openshift.org/latest/minishift/getting-started/quickstart.html
  * https://github.com/minishift/minishift/issues/2121
@@ -87,9 +87,11 @@ oc import-image -n openshift openshift/redhat-openjdk-18:1.3 --from=registry.acc
 
 oc create -n openshift -f https://raw.githubusercontent.com/nalbam/openshift/master/openjdk18-basic-s2i.json
 
+oc create -f https://raw.githubusercontent.com/OpenShiftDemos/nexus/master/nexus3-template.yaml
+oc new-app nexus2
+
 oc delete template/openjdk8-basic-s2i
 ```
  * https://github.com/openshift/source-to-image
  * https://github.com/openshift/source-to-image/blob/master/examples/nginx-centos7/README.md
  * https://github.com/openshift-s2i
-

@@ -50,8 +50,8 @@ export IP="$(ip route get 8.8.8.8 | awk '{print $NF; exit}')"
 
 ansible-playbook -i inventory.ini openshift-ansible/playbooks/byo/config.yml
 
-htpasswd -b /etc/origin/master/htpasswd $USERNAME $PASSWORD
-oc adm policy add-cluster-role-to-user cluster-admin $USERNAME
+htpasswd -b /etc/origin/master/htpasswd ${USERNAME} ${PASSWORD}
+oc adm policy add-cluster-role-to-user cluster-admin ${USERNAME}
 
 ```
 
@@ -62,9 +62,35 @@ wget ${URL}
 tar zxvf minishift-*-linux-amd64.tgz
 sudo mv minishift-*-linux-amd64/minishift /usr/local/bin/
 
+minishift config set cpus 4
+minishift config set memory 8192
 minishift config set skip-check-kvm-driver true
 
 minishift start
+
+eval $(minishift oc-env)
+eval $(minishift docker-env)
+
+oc login -u system:admin
+
+oc get all
+
 ```
  * https://docs.openshift.org/latest/minishift/getting-started/quickstart.html
  * https://github.com/minishift/minishift/issues/2121
+
+## source-to-image
+```bash
+oc project openshift
+
+oc import-image -n openshift openshift/redhat-openjdk18-openshift:1.3 --from=registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift --confirm
+
+oc create -n openshift -f https://raw.githubusercontent.com/jboss-openshift/application-templates/master/openjdk/openjdk18-web-basic-s2i.json
+oc create -n openshift -f https://raw.githubusercontent.com/nalbam/openshift/master/openjdk18-basic-s2i.json
+
+oc delete template/openjdk8-basic-s2i
+```
+ * https://github.com/openshift/source-to-image
+ * https://github.com/openshift/source-to-image/blob/master/examples/nginx-centos7/README.md
+ * https://github.com/openshift-s2i
+

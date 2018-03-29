@@ -85,15 +85,36 @@ oc project openshift
 oc import-image -n openshift openshift/redhat-openjdk-18:1.3 --from=registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:latest --confirm
 oc create -n openshift -f https://raw.githubusercontent.com/nalbam/openshift/master/openjdk18-basic-s2i.json
 
-oc new-project ci
-oc policy add-role-to-user admin developer -n ci
-oc create -f https://raw.githubusercontent.com/OpenShiftDemos/nexus/master/nexus3-template.yaml
-oc new-app nexus3 -p NEXUS_VERSION=latest
-
-nexus.ci.svc:8081
-
 oc delete template/openjdk8-basic-s2i
 ```
  * https://github.com/openshift/source-to-image
  * https://github.com/openshift/source-to-image/blob/master/examples/nginx-centos7/README.md
  * https://github.com/openshift-s2i
+
+## ci/cd
+```bash
+oc new-project ci
+oc policy add-role-to-user admin developer -n ci
+
+oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/nexus/master/nexus3-template.yaml \
+           -p NEXUS_VERSION=latest \
+           -p MAX_MEMORY=2Gi
+
+GOGS_HOST="gogs-ci.$(oc get route nexus -o template --template='{{.spec.host}}' | sed "s/nexus-ci.//g")"
+oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/gogs-openshift-docker/master/openshift/gogs-template.yaml \
+           -p GOGS_VERSION=latest \
+           -p HOSTNAME=${GOGS_HOST} \
+           -p SKIP_TLS_VERIFY=true
+
+oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/sonarqube-openshift-docker/master/sonarqube-template.yaml \
+           -p SONARQUBE_VERSION=latest \
+           -p SONAR_MAX_MEMORY=4Gi
+
+echo $(curl --post302 http://${GOGS_HOST}/user/sign_up \
+  --form user_name=gogs \
+  --form password=gogs \
+  --form retype=gogs \
+  --form email=gogs@gogs.com)
+
+
+```

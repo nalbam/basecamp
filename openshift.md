@@ -56,8 +56,7 @@ oc adm policy add-cluster-role-to-user cluster-admin ${USERNAME}
 
 ## minishift
 ```bash
-export URL=$(curl -s https://api.github.com/repos/minishift/minishift/releases/latest | grep browser_download_url | grep linux | cut -d '"' -f 4)
-wget ${URL}
+wget $(curl -s https://api.github.com/repos/minishift/minishift/releases/latest | grep browser_download_url | grep linux | cut -d '"' -f 4)
 tar zxvf minishift-*-linux-amd64.tgz
 sudo mv minishift-*-linux-amd64/minishift /usr/local/bin/
 
@@ -70,7 +69,6 @@ minishift start
 minishift console
 
 eval $(minishift oc-env)
-
 eval $(minishift docker-env)
 
 oc login -u system:admin
@@ -87,8 +85,12 @@ oc project openshift
 oc import-image -n openshift openshift/redhat-openjdk-18:1.3 --from=registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:latest --confirm
 oc create -n openshift -f https://raw.githubusercontent.com/nalbam/openshift/master/openjdk18-basic-s2i.json
 
+oc new-project ci
+oc policy add-role-to-user admin developer -n ci
 oc create -f https://raw.githubusercontent.com/OpenShiftDemos/nexus/master/nexus3-template.yaml
-oc new-app nexus2
+oc new-app nexus3 -p NEXUS_VERSION=latest
+
+nexus.ci.svc:8081
 
 oc delete template/openjdk8-basic-s2i
 ```

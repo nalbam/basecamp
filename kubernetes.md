@@ -12,8 +12,8 @@ curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/${KUB
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && \
   chmod +x minikube && sudo mv minikube /usr/local/bin/
 
-minikube config set cpus 4
-minikube config set memory 8192
+minikube config set cpus 2
+minikube config set memory 8GB
 minikube config set vm-driver kvm2
 
 minikube start --vm-driver=kvm2  # ubuntu

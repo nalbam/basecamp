@@ -15,19 +15,22 @@ popd
 sudo vi /etc/sysconfig/docker
 INSECURE_REGISTRY='--insecure-registry 172.30.0.0/16'
 
-sudo service docker restart
+sudo systemctl daemon-reload
+sudo systemctl restart docker
 
-sudo mount --make-shared /
-sudo sed -i.bak -e \
- 's:^\(\ \+\)"$unshare" -m -- nohup:\1"$unshare" -m --propagation shared -- nohup:' \
- /etc/init.d/docker
+sudo docker network inspect -f "{{range .IPAM.Config }}{{ .Subnet }}{{end}}" bridge
 
-oc cluster up --routing-suffix=apps.nalbam.com --public-hostname=console.nalbam.com
-oc cluster up --routing-suffix=13.124.112.3.nip.io --public-hostname=13.124.112.3.nip.io
+#sudo mount --make-shared /
+#sudo sed -i.bak -e \
+# 's:^\(\ \+\)"$unshare" -m -- nohup:\1"$unshare" -m --propagation shared -- nohup:' \
+# /etc/init.d/docker
+
+oc cluster up --public-hostname=console.nalbam.com --routing-suffix=apps.nalbam.com
 
 oc cluster down
 ```
- * https://www.server-world.info/en/note?os=CentOS_7&p=openshift
+ * https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md
+ * https://docs.openshift.org/latest/getting_started/administrators.html
 
 ## install with ansible
 ```bash
@@ -45,18 +48,19 @@ pushd openshift-ansible
 git checkout release-3.7
 popd
 
-export DOMAIN=${DOMAIN:="$(curl ipinfo.io/ip).nip.io"}
+export IP="$(ip route get 8.8.8.8 | awk '{print $NF; exit}')"
+
+export DOMAIN=${DOMAIN:="${IP}.nip.io"}
 export USERNAME=${USERNAME:="$(whoami)"}
 export PASSWORD=${PASSWORD:=password}
 export VERSION=${VERSION:="v3.7.1"}
-
-export IP="$(ip route get 8.8.8.8 | awk '{print $NF; exit}')"
 
 ansible-playbook -i inventory.ini openshift-ansible/playbooks/byo/config.yml
 
 htpasswd -b /etc/origin/master/htpasswd ${USERNAME} ${PASSWORD}
 oc adm policy add-cluster-role-to-user cluster-admin ${USERNAME}
 ```
+ * https://docs.openshift.org/latest/install_config/install/advanced_install.html
 
 ## minishift
 ```bash

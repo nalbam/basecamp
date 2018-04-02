@@ -106,17 +106,17 @@ oc new-project ci
 oc policy add-role-to-user admin developer -n ci
 
 oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/nexus/master/nexus3-template.yaml \
-           -p NEXUS_VERSION=latest \
+           -p NEXUS_VERSION=3.9.0 \
            -p MAX_MEMORY=2Gi
 
 GOGS_HOST="gogs-ci.$(oc get route nexus -o template --template='{{.spec.host}}' | sed "s/nexus-ci.//g")"
 oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/gogs-openshift-docker/master/openshift/gogs-template.yaml \
-           -p GOGS_VERSION=latest \
+           -p GOGS_VERSION=0.11.43 \
            -p HOSTNAME=${GOGS_HOST} \
            -p SKIP_TLS_VERIFY=true
 
 oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/sonarqube-openshift-docker/master/sonarqube-template.yaml \
-           -p SONARQUBE_VERSION=latest \
+           -p SONARQUBE_VERSION=6.7.2 \
            -p SONAR_MAX_MEMORY=4Gi
 
 echo $(curl --post302 http://${GOGS_HOST}/user/sign_up \

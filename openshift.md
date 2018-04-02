@@ -20,7 +20,7 @@ sudo sed -i.bak -e \
  's:^\(\ \+\)"$unshare" -m -- nohup:\1"$unshare" -m --propagation shared -- nohup:' \
  /etc/init.d/docker
 
-oc cluster up --routing-suffix=console.nalbam.com --public-hostname=console.nalbam.com
+oc cluster up --routing-suffix=apps.nalbam.com --public-hostname=console.nalbam.com
 oc cluster up --routing-suffix=13.124.112.3.nip.io --public-hostname=13.124.112.3.nip.io
 
 oc cluster down

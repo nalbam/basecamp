@@ -125,5 +125,4 @@ echo $(curl --post302 http://${GOGS_HOST}/user/sign_up \
   --form retype=gogs \
   --form email=gogs@gogs.com)
 
-
 ```

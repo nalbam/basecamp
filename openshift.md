@@ -1,10 +1,5 @@
 ## install
 ```bash
-sudo atomic-openshift-installer install
-```
-* https://docs.openshift.com/container-platform/3.9/install_config/install/quick_install.html
-
-```bash
 sudo yum update -y
 sudo yum install -y docker
 
@@ -13,7 +8,9 @@ sudo chkconfig docker on
 
 wget $(curl -s https://api.github.com/repos/openshift/origin/releases/latest | grep browser_download_url | grep linux | grep server | cut -d '"' -f 4)
 tar -xvzf openshift-origin-server-*-linux-64bit.tar.gz
-sudo cp openshift-origin-server-*-linux-64bit/oc /usr/local/bin/
+pushd openshift-origin-server-*-linux-64bit
+sudo cp -rf hyperkube kubectl oadm oc openshift /usr/local/bin/
+popd
 
 sudo vi /etc/sysconfig/docker
 INSECURE_REGISTRY='--insecure-registry 172.30.0.0/16'

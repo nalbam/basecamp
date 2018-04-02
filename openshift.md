@@ -6,13 +6,12 @@ sudo yum install -y docker
 sudo service docker start
 sudo chkconfig docker on
 
-export URL=$(curl -s https://api.github.com/repos/openshift/origin/releases/latest | grep browser_download_url | grep linux | grep server | cut -d '"' -f 4)
-wget ${URL}
+wget $(curl -s https://api.github.com/repos/openshift/origin/releases/latest | grep browser_download_url | grep linux | grep server | cut -d '"' -f 4)
 tar -xvzf openshift-origin-server-*-linux-64bit.tar.gz
 sudo cp openshift-origin-server-*-linux-64bit/oc /usr/local/bin/
 
 sudo vi /etc/sysconfig/docker
-OPTIONS="--default-ulimit nofile=1024:4096 --insecure-registry 172.30.0.0/16"
+OPTIONS="--insecure-registry 172.30.0.0/16"
 
 sudo service docker restart
 
@@ -21,11 +20,13 @@ sudo sed -i.bak -e \
  's:^\(\ \+\)"$unshare" -m -- nohup:\1"$unshare" -m --propagation shared -- nohup:' \
  /etc/init.d/docker
 
-sudo /usr/local/bin/oc cluster up --routing-suffix=13.124.112.3.nip.io --public-hostname=13.124.112.3.nip.io
+oc cluster up --routing-suffix=13.124.112.3.nip.io --public-hostname=13.124.112.3.nip.io
+oc cluster up --routing-suffix=13.124.112.3.nip.io --public-hostname=13.124.112.3.nip.io
 
-sudo /usr/local/bin/oc cluster down
+oc cluster down
 ```
 
+## install with ansible
 ```bash
 sudo yum update -y
 sudo yum install -y git wget docker

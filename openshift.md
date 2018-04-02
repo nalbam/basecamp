@@ -8,10 +8,12 @@ sudo chkconfig docker on
 
 wget $(curl -s https://api.github.com/repos/openshift/origin/releases/latest | grep browser_download_url | grep linux | grep server | cut -d '"' -f 4)
 tar -xvzf openshift-origin-server-*-linux-64bit.tar.gz
-sudo cp openshift-origin-server-*-linux-64bit/oc /usr/local/bin/
+pushd openshift-origin-server-*-linux-64bit
+sudo cp -rf hyperkube kubectl oadm oc openshift /usr/local/bin/
+popd
 
 sudo vi /etc/sysconfig/docker
-OPTIONS="--insecure-registry 172.30.0.0/16"
+INSECURE_REGISTRY='--insecure-registry 172.30.0.0/16'
 
 sudo service docker restart
 
@@ -20,11 +22,12 @@ sudo sed -i.bak -e \
  's:^\(\ \+\)"$unshare" -m -- nohup:\1"$unshare" -m --propagation shared -- nohup:' \
  /etc/init.d/docker
 
-oc cluster up --routing-suffix=13.124.112.3.nip.io --public-hostname=13.124.112.3.nip.io
+oc cluster up --routing-suffix=apps.nalbam.com --public-hostname=console.nalbam.com
 oc cluster up --routing-suffix=13.124.112.3.nip.io --public-hostname=13.124.112.3.nip.io
 
 oc cluster down
 ```
+ * https://www.server-world.info/en/note?os=CentOS_7&p=openshift
 
 ## install with ansible
 ```bash
@@ -100,23 +103,28 @@ oc delete template/openjdk8-basic-s2i
  * https://github.com/openshift/source-to-image/blob/master/examples/nginx-centos7/README.md
  * https://github.com/openshift-s2i
 
+## import image
+```
+oc import-image -n openshift openshift/sample-web:latest --from=docker.io/nalbam/sample-web:latest --confirm
+```
+
 ## ci/cd
 ```bash
 oc new-project ci
 oc policy add-role-to-user admin developer -n ci
 
 oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/nexus/master/nexus3-template.yaml \
-           -p NEXUS_VERSION=latest \
+           -p NEXUS_VERSION=3.9.0 \
            -p MAX_MEMORY=2Gi
 
 GOGS_HOST="gogs-ci.$(oc get route nexus -o template --template='{{.spec.host}}' | sed "s/nexus-ci.//g")"
 oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/gogs-openshift-docker/master/openshift/gogs-template.yaml \
-           -p GOGS_VERSION=latest \
+           -p GOGS_VERSION=0.11.43 \
            -p HOSTNAME=${GOGS_HOST} \
            -p SKIP_TLS_VERIFY=true
 
 oc new-app -f https://raw.githubusercontent.com/OpenShiftDemos/sonarqube-openshift-docker/master/sonarqube-template.yaml \
-           -p SONARQUBE_VERSION=latest \
+           -p SONARQUBE_VERSION=6.7.2 \
            -p SONAR_MAX_MEMORY=4Gi
 
 echo $(curl --post302 http://${GOGS_HOST}/user/sign_up \

@@ -10,9 +10,9 @@ iptables -A OUTPUT -m state --state INVALID -j DROP
 
 iptables -A INPUT -p tcp -m state --state ESTABLISHED,RELATED -j ACCEPT
 
-iptables -A INPUT -p tcp -s 1.214.48.241 --dpost 8443 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A INPUT -p tcp -s 1.214.48.241 --dport 8443 -m state --state NEW,ESTABLISHED -j ACCEPT
 
-iptables -A INPUT -p tcp --dpost 22    -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A INPUT -p tcp --dport 22    -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A INPUT -p tcp --dport 80    -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A INPUT -p tcp --dport 443   -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A INPUT -p tcp --dport 3000  -m state --state NEW,ESTABLISHED -j ACCEPT

@@ -25,6 +25,7 @@ oc cluster up --routing-suffix=13.124.112.3.nip.io --public-hostname=13.124.112.
 
 oc cluster down
 ```
+ * https://www.server-world.info/en/note?os=CentOS_7&p=openshift
 
 ## install with ansible
 ```bash

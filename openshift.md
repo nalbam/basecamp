@@ -1,5 +1,10 @@
 ## install
 ```bash
+sudo atomic-openshift-installer install
+```
+* https://docs.openshift.com/container-platform/3.9/install_config/install/quick_install.html
+
+```bash
 sudo yum update -y
 sudo yum install -y docker
 

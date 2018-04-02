@@ -18,6 +18,7 @@ iptables -A INPUT -p tcp --dport 3000  -m state --state NEW,ESTABLISHED -j ACCEP
 iptables -A INPUT -p tcp --dport 4949  -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A INPUT -p tcp --dport 6379  -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A INPUT -p tcp --dport 8080  -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A INPUT -p tcp --dport 8443  -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A INPUT -p tcp --dport 9200  -m state --state NEW,ESTABLISHED -j ACCEPT
 
 iptables -A INPUT -p tcp -j DROP

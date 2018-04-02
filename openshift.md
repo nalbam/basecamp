@@ -16,7 +16,7 @@ tar -xvzf openshift-origin-server-*-linux-64bit.tar.gz
 sudo cp openshift-origin-server-*-linux-64bit/oc /usr/local/bin/
 
 sudo vi /etc/sysconfig/docker
-OPTIONS="--insecure-registry 172.30.0.0/16"
+INSECURE_REGISTRY='--insecure-registry 172.30.0.0/16'
 
 sudo service docker restart
 

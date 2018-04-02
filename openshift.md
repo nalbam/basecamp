@@ -100,6 +100,11 @@ oc delete template/openjdk8-basic-s2i
  * https://github.com/openshift/source-to-image/blob/master/examples/nginx-centos7/README.md
  * https://github.com/openshift-s2i
 
+## import image
+```
+oc import-image -n openshift openshift/sample-web:latest --from=docker.io/nalbam/sample-web:latest --confirm
+```
+
 ## ci/cd
 ```bash
 oc new-project ci

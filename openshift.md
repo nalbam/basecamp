@@ -20,11 +20,6 @@ sudo systemctl restart docker
 
 sudo docker network inspect -f "{{range .IPAM.Config }}{{ .Subnet }}{{end}}" bridge
 
-#sudo mount --make-shared /
-#sudo sed -i.bak -e \
-# 's:^\(\ \+\)"$unshare" -m -- nohup:\1"$unshare" -m --propagation shared -- nohup:' \
-# /etc/init.d/docker
-
 oc cluster up --public-hostname=console.nalbam.com --routing-suffix=apps.nalbam.com
 
 oc cluster down
@@ -53,13 +48,14 @@ export IP="$(ip route get 8.8.8.8 | awk '{print $NF; exit}')"
 export DOMAIN=${DOMAIN:="${IP}.nip.io"}
 export USERNAME=${USERNAME:="$(whoami)"}
 export PASSWORD=${PASSWORD:=password}
-export VERSION=${VERSION:="v3.7.1"}
+export VERSION=${VERSION:="v3.7.2"}
 
 ansible-playbook -i inventory.ini openshift-ansible/playbooks/byo/config.yml
 
 htpasswd -b /etc/origin/master/htpasswd ${USERNAME} ${PASSWORD}
 oc adm policy add-cluster-role-to-user cluster-admin ${USERNAME}
 ```
+ * https://github.com/openshift/openshift-ansible
  * https://docs.openshift.org/latest/install_config/install/advanced_install.html
 
 ## minishift

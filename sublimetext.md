@@ -31,7 +31,6 @@
     "trim_trailing_white_space_on_save": true,
     "auto_complete_commit_on_tab": true,
     "translate_tabs_to_spaces": true,
-    //"draw_white_space": "all",
     "tab_size": 4,
 
     "show_encoding": true,

@@ -6,17 +6,17 @@
 
 ### Package
 ```
-  - BracketHighighter
-  - SidebarEnhancements
-  - SublimeCodeIntel
+- BracketHighighter
+- SidebarEnhancements
+- SublimeCodeIntel
 
-  - GIT
-  - SFTP
-  - Emmet http://docs.emmet.io/
+- GIT
+- SFTP
+- Emmet http://docs.emmet.io/
 ```
 
 ### Config
-```
+```json
 {
     "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
     "font_size": 12,

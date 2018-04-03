@@ -38,9 +38,8 @@ nalbam  ALL=(ALL)   NOPASSWD: ALL
 ```
 # vi /etc/ssh/sshd_config
 
-#PermitRootLogin yes
--->
-PermitRootLogin no
+PermitRootLogin without-password
+PasswordAuthentication yes
 
 # service sshd restart
 ```

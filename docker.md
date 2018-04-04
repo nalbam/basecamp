@@ -1,14 +1,15 @@
-### install 
+## install 
 ```
 sudo yum install -y docker
 
 sudo service docker start
 sudo chkconfig docker on
 
+sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-### docker 
+## docker 
 ```
 sudo docker pull mysql
 sudo docker pull redis

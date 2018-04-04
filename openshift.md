@@ -1,7 +1,7 @@
 ## install
 ```bash
 sudo yum update -y
-sudo yum install -y docker
+sudo yum install -y docker python-rhsm-certificates
 
 sudo service docker start
 sudo chkconfig docker on
@@ -26,6 +26,17 @@ oc cluster down
 ```
  * https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md
  * https://docs.openshift.org/latest/getting_started/administrators.html
+
+## install with atomic
+```
+yum update -y
+
+atomic-openshift-installer install
+
+atomic-openshift-installer -u install
+```
+ * https://docs.openshift.com/container-platform/3.9/install_config/install/quick_install.html
+ * https://docs.openshift.com/container-platform/3.9/install_config/install/stand_alone_registry.html
 
 ## install with ansible
 ```bash

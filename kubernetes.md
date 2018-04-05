@@ -19,17 +19,29 @@ net.bridge.bridge-nf-call-iptables = 1
 EOF
 sysctl --system
 
-kubeadm init --ignore-preflight-errors swap
+docker info | grep -i cgroup
+
+vi /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=systemd --runtime-cgroups=/systemd/system.slice --kubelet-cgroups=/systemd/system.slice"
+
+kubeadm init
 
 kubeadm reset
 
 systemctl status kubelet
 
-#To start using your cluster, you need to run the following as a regular user:
+kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
+```
+```
+# To start using your cluster, you need to run the following as a regular user:
 
 mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo cp -rf /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+sudo systemctl status kubelet -l
+
+watch kubectl get node,pod,svc --all-namespaces
 ```
  * https://kubernetes.io/docs/tasks/tools/install-kubectl/
  * https://kubernetes.io/docs/setup/independent/install-kubeadm/
@@ -38,7 +50,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
  * https://amasucci.com/post/2017/10/22/how-to-install-kubernetes-1.8.1-on-centos-7.3/
 
 ## minikube
-```bash
+```
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && \
   chmod +x minikube && sudo mv minikube /usr/local/bin/
 
@@ -59,7 +71,7 @@ docker ps
  * https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/
 
 ## sample
-```bash
+```
 kubectl run sample-node --image=nalbam/sample-node:latest --port=3000
 kubectl expose deployment sample-node --type=LoadBalancer
 
@@ -75,7 +87,7 @@ kubectl delete service sample-node
 ```
 
 ## helm
-```bash
+```
 curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz
 
 helm init
@@ -85,7 +97,7 @@ helm install --name nalbam stable/jenkins
  * https://github.com/kubernetes/helm
 
 ## kops
-```bash
+```
 export KOPS_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)
 curl -LO https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION}/kops-linux-amd64 && \
   chmod +x kops-linux-amd64 && sudo mv kops-linux-amd64 /usr/local/bin/kops

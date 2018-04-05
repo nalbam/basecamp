@@ -2,11 +2,13 @@
 ```
 sudo yum install -y docker
 
-sudo service docker start
-sudo chkconfig docker on
+sudo systemctl enable docker
+sudo systemctl start docker
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+sudo usermod -aG wheel $USER
 ```
 
 ## docker 

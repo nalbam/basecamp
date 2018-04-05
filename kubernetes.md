@@ -46,6 +46,10 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 sudo systemctl status kubelet -l
 
 watch kubectl get node,pod,svc --all-namespaces
+
+TUNL_IP=$(ifconfig tunl0 | grep inet | awk -F' ' '{print $2}')
+IP_LIST=$(kubectl get svc --all-namespaces | grep LoadBalancer | awk -F' ' '{print $6}')
+
 ```
  * https://kubernetes.io/docs/tasks/tools/install-kubectl/
  * https://kubernetes.io/docs/setup/independent/install-kubeadm/

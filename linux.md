@@ -45,16 +45,14 @@ PasswordAuthentication yes
 ```
 
 ### hostname 변경
-
-  * centos 6
+ * centos 6
 ```
 # cat /etc/sysconfig/network | grep HOSTNAME
 # vi /etc/sysconfig/network
 
 HOSTNAME=s1
 ```
-
-  * centos 7
+ * centos 7
 ```
 # hostnamectl set-hostname s1
 # hostname
@@ -72,6 +70,7 @@ cd /etc/systemd/system/
 # nmcli d
 # nmtui
 # ip addr
+# netstat -tnlp
 ```
 
 ### Desktop

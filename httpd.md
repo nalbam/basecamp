@@ -1,16 +1,12 @@
-### 설치
+### install
 ```
 sudo yum groupinstall -y "Web Server"
 ```
 
-### 시작
+### start
 ```
-sudo service httpd start
-```
-
-### 자동
-```
-sudo chkconfig httpd on
+sudo systemctl enable httpd
+sudo systemctl start httpd
 ```
 
 ### 경로
@@ -18,6 +14,3 @@ sudo chkconfig httpd on
 /usr/lib64/httpd
 /etc/httpd
 ```
-
-  * https://www.softwarecollections.org/en/scls/rhscl/httpd24/
-  

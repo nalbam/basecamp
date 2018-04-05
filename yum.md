@@ -1,7 +1,7 @@
 ## CentOS
 ```
-yum -y groupinstall "Development Tools"
-yum -y groupinstall "Server Platform Development"
+yum -y install "@Development Tools"
+yum -y install "@Server Platform Development"
 ```
 
 ## CentOS/RHEL 7

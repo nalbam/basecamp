@@ -60,6 +60,13 @@ HOSTNAME=s1
 # hostname
 ```
 
+### startup
+```
+cd /usr/local/
+cd /etc/rc.d/init.d/
+cd /etc/systemd/system/
+```
+
 ### Network
 ```
 # nmcli d

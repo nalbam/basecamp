@@ -2,14 +2,6 @@
  * https://kubernetes.io/docs/tasks/tools/install-kubectl/
  * https://kubernetes.io/docs/setup/independent/install-kubeadm/
 
-## kops
- * https://github.com/kubernetes/kops
- * https://kubernetes.io/docs/getting-started-guides/kops/
-
-## coreos tectonic
- * https://coreos.com/tectonic/docs/latest/install/aws/index.html
- * https://coreos.com/tectonic/docs/latest/install/aws/uninstall.html
-
 ## minikube
 ```bash
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && \
@@ -66,9 +58,6 @@ curl -LO https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION}/ko
  * https://github.com/kubernetes/kops
  * https://kubernetes.io/docs/getting-started-guides/kops/
 
-## skaffold
-```bash
-curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \
-  chmod +x skaffold && sudo mv skaffold /usr/local/bin/
-```
- * https://github.com/GoogleCloudPlatform/skaffold
+## coreos tectonic
+ * https://coreos.com/tectonic/docs/latest/install/aws/index.html
+ * https://coreos.com/tectonic/docs/latest/install/aws/uninstall.html

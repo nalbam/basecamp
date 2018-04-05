@@ -9,9 +9,9 @@ sudo yum install -y augeas-libs libffi-devel python27-tools system-rpm-config
 
 ### Let's Encrypt
 ```
-~/certbot/certbot-auto --email me@nalbam.com -d demo.nalbam.com
+sudo ~/certbot/certbot-auto --email me@nalbam.com -d demo.nalbam.com
 
-~/certbot/certbot-auto certonly --standalone --email me@nalbam.com -d demo.nalbam.com
+sudo ~/certbot/certbot-auto certonly --standalone --email me@nalbam.com -d demo.nalbam.com
 ```
 
 ### Amazon Linux

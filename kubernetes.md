@@ -33,7 +33,7 @@ systemctl status kubelet
 # Installing a pod network
 kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/installation/hosted/kubeadm/1.7/calico.yaml
 
-# Master Isolation - master 에도 배포 되도록
+# Master Isolation
 kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
 ```

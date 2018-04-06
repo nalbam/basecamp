@@ -7,8 +7,6 @@ sudo systemctl start docker
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
-
-sudo usermod -aG wheel $USER
 ```
 
 ## docker 

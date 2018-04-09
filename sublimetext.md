@@ -1,10 +1,10 @@
-### Download
+## Download
  * http://www.sublimetext.com/3 
 
-### Package Control
+## Package Control
  * https://packagecontrol.io/installation
 
-### Package
+## Package
 ```
 - BracketHighighter
 - SidebarEnhancements
@@ -15,7 +15,7 @@
 - Emmet http://docs.emmet.io/
 ```
 
-### Config
+## Config
 ```json
 {
     "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",

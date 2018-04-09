@@ -1,13 +1,13 @@
 
  * https://www.elastic.co/kr/products
 
-### download
+## download
 ```
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.0.0.tar.gz
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.1.zip
 ```
 
-### env
+## env
 ```
 sudo vi /etc/security/limits.conf
 
@@ -23,7 +23,7 @@ echo 1048575 > /proc/sys/vm/max_map_count
 sudo reboot 0
 ```
 
-### config
+## config
 ```
 # network
 network.host: 0.0.0.0
@@ -37,12 +37,12 @@ http.cors.allow-credentials: true
 http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization
 ```
 
-### start
+## start
 ```
 bin/elasticsearch -d
 ```
 
-### plugin
+## plugin
 ```
 git clone git://github.com/mobz/elasticsearch-head.git
 cd elasticsearch-head
@@ -51,14 +51,14 @@ grunt server
 open http://localhost:9100/
 ```
 
-### search
+## search
 ```
 http://localhost:9200/_search?q=name:변강쇠
 http://localhost:9200/test/_search?q=name:변강쇠 AND birth:1980*&sort=reg_time:desc&from=0&size=10
 http://localhost:9200/test/_search?source={"query":{"match":{"name":"변강쇠"}}}
 ```
 
-### mapping
+## mapping
 ```
 curl -XPUT http://localhost:9200/test -d '
 {
@@ -73,7 +73,7 @@ curl -XPUT http://localhost:9200/test -d '
 '
 ```
 
-### geo search
+## geo search
 ```
 curl -XGET 'http://localhost:9200/test/_search?pretty' -d '
 {

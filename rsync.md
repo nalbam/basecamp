@@ -1,4 +1,4 @@
-### 설치
+## 설치
 ```
 # yum -y install xinetd rsync
 ```
@@ -23,18 +23,18 @@ service rsync
 }
 ```
 
-### 시작 ###
+## 시작 ##
 ```
 # chkconfig xinetd on
 # service xinetd restart
 ```
 
-### 확인 ###
+## 확인 ##
 ```
 port : 873
 ```
 
-### 서버 설정 ###
+## 서버 설정 ##
 ```
 # vi /etc/rsyncd.conf
 ```
@@ -76,7 +76,7 @@ max connection : 최대 몇개의 커넥션을 연결할 수 있는지 설정
 timeout : 타임아웃 시간 설정
 ```
 
-### 클라이언트
+## 클라이언트
 ```
 rsync -av s3:/data/shell/ /backup/shell/
 rsync -av --delete --exclude=*.txt --bwlimit=1024 s3:/data/webapp/spickr/ /backup/webapp/spickr/

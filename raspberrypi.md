@@ -1,10 +1,10 @@
-### account
+## account
 ```
 pi
 respberry
 ```
 
-### ssh enable
+## ssh enable
 ```
 sudo raspi-config
 
@@ -12,20 +12,20 @@ sudo raspi-config
 - SSH enable
 ```
 
-### keyboard
+## keyboard
 ```
 sudo vi /etc/default/keyboard
 
 XKBLAYOUT="us"
 ```
 
-### usb / module
+## usb / module
 ```
 lsusb
 lsmod
 ```
 
-### network
+## network
 ```
 sudo iwconfig
 sudo iwlist wlan0 scan
@@ -39,7 +39,7 @@ network={
 }
 ```
 
-### zero otg
+## zero otg
  * https://gist.github.com/gbaman/50b6cca61dd1c3f88f41
  * https://gist.github.com/gbaman/975e2db164b3ca2b51ae11e45e8fd40a
 ```
@@ -49,7 +49,7 @@ echo "g_ether" | sudo tee -a /etc/modules
 echo "g_hid" | sudo tee -a /etc/modules
 ```
 
-### update
+## update
 ```
 sudo apt-get -y update
 sudo apt-get -y upgrade
@@ -65,12 +65,12 @@ sudo apt-get -y install python-serial
 sudo apt-get -y install python-bluez
 ```
 
-### nalbam-rpi
+## nalbam-rpi
 ```
 git clone https://github.com/nalbam/nalbam-rpi.git
 ```
 
-### 5inch LCD
+## 5inch LCD
 ```
 sudo vi /boot/config.txt
 ```
@@ -88,7 +88,7 @@ hdmi_drive=1
 hdmi_ignore_edid_audio=1
 ```
 
-### image
+## image
 ```
 sudo apt-get -y install fbi
 ```
@@ -101,7 +101,7 @@ fbi image.jpg
  -d /dev/fb0 : 화면 지정
 ```
 
-### usb-audio
+## usb-audio
 ```
 sudoi vi /etc/modprobe.d/alsa-base.conf
 ```
@@ -114,7 +114,7 @@ options snd_bcm2835 index=1
 options snd slots=snd-usb-audio,snd-bcm2835
 ```
 
-### sound
+## sound
 ```
 alsamixer
 
@@ -126,7 +126,7 @@ arecord -l
 arecord -D plughw:0,0 hi.wav
 ```
 
-### espeak
+## espeak
 ```
 sudo apt-get -y install espeak
 
@@ -134,14 +134,14 @@ espeak "hi, pi"
 espeak "hi, pi" -w hi.wav
 ```
 
-### mp3
+## mp3
 ```
 sudo apt-get -y install mpg321
 
 mpg321 -o alsa -a plughw:0,0 /usr/share/scratch/Media/Sounds/Vocals/Sing-me-a-song.mp3
 ```
 
-### video
+## video
 ```
 omxplayer /opt/vc/src/hello_pi/hello_video/test.h264
  -b : blank
@@ -150,12 +150,12 @@ omxplayer /opt/vc/src/hello_pi/hello_video/test.h264
  not support usb audio
 ```
 
-### bluetooth
+## bluetooth
 ```
 sudo hcitool scan
 ```
 
-### gpio
+## gpio
 ```
 gpio readall
 gpio -g read 18
@@ -164,7 +164,7 @@ gpio -g read 18
 gcc motor.c -o motor -lwiringPi
 ```
 
-### apm
+## apm
 ```
 sudo apt-get -y install apache2 php5 mysql-server mysql-client php5-mysql phpmyadmin
 
@@ -173,7 +173,7 @@ sudo service apache2 restart
 cd /etc/apache2/
 ```
 
-### node.js
+## node.js
 ```
 wget https://nodejs.org/dist/v4.4.1/node-v4.4.1-linux-armv7l.tar.gz
 tar -xvf node-v4.4.1-linux-armv7l.tar.gz
@@ -183,7 +183,7 @@ cd node-v4.4.1-linux-armv7l
 sudo cp -R * /usr/local/
 ```
 
-### kiosk
+## kiosk
 ```
 sudo apt-get -y install x11-xserver-utils matchbox unclutter
 ```
@@ -208,7 +208,7 @@ sudo vi ~/.config/lxsession/LXDE-pi/autostart
 @/home/pi/kiosk.sh
 ```
 
-### screensaver
+## screensaver
 ```
 sudo vi /etc/lightdm/lightdm.conf
 
@@ -223,7 +223,7 @@ xset -dpms         # disable DPMS (Energy Star) features.
 xset s noblank     # don’t blank the video device
 ```
 
-### LCD 3.5
+## LCD 3.5
  * http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
 ```
 cd LCD-show/

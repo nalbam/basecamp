@@ -1,4 +1,4 @@
-### download
+## download
 ```
 https://github.com/qtumproject/qtum/releases
 
@@ -9,7 +9,7 @@ tar zxvf qtum-0.14.13-arm-linux-gnueabihf.tar.gz
 ln -s qtum-0.14.13 qtum-wallet
 ```
 
-### service
+## service
 ```
 sudo vi /etc/systemd/system/qtumd.service
 ```
@@ -33,7 +33,7 @@ KillMode=mixed
 WantedBy=multi-user.target
 ```
 
-### execute
+## execute
 ```
 ./qtumd &
 
@@ -46,7 +46,7 @@ sudo systemctl stop qtumd.service
 pgrep -a qtumd
 ```
 
-### cli
+## cli
 ```
 ~/qtum-wallet/bin/qtum-cli help
 ~/qtum-wallet/bin/qtum-cli version
@@ -55,7 +55,7 @@ pgrep -a qtumd
 ~/qtum-wallet/bin/qtum-cli getstakinginfo
 ```
 
-### wallet encrypt
+## wallet encrypt
 ```
 ~/qtum-wallet/bin/qtum-cli -stdin encryptwallet
 ```
@@ -64,19 +64,19 @@ red dog blue cat
 <CTRL-D>
 ```
 
-### wallet backup
+## wallet backup
 ```
 $ cp ~/.qtum/wallet.dat ./nalbam-qtum-backup.dat
 ```
 
-### wallet reload
+## wallet reload
 ```
 sudo systemctl stop qtumd.service
 rm -f ~/.qtum/.lock ~/.qtum/qtumd.pid ~/.qtum/.cookie
 sudo systemctl start qtumd.service
 ```
 
-### wallet unlock
+## wallet unlock
 ```
 ~/qtum-wallet/bin/qtum-cli -stdin walletpassphrase
 ```
@@ -87,12 +87,12 @@ true
 <CTRL-D>
 ```
 
-### wallet lock
+## wallet lock
 ```
 ~/qtum-wallet/bin/qtum-cli walletlock
 ```
 
-### wallet address
+## wallet address
 ```
 ~/qtum-wallet/bin/qtum-cli listaccounts
 

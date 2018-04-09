@@ -1,4 +1,4 @@
-### 런레벨
+## 런레벨
 ```
   * 런레벨
     * 0 - halt
@@ -16,7 +16,7 @@
     * 20 : halt 시  start, stop 순서
 ```
 
-### shell
+## shell
 ```
 # vi /etc/rc.d/init.d/myapp
 ```

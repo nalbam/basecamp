@@ -1,4 +1,4 @@
-### bower
+## bower
 ```
 npm update -g
 npm update

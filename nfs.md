@@ -1,9 +1,9 @@
-### 설치 
+## 설치 
 ```
 # yum -y install rpcbind nfs-utils
 ```
 
-### 설정 
+## 설정 
 ```
 # vi /etc/exports
 ```
@@ -12,19 +12,19 @@
 /data/userfile *(rw,sync,no_root_squash,no_all_squash)
 ```
 
-### 시작 
+## 시작 
 ```
 # service nfs restart
 # service nfslock restart
 # service rpcbind restart
 ```
 
-### 확인 
+## 확인 
 ```
 # rpcinfo -p
 ```
 
-### 포트 
+## 포트 
 ```
 # vi /etc/sysconfig/nfs
 
@@ -36,7 +36,7 @@ STATD_PORT=662
 STATD_OUTGOING_PORT=2020
 ```
 
-### 포트열기 
+## 포트열기 
 ```
 # vi /etc/sysconfig/iptables
 ```
@@ -59,19 +59,19 @@ iptables -A INPUT -m state --state NEW -p udp --dport 875 -j ACCEPT
 # service iptables restart
 ```
 
-### 재시작 
+## 재시작 
 ```
 # service nfs restart
 # service nfslock restart
 # service rpcbind restart
 ```
 
-### 마운트 
+## 마운트 
 ```
 # mount -t nfs 114.207.113.217:/data/userfile  /data/userfile  -o nolock
 ```
 
-### 확인 
+## 확인 
 ```
 # df -h
 ```
@@ -84,14 +84,14 @@ tmpfs                 3.8G     0  3.8G   0% /dev/shm
                       902G  176G  680G  21% /data/nfs/spickr/static
 ```
 
-### 부팅시 시작 
+## 부팅시 시작 
 ```
 # chkconfig nfs on
 # chkconfig nfslock on
 # chkconfig rpcbind on
 ```
 
-### 부팅시 마운드 
+## 부팅시 마운드 
 ```
 # vi /etc/fstab
 ```

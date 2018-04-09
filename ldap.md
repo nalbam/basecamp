@@ -1,15 +1,15 @@
 
-### install 
+## install 
 ```
 sudo yum install -y openldap openldap-servers openldap-clients
 ```
 
-### root password
+## root password
 ```
 slappasswd -s <password>
 ```
 
-### base.ldif
+## base.ldif
 ```
 vi /root/base.ldif
 ```
@@ -31,16 +31,16 @@ objectClass: organizationalUnit
 
 ```
 
-### slapd.conf
+## slapd.conf
 ```
 cp /usr/share/openldap-servers/slapd.conf.obsolete /etc/openldap/slapd.conf
 
 vi /etc/openldap/slapd.conf
 ```
 ```
-#######################################################################
+################################################
 # database definitions
-#######################################################################
+################################################
 
 database        bdb
 suffix          "dc=nalbam,dc=com"
@@ -50,7 +50,7 @@ rootdn          "cn=Manager,dc=nalbam,dc=com"
 rootpw          {crypt}xxxxxxxx
 ```
 
-### config
+## config
 ```
 rm -rf /etc/openldap/slapd.d/*
 
@@ -64,19 +64,19 @@ chown ldap.ldap -Rf /etc/openldap/slapd.d/*
 chown ldap.ldap -Rf /var/lib/ldap/*
 ```
 
-### start
+## start
 ```
 service slapd start
 chkconfig slapd on
 ```
 
-### test
+## test
 ```
 ldapsearch -x -d 1
 ldapsearch -x -b dc=nalbam,dc=com
 ```
 
-### add user
+## add user
 ```
 vi user.ldif
 ```
@@ -105,7 +105,7 @@ userPassword: {SSHA}xxxxxxxx
 ldapadd -x -D 'cn=Manager,dc=nalbam,dc=com' -W -f user.ldif
 ```
 
-### add group
+## add group
 ```
 vi group.ldif
 ```

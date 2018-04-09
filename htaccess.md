@@ -1,9 +1,9 @@
-### 암호생성 
+## 암호생성 
 ```
 htpasswd -c /data/passwd/.byforce byforce
 ```
 
-### 설정 
+## 설정 
 ```
 vi /etc/httpd/conf.d/vhost-smileforge-wiki.conf
 ```
@@ -23,7 +23,7 @@ vi /etc/httpd/conf.d/vhost-smileforge-wiki.conf
     </Directory>
 ```
 
-### 재시작 
+## 재시작 
 ```
 service httpd restart
 ```

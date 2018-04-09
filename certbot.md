@@ -1,4 +1,4 @@
-### setup
+## setup
 ```
 git clone https://github.com/certbot/certbot
 
@@ -7,14 +7,14 @@ git clone https://github.com/certbot/certbot
 sudo yum install -y augeas-libs libffi-devel python27-tools system-rpm-config
 ```
 
-### Let's Encrypt
+## Let's Encrypt
 ```
 sudo ~/certbot/certbot-auto --email me@nalbam.com -d demo.nalbam.com
 
 sudo ~/certbot/certbot-auto certonly --standalone --email me@nalbam.com -d demo.nalbam.com
 ```
 
-### Amazon Linux
+## Amazon Linux
 ```
 sudo ~/certbot/certbot-auto --email me@nalbam.com --debug
 

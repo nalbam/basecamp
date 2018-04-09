@@ -1,9 +1,9 @@
-### keygen
+## keygen
 ```
 ssh-keygen -f id_rsa -N '' -C "me@nalbam.com"
 ```
 
-### copy
+## copy
 ```
 scp s1:/home/nalbam/.ssh/id_dsa.pub.s1 ~/.ssh/
 scp ~/.ssh/id_dsa.pub.s2 s1:/home/nalbam/.ssh/

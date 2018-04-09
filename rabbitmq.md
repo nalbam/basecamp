@@ -1,4 +1,4 @@
-### erlang
+## erlang
 ```
 wget http://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
 sudo rpm -Uvh erlang-solutions-1.0-1.noarch.rpm
@@ -6,7 +6,7 @@ sudo rpm -Uvh erlang-solutions-1.0-1.noarch.rpm
 sudo yum install -y erlang
 ```
 
-### rabbitmq
+## rabbitmq
 ```
 sudo yum install -y socat
 
@@ -16,18 +16,18 @@ wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.5/rabbitmq-server-3.6
 sudo rpm -Uvh rabbitmq-server-3.6.5-1.noarch.rpm
 ```
 
-### start
+## start
 ```
 sudo chkconfig rabbitmq-server on
 sudo service rabbitmq-server start
 ```
 
-### plugins - management
+## plugins - management
 ```
 sudo rabbitmq-plugins enable rabbitmq_management
 ```
 
-### plugins - delayed_message
+## plugins - delayed_message
 ```
 cd /usr/lib/rabbitmq/lib/rabbitmq_server-3.6.5/plugins/
 wget http://www.rabbitmq.com/community-plugins/v3.6.x/rabbitmq_delayed_message_exchange-0.0.1.ez
@@ -35,7 +35,7 @@ wget http://www.rabbitmq.com/community-plugins/v3.6.x/rabbitmq_delayed_message_e
 sudo rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 ```
 
-### user
+## user
 ```
 sudo rabbitmqctl add_user rabbitmq password
 sudo rabbitmqctl set_user_tags rabbitmq administrator

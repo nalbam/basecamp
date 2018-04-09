@@ -1,14 +1,14 @@
 
  * https://www.elastic.co/kr/products
 
-### download
+## download
 ```
 wget https://artifacts.elastic.co/downloads/kibana/kibana-6.0.0-linux-x86_64.tar.gz
 wget https://artifacts.elastic.co/downloads/kibana/kibana-5.2.1-linux-x86_64.tar.gz
 wget https://download.elastic.co/kibana/kibana/kibana-4.6.4-linux-x86_64.tar.gz
 ```
 
-### config
+## config
 ```
 vi config/kibana.yml
 ```
@@ -21,12 +21,12 @@ elasticsearch.username: "user"
 elasticsearch.password: "pass"
 ```
 
-### start 
+## start 
 ```
 nohup bin/kibana &
 ```
 
-### status
+## status
 ```
 ps -ef | grep node
 ```

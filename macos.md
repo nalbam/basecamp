@@ -1,4 +1,4 @@
-### 단축키
+## 단축키
 ```
 COMMAND + F3 : 모든 창 숨김
 
@@ -14,7 +14,7 @@ CONTROL + COMMAND + D : 사전
 OPTION + SHIFT + 볼륨 : 세밀하게 조절
 ```
 
-### Homebrew - http://brew.sh/
+## Homebrew - http://brew.sh/
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -32,7 +32,7 @@ brew cask install minishift openshift-cli
 brew cask install rdm
 ```
 
-### docker-machine
+## docker-machine
 ```
 brew install docker-machine-driver-xhyve
 
@@ -45,7 +45,7 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-
   sudo chmod u+s /usr/local/bin/docker-machine-driver-hyperkit
 ```
 
-### ₩ -> `
+## ₩ -> `
 ```
 vi /Users/nalbam/Library/KeyBindings/DefaultkeyBinding.dict
 ```
@@ -55,12 +55,12 @@ vi /Users/nalbam/Library/KeyBindings/DefaultkeyBinding.dict
 }
 ```
 
-### find mv
+## find mv
 ```
 find . -iname "*.mp3" -exec mv {} mp3 \;
 ```
 
-### SD Card
+## SD Card
 ```
 diskutil list
 
@@ -73,7 +73,7 @@ sudo dd bs=1m if=retropie-4.0.2-rpi2_rpi3.img of=/dev/disk3
 # 진행상황 : ctrl + t
 ```
 
-### macOS Sierra USB
+## macOS Sierra USB
 ```
 sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia \
     --volume /Volumes/macOS\ Sierra \

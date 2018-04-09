@@ -1,11 +1,11 @@
-### install (yum)
+## install (yum)
 ```
 sudo yum install nginx
 sudo service nginx start
 sudo chkconfig nginx on
 ```
 
-### install (compile)
+## install (compile)
 ```
 wget https://nginx.org/download/nginx-1.11.3.tar.gz
 tar xzf nginx-1.11.3.tar.gz
@@ -15,7 +15,7 @@ cd nginx-1.11.3
 sudo make & make install
 ```
 
-### php-fpm
+## php-fpm
 ```
 sudo yum install php56-fpm
 sudo service php-fpm start

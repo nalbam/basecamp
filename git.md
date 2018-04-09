@@ -1,4 +1,4 @@
-### 설정 
+## 설정 
 ```
 git config --global user.name "nalbam"
 git config --global user.email "me@nalbam.com"
@@ -11,7 +11,7 @@ git config --global push.default simple
 git config --list
 ```
 
-### 사용법 
+## 사용법 
 ```
 git clone https://github.com/nalbam/nalbam-common.git
 

@@ -1,4 +1,4 @@
-### 사용법
+## 사용법
 ```
 vagrant init puppetlabs/centos-6.6-64-puppet; vagrant up --provider virtualbox
 

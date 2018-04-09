@@ -1,4 +1,4 @@
-### 다운로드 및 설치
+## 다운로드 및 설치
 ```
 # vi /etc/yum.repos.d/mongodb.repo
 
@@ -11,13 +11,13 @@ enabled=1
 # yum -y install mongodb-org mongodb-org-server mongodb-org-shell mongodb-org-mongos mongodb-org-tools
 ```
 
-### 시작
+## 시작
 ```
 chkconfig mongod on
 service mongod restart
 ```
 
-### 설정
+## 설정
 ```
 vi /etc/mongod.conf
 
@@ -28,17 +28,17 @@ bind_ip=127.0.0.1,114.207.113.217,59.6.152.75
 auth=true
 ```
 
-### 데이터
+## 데이터
 ```
 cd /var/lib/mongo
 ```
 
-### 로그
+## 로그
 ```
 tail -f /var/log/mongodb/mongod.log
 ```
 
-### 테스트
+## 테스트
 ```
 # mongo
 
@@ -53,7 +53,7 @@ tail -f /var/log/mongodb/mongod.log
 
 ```
 
-### php
+## php
 ```
 pecl install mongo
 

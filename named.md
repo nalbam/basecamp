@@ -1,10 +1,10 @@
-### 설치 
+## 설치 
 
 ```
 # yum -y install bind-*
 ```
 
-### 설정 
+## 설정 
 
 ```
 # vi /etc/named.conf
@@ -92,7 +92,7 @@ mail    IN      CNAME   ghs.googlehosted.com.
 nalbam.com. IN TXT "v=spf1 a mx include:aspmx.googlemail.com include:_spf.google.com ~all"
 ```
 
-### 체크 
+## 체크 
 
 ```
 # named-checkconf /etc/named.rfc1912.zones
@@ -100,7 +100,7 @@ nalbam.com. IN TXT "v=spf1 a mx include:aspmx.googlemail.com include:_spf.google
 # named-checkzone nalbam.com /var/named/ns.nalbam.com.zone
 ```
 
-### 시작 
+## 시작 
 
 ```
 # service named restart

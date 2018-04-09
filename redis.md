@@ -1,4 +1,4 @@
-### install
+## install
 ```
 sudo yum install -y redis
 ```
@@ -8,7 +8,7 @@ sudo chkconfig redis on
 sudo service redis restart
 ```
 
-### conf
+## conf
 ```
 sudo vi /etc/redis.conf
 ```
@@ -19,7 +19,7 @@ bind 114.207.113.217
 requirepass password
 ```
 
-### remove
+## remove
 ```
 redis-cli -a "ya1234" keys "*" | xargs /redis-cli -a "ya1234" del
 ```

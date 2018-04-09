@@ -1,4 +1,4 @@
-### install ###
+## install ##
 ```
 sudo yum install autoconf libtool
 
@@ -9,7 +9,7 @@ make
 make install
 ```
 
-### conf
+## conf
 ```
 # vi /etc/httpd/conf.d/modjk.conf
 
@@ -25,7 +25,7 @@ LoadModule  jk_module  modules/mod_jk.so
 </IfModule>
 ```
 
-### workers
+## workers
 ```
 # vi /etc/httpd/conf.d/workers.properties
 

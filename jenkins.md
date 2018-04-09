@@ -1,4 +1,4 @@
-### Deploy 
+## Deploy 
 ```
 cd /data/webapp/app
 
@@ -8,7 +8,7 @@ t 00 init
 t 00 deploy jenkins
 ```
 
-### Plugin 
+## Plugin 
 ```
 Blue Ocean beta
 Maven Integration plugin
@@ -27,7 +27,7 @@ Android Emulator Plugin
 Environment Injector Plugin
 ```
 
-### Android 
+## Android 
 ```
 sudo yum install -y libGL.so.1 glx-utils zlib.i686
 
@@ -43,7 +43,7 @@ ANDROID_HOME=/data/apps/android-sdk-linux
 clean assemble
 ```
 
-### Mail 
+## Mail 
 ```
 smtphost = 'smtp.gmail.com'
 smtpport = 465

@@ -1,9 +1,9 @@
-### 설치
+## 설치
 ```
 # yum -y groupinstall "MySQL Database server"
 ```
 
-### 설정
+## 설정
 ```
 # cp /usr/share/mysql/my-huge.cnf /etc/my.cnf
 # cp /usr/share/mysql/my-large.cnf /etc/my.cnf
@@ -54,14 +54,14 @@ chown mysql.mysql -R /var/log/mysql
 tail -f /var/log/mysql/log-slow-queries.log
 ```
 
-### 시작
+## 시작
 ```
 # chkconfig mysqld on
 # service mysqld restart
 # sudo systemctl restart mariadb
 ```
 
-### CentOS 6.x 에서 nproc(Max User Processes) ###
+## CentOS 6.x 에서 nproc(Max User Processes) ##
 ```
 # vi /etc/security/limits.conf
 
@@ -72,7 +72,7 @@ tail -f /var/log/mysql/log-slow-queries.log
 
 http://gywn.net/2012/10/mysql-connection-limitation-nproc/
 
-### 계정 ###
+## 계정 ##
 ```
 # mysql -u root -p
 mysql> select host, db, user from mysql.db;
@@ -80,7 +80,7 @@ mysql> select host, user, password from mysql.user;
 mysql> set password for root@localhost=password('PASSWORD');
 ```
 
-### root 계정 분실
+## root 계정 분실
 ```
 # service mysqld stop
 # mysqld_safe --user=root --skip-grant-tables &
@@ -93,7 +93,7 @@ mysql> quit
 # service mysqld restart
 ```
 
-### 데이터 이전
+## 데이터 이전
 ```
 # service mysqld stop
 
@@ -113,21 +113,21 @@ mysql> quit
 # service mysqld start
 ```
 
-### 덤프
+## 덤프
 ```
 $ mysqldump -u[사용자아이디] -p[비밀번호] 데이터베이스명 > 덤프파일명
 
 예) mysqldump -uUSERNAME -pPASSWORD mydatabase > mydatabase.sql
 ```
 
-### 복구
+## 복구
 ```
 $ mysql -u[사용자아이디] -p[비밀번호] 데이터베이스명 &lt; 덤프파일명
 
 예) mysql -uUSERNAME -pPASSWORD mydatabase < mydatabase.sql
 ```
 
-### Java UTF-8
+## Java UTF-8
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">

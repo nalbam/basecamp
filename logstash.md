@@ -1,12 +1,12 @@
 
  * https://www.elastic.co/kr/products
 
-### download
+## download
 ```
 wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.1.tar.gz
 ```
 
-### config
+## config
 ```
 input {
   file {
@@ -28,12 +28,12 @@ output {
 }
 ```
 
-### start 
+## start 
 ```
 nohup bin/logstash -f logstash.conf &
 ```
 
-### clear
+## clear
 ```
 curl -XDELETE http://localhost:9200/logstash*
 ```

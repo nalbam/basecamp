@@ -1,4 +1,4 @@
-### firewalld
+## firewalld
 ```
 yum install firewalld
 
@@ -20,7 +20,7 @@ firewall-cmd --permanent --add-port=30000-32767/tcp
 firewall-cmd --reload
 ```
 
-### 설정 
+## 설정 
 ```
 iptables -F
 
@@ -45,7 +45,7 @@ iptables -L
 service iptables restart
 ```
 
-### 리셋 
+## 리셋 
 ```
 iptables -F
 service iptables save
@@ -54,7 +54,7 @@ iptables -L
 service iptables restart
 ```
 
-### Port Number (0~65536) 
+## Port Number (0~65536) 
 ```
 20    FTP
 21    FTP

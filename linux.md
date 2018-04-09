@@ -1,22 +1,22 @@
-### 서버 정보
+## 서버 정보
 ```
 cat /proc/cpuinfo
 cat /proc/meminfo
 ```
 
-### 설치 버전
+## 설치 버전
 ```
 uname -a
 ```
 
-### 시간 싱크
+## 시간 싱크
 ```
 crontab -e
 
 0 0 * * * /usr/bin/rdate -s time.bora.net
 ```
 
-### 터미널 언어
+## 터미널 언어
 ```
 vi /etc/sysconfig/i18n
 
@@ -26,7 +26,7 @@ SYSFONT="latarcyrheb-sun16"
 source /etc/sysconfig/i18n
 ```
 
-### sudo 권한
+## sudo 권한
 ```
 sudo usermod -aG wheel $USER
 
@@ -36,7 +36,7 @@ vi /etc/sudoers
 %wheel	ALL=(ALL)	NOPASSWD: ALL
 ```
 
-### root 로그인 금지
+## root 로그인 금지
 ```
 vi /etc/ssh/sshd_config
 
@@ -46,7 +46,7 @@ PasswordAuthentication yes
 service sshd restart
 ```
 
-### hostname 변경
+## hostname 변경
  * centos 6
 ```
 cat /etc/sysconfig/network | grep HOSTNAME
@@ -60,14 +60,14 @@ sudo hostnamectl set-hostname s1
 hostname
 ```
 
-### startup
+## startup
 ```
 cd /usr/local/
 cd /etc/rc.d/init.d/
 cd /etc/systemd/system/
 ```
 
-### Network
+## Network
 ```
 sudo nmcli d
 sudo nmtui
@@ -75,7 +75,7 @@ sudo ip addr
 sudo netstat -tnlp
 ```
 
-### Desktop
+## Desktop
 ```
 sudo yum -y groupinstall "GNOME Desktop" "Graphical Administration Tools"
 

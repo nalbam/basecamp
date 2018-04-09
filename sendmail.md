@@ -1,9 +1,9 @@
-### 설치
+## 설치
 ```
 # yum -y install sendmail sendmail-cf
 ```
 
-### 릴레이
+## 릴레이
 ```
 # vi /etc/mail/access
 ```
@@ -13,7 +13,7 @@ spic.me     RELAY
 nalbam.com  RELAY
 ```
 
-### 최종 수신자
+## 최종 수신자
 ```
 # vi /etc/mail/local-host-names
 ```
@@ -23,7 +23,7 @@ spic.me
 nalbam.com
 ```
 
-### spickr 계정
+## spickr 계정
 ```
 # vi /etc/aliases
 ```
@@ -31,7 +31,7 @@ nalbam.com
 spickr:     |/data/webapp/spickr/shell/mail.save.php
 ```
 
-### sendmail 설정
+## sendmail 설정
 ```
 # vi /etc/mail/sendmail.mc
 ```
@@ -49,14 +49,14 @@ MASQUERADE_AS(`nalbam.com')dnl
 FEATURE(masquerade_envelope)dnl
 ```
 
-### sendmail 적용
+## sendmail 적용
 ```
 # m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf
 # service sendmail restart
 # service saslauthd restart
 ```
 
-### 모든 spic.kr 로 들어온 메일을 spickr 계정으로 전송
+## 모든 spic.kr 로 들어온 메일을 spickr 계정으로 전송
 ```
 # vi /etc/mail/virtusertable
 ```
@@ -65,18 +65,18 @@ FEATURE(masquerade_envelope)dnl
 @spic.kr  spickr@spic.me
 ```
 
-### 재시작
+## 재시작
 ```
 # service sendmail restart
 ```
 
-### 자동시작
+## 자동시작
 ```
 # chkconfig sendmail on
 # chkconfig saslauthd on
 ```
 
-### send
+## send
 ```
 telnet nalbam.com 25
 
@@ -88,19 +88,19 @@ yo
 .
 ```
 
-### sendmail 에서 php 실행에 문제가 발생 했다면
+## sendmail 에서 php 실행에 문제가 발생 했다면
 ```
 # ln -s /usr/bin/php /etc/smrsh/php
 # ln -s /data/webapp/spickr/shell/mail.save.php /etc/smrsh/mail.save.php
 ```
 
-### daemon MTA: cannot bind: Address already in use
+## daemon MTA: cannot bind: Address already in use
 ```
 # service postfix stop
 # chkconfig postfix off
 ```
 
-### php 파싱
+## php 파싱
 ```
 #!/usr/local/bin/php
 <?php

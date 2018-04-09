@@ -1,26 +1,26 @@
-### Editor
+## Editor
 ```
 Preferences > Editor > Font > Font : Monaco, 14
 Preferences > Editor > Code Style > Right margin : 300
 ```
 
-### JavaScript
+## JavaScript
 ```
 Preferences > Languages & Frameworks > JavaScript : ECMAScript 6
 ```
 
-### Lombok
+## Lombok
 ```
 Preferences > Plugins > Browse repositories > Lombok
 Preferences > Build > Compiler > Annotation Processors > Enable annotaion processing
 ```
 
-### Save Actions
+## Save Actions
 ```
 Preferences > Plugins > Browse repositories > Save Actions
 ```
 
-### Clean
+## Clean
 ```
 rm -rf ~/Library/Preferences/IntelliJ*
 rm -rf ~/Library/Caches/IntelliJ*

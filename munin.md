@@ -1,15 +1,15 @@
-### 설치
+## 설치
 ```
 sudo yum install -y munin-node munin
 sudo yum install -y munin-node
 ```
 
-### 모니터 유저
+## 모니터 유저
 ```
 sudo htpasswd -c /etc/munin/munin-htpasswd username
 ```
 
-### 서버 설정
+## 서버 설정
 ```
 sudo vi /etc/munin/munin.conf
 ```
@@ -49,7 +49,7 @@ jmx_weblogic_memory.pool_PS_Perm_Gen.usage.Used.warning   200000000 # 256m
 jmx_weblogic_memory.pool_PS_Perm_Gen.usage.Used.critical  256000000 # 256m
 ```
 
-### 노드(클라이언트) 설정 - 서버지정
+## 노드(클라이언트) 설정 - 서버지정
 ```
 sudo vi /etc/munin/munin-node.conf
 ```
@@ -59,13 +59,13 @@ allow ^::1$
 allow ^218\.38\.12\.106$
 ```
 
-### 노드(클라이언트) 시작
+## 노드(클라이언트) 시작
 ```
 sudo chkconfig munin-node on
 sudo service munin-node start
 ```
 
-### 로그
+## 로그
 ```
 tail -f -n 300 /var/log/munin/munin-update.log
 ```
@@ -75,7 +75,7 @@ tail -f -n 300 /var/log/munin/munin-update.log
 2009/10/14-17:40:01 CONNECT TCP Peer: "127.0.0.1:57802" Local: "127.0.0.1:4949"
 ```
 
-### 플러그인 사용
+## 플러그인 사용
  * Apache
 ```
 # ln -s /usr/share/munin/plugins/apache_accesses /etc/munin/plugins/
@@ -159,7 +159,7 @@ env.HOST 127.0.0.1
 env.PORT 27017
 ```
 
-### 삭제 ###
+## 삭제 ##
 ```
 sudo service munin-node stop
 

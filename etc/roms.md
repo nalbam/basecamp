@@ -1,4 +1,4 @@
-### cps1 -> fba
+## cps1 -> fba
 | status | filename | title | size |
 | --- | --- | --- | --- |
 | :-D | 1941.zip | 1941: Counter Attack (World) |  1.4M |
@@ -10,7 +10,7 @@
 | :-D | kod.zip | The King of Dragons (World 910711) |  2.3M |
 | :-D | wof.zip | Warriors of Fate (World 921002) |  3.8M |
 
-### cps2 -> fba
+## cps2 -> fba
 | status | filename | title | size |
 | --- | --- | --- | --- |
 | :-D | 1944.zip | 1944: The Loop Master (USA 000620) |  16M |
@@ -25,7 +25,7 @@
 | :?: | vhunt2.zip | Vampire Hunter 2: Darkstalkers Revenge (Japan 970929) |  22M |
 | :?: | vsav2.zip | Vampire Savior 2: The Lord of Vampire (Japan 970913) |  23M |
 
-### neogeo -> fba
+## neogeo -> fba
 | status | filename | title | size |
 | --- | --- | --- | --- |
 | :-D | aof.zip | Art of Fighting / Ryuuko no Ken |  6.4M |
@@ -43,7 +43,7 @@
 | :-D | sonicwi2.zip | Aero Fighters 2 / Sonic Wings 2 |  5.3M |
 | :-D | sonicwi3.zip | Aero Fighters 3 / Sonic Wings 3 |  9.0M |
 
-### nes
+## nes
 | status | filename | size |
 | --- | --- | --- |
 | :-D | Bomberman (USA).nes |  25K |
@@ -59,7 +59,7 @@
 | :-D | Super Mario Bros. 3 (USA).nes |  385K |
 | :-D | Tetris (USA).nes |  49K |
 
-### snes
+## snes
 | status | filename | size |
 | --- | --- | --- |
 | :-D | Aero Fighters (USA).sfc |  1.3M |
@@ -87,7 +87,7 @@
 | :-D | Super Mario World 2 - Yoshi's Island (USA).sfc |  2.0M |
 | :-D | Tetris 2 (USA).sfc |  1.0M |
 
-### psx
+## psx
 | status | filename | size |
 | --- | --- | --- |
 | :-D | Bubble Bobble - featuring Rainbow Islands [U] [SLUS-00370].bin |  91M |
@@ -100,7 +100,7 @@
 | :-( | Tekken 3.bin | 657M |
 | :?: | Vampire Savior - EX Edition (Japan).bin |  716M |
 
-### mame
+## mame
 | status | filename | title | size |
 | --- | --- | --- | --- |
 | :?: | boblbobl.zip | Bobble Bobble |  56K |
@@ -111,7 +111,7 @@
 | :?: | snowbro2.zip | Snow Bros. 2 - With New Elves / Otenki Paradise |  1.8M |
 | :?: | snowbros.zip | Snow Bros. - Nick & Tom (set 1) |  283K |
 
-### roms
+## roms
 ```
 rsync -av s1:/home/pi/roms/ /home/pi/RetroPie/roms/
 ```

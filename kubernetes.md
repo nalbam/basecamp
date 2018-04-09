@@ -58,18 +58,14 @@ ifconfig tunl0 | grep inet | awk -F' ' '{print $2}'
 
 ## sample
 ```
-kubectl run sample-node --image=nalbam/sample-node:latest --port=3000
-kubectl expose deployment sample-node --type=LoadBalancer
+git clone https://github.com/nalbam/kubernetes.git
+cd kubernetes
 
-kubectl set image deployment/sample-node sample-node=nalbam/sample-node:latest
+kubectl apply -f sample/sample-node.yml
+kubectl apply -f sample/sample-spring.yml
+kubectl apply -f sample/sample-web.yml
 
-kubectl get pods
-kubectl describe pod sample-node
+watch kubectl get node,pod,svc,ing -n default
 
-kubectl delete deployment sample-node
-kubectl delete service sample-node
+kubectl describe pod sample-web
 ```
-
-## coreos tectonic
- * https://coreos.com/tectonic/docs/latest/install/aws/index.html
- * https://coreos.com/tectonic/docs/latest/install/aws/uninstall.html

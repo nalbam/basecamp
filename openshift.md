@@ -1,10 +1,10 @@
 ## install
-```bash
+```
 sudo yum update -y
 sudo yum install -y docker python-rhsm-certificates
 
-sudo service docker start
-sudo chkconfig docker on
+sudo systemctl start docker
+sudo systemctl enable docker
 
 wget $(curl -s https://api.github.com/repos/openshift/origin/releases/latest | grep browser_download_url | grep linux | grep server | cut -d '"' -f 4)
 tar -xvzf openshift-origin-server-*-linux-64bit.tar.gz
@@ -27,82 +27,8 @@ oc cluster down
  * https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md
  * https://docs.openshift.org/latest/getting_started/administrators.html
 
-## install with atomic
-```
-yum update -y
-
-atomic-openshift-installer install
-
-atomic-openshift-installer -u install
-```
- * https://docs.openshift.com/container-platform/3.9/install_config/install/quick_install.html
- * https://docs.openshift.com/container-platform/3.9/install_config/install/stand_alone_registry.html
-
-## install with ansible
-```bash
-sudo yum update -y
-sudo yum install -y git wget docker
-
-sudo service docker start
-sudo chkconfig docker on
-
-sudo pip install -Iv ansible
-
-git clone https://github.com/openshift/openshift-ansible.git
-
-pushd openshift-ansible
-git checkout release-3.7
-popd
-
-export IP="$(ip route get 8.8.8.8 | awk '{print $NF; exit}')"
-
-export DOMAIN=${DOMAIN:="${IP}.nip.io"}
-export USERNAME=${USERNAME:="$(whoami)"}
-export PASSWORD=${PASSWORD:=password}
-export VERSION=${VERSION:="v3.7.2"}
-
-ansible-playbook -i inventory.ini openshift-ansible/playbooks/byo/config.yml
-
-htpasswd -b /etc/origin/master/htpasswd ${USERNAME} ${PASSWORD}
-oc adm policy add-cluster-role-to-user cluster-admin ${USERNAME}
-```
- * https://github.com/openshift/openshift-ansible
- * https://docs.openshift.org/latest/install_config/install/advanced_install.html
-
-## minishift
-```bash
-wget $(curl -s https://api.github.com/repos/minishift/minishift/releases/latest | grep browser_download_url | grep linux | cut -d '"' -f 4)
-tar zxvf minishift-*-linux-amd64.tgz
-sudo mv minishift-*-linux-amd64/minishift /usr/local/bin/
-
-minishift config set cpus 2
-minishift config set memory 8GB
-minishift config set metrics true
-minishift config set skip-check-kvm-driver true
-
-minishift start
-minishift console
-
-minishift addons enable xpaas
-
-minishift ssh docker pull openshiftdemos/nexus:latest 
-minishift ssh docker pull openshiftdemos/gogs:latest 
-minishift ssh docker pull openshiftdemos/sonarqube:latest 
-minishift ssh docker pull openshift/jenkins-2-centos7
-minishift ssh docker pull openshift/jenkins-slave-maven-centos7
-
-eval $(minishift oc-env)
-eval $(minishift docker-env)
-
-oc login -u system:admin
-
-oc get all
-```
- * https://docs.openshift.org/latest/minishift/getting-started/quickstart.html
- * https://github.com/minishift/minishift/issues/2121
-
 ## source-to-image
-```bash
+```
 oc project openshift
 
 oc import-image -n openshift openshift/redhat-openjdk-18:1.3 --from=registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:latest --confirm
@@ -120,7 +46,7 @@ oc import-image -n openshift openshift/sample-web:latest --from=docker.io/nalbam
 ```
 
 ## ci/cd
-```bash
+```
 oc new-project ci
 oc policy add-role-to-user admin developer -n ci
 
@@ -143,5 +69,4 @@ echo $(curl --post302 http://${GOGS_HOST}/user/sign_up \
   --form password=gogs \
   --form retype=gogs \
   --form email=gogs@gogs.com)
-
 ```

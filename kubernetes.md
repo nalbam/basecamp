@@ -38,9 +38,8 @@ kubectl apply -f https://docs.projectcalico.org/v3.0/getting-started/kubernetes/
 # Master Isolation
 kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
+* To start using your cluster, you need to run the following as a regular user:
 ```
-# To start using your cluster, you need to run the following as a regular user:
-
 mkdir -p $HOME/.kube
 sudo cp -rf /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
@@ -49,9 +48,7 @@ sudo systemctl status kubelet -l
 
 watch kubectl get node,pod,svc,ing --all-namespaces
 
-TUNL_IP=$(ifconfig tunl0 | grep inet | awk -F' ' '{print $2}')
-IP_LIST=$(kubectl get svc --all-namespaces | grep LoadBalancer | awk -F' ' '{print $6}')
-
+ifconfig tunl0 | grep inet | awk -F' ' '{print $2}'
 ```
  * https://kubernetes.io/docs/tasks/tools/install-kubectl/
  * https://kubernetes.io/docs/setup/independent/install-kubeadm/
@@ -68,8 +65,6 @@ kubectl set image deployment/sample-node sample-node=nalbam/sample-node:latest
 
 kubectl get pods
 kubectl describe pod sample-node
-
-minikube service sample-node
 
 kubectl delete deployment sample-node
 kubectl delete service sample-node

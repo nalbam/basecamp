@@ -14,6 +14,8 @@ minikube dashboard
 
 eval $(minikube docker-env)
 
+minikube service sample-node
+
 docker ps
 ```
  * https://kubernetes.io/docs/tasks/tools/install-minikube/

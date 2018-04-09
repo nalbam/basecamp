@@ -1,6 +1,7 @@
 ### firewalld
 ```
 yum install firewalld
+
 systemctl start firewalld
 systemctl enable firewalld
 

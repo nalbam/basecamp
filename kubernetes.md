@@ -9,6 +9,7 @@ gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOF
+
 setenforce 0
 yum install -y kubelet kubeadm kubectl
 systemctl enable kubelet && systemctl start kubelet
@@ -17,6 +18,7 @@ cat <<EOF > /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
+
 sysctl --system
 
 docker info | grep -i cgroup
@@ -57,27 +59,6 @@ IP_LIST=$(kubectl get svc --all-namespaces | grep LoadBalancer | awk -F' ' '{pri
  * https://www.linuxtechi.com/install-kubernetes-1-7-centos7-rhel7/
  * https://amasucci.com/post/2017/10/22/how-to-install-kubernetes-1.8.1-on-centos-7.3/
 
-## minikube
-```
-curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && \
-  chmod +x minikube && sudo mv minikube /usr/local/bin/
-
-minikube config set cpus 2
-minikube config set memory 8GB
-minikube config set vm-driver kvm2
-
-minikube start --vm-driver=kvm2  # ubuntu
-minikube start --vm-driver=xhyve # mac
-
-minikube dashboard
-
-eval $(minikube docker-env)
-
-docker ps
-```
- * https://kubernetes.io/docs/tasks/tools/install-minikube/
- * https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/
-
 ## sample
 ```
 kubectl run sample-node --image=nalbam/sample-node:latest --port=3000
@@ -93,25 +74,6 @@ minikube service sample-node
 kubectl delete deployment sample-node
 kubectl delete service sample-node
 ```
-
-## helm
-```
-curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz
-
-helm init
-helm install --name nalbam stable/jenkins
-```
- * https://helm.sh/
- * https://github.com/kubernetes/helm
-
-## kops
-```
-export KOPS_VERSION=$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)
-curl -LO https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION}/kops-linux-amd64 && \
-  chmod +x kops-linux-amd64 && sudo mv kops-linux-amd64 /usr/local/bin/kops
-```
- * https://github.com/kubernetes/kops
- * https://kubernetes.io/docs/getting-started-guides/kops/
 
 ## coreos tectonic
  * https://coreos.com/tectonic/docs/latest/install/aws/index.html

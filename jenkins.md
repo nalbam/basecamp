@@ -27,28 +27,21 @@ Android Emulator Plugin
 Environment Injector Plugin
 ```
 
-## Android 
+## backup from kubernetes
 ```
-sudo yum install -y libGL.so.1 glx-utils zlib.i686
+export NAMESPACE=default
+export JENKINS_POD=$(kubectl get pods -n $NAMESPACE | grep jenkins | awk '{print $1}')
 
-tar zxvf android-sdk_r24.4.1-linux.tgz
+mkdir -p docker/jenkins
 
-android-sdk-linux/tools/android update sdk --no-ui
+kubectl cp ${NAMESPACE}/${JENKINS_POD}:var/jenkins_home/config.xml   docker/jenkins/config.xml
+kubectl cp ${NAMESPACE}/${JENKINS_POD}:var/jenkins_home/users/   docker/jenkins/users/
+kubectl cp ${NAMESPACE}/${JENKINS_POD}:var/jenkins_home/jobs/   docker/jenkins/jobs/
+kubectl cp ${NAMESPACE}/${JENKINS_POD}:var/jenkins_home/secrets/master.key   docker/jenkins/secrets/master.key
+kubectl cp ${NAMESPACE}/${JENKINS_POD}:var/jenkins_home/secrets/hudson.util.Secret   docker/jenkins/secrets/hudson.util.Secret
+kubectl cp ${NAMESPACE}/${JENKINS_POD}:var/jenkins_home/secrets/slave-to-master-security-kill-switch   docker/jenkins/secrets/slave-to-master-security-kill-switch
 
-android-sdk-linux/tools/android list sdk -a
-android-sdk-linux/tools/android update sdk -a -u -t 4
-
-ANDROID_HOME=/data/apps/android-sdk-linux
-
-clean assemble
-```
-
-## Mail 
-```
-smtphost = 'smtp.gmail.com'
-smtpport = 465
-use_ssl  = true
-
-username = 'mon@nalbam.com'
-password = 'password'
+curl -sSL "http://admin:password@10.106.225.149:8080/pluginManager/api/xml?depth=1&xpath=/*/*/shortName|/*/*/version&wrapper=plugins" | \
+  perl -pe 's/.*?<shortName>([\w-]+).*?<version>([^<]+)()(<\/\w+>)+/\1 \2\n/g'|sed 's/ /:/' > \
+  docker/jenkins/plugins.txt 
 ```

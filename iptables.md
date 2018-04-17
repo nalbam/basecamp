@@ -1,16 +1,18 @@
 ## firewalld
 ```
-yum install firewalld
+yum install -y firewalld
 
 systemctl start firewalld
 systemctl enable firewalld
 
+firewall-cmd --permanent --add-port=22/tcp
 firewall-cmd --permanent --add-port=80/tcp
 firewall-cmd --permanent --add-port=443/tcp
 firewall-cmd --permanent --add-port=6443/tcp
 firewall-cmd --permanent --add-port=6783/tcp
 firewall-cmd --permanent --add-port=8001/tcp
 firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=8443/tcp
 firewall-cmd --permanent --add-port=2379-2380/tcp
 firewall-cmd --permanent --add-port=10250/tcp
 firewall-cmd --permanent --add-port=10251/tcp
@@ -21,7 +23,7 @@ firewall-cmd --permanent --add-port=30000-32767/tcp
 firewall-cmd --reload
 ```
 
-## 설정 
+## iptables 
 ```
 iptables -F
 
@@ -36,6 +38,7 @@ iptables -A INPUT -p tcp -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A INPUT -p tcp --dport 22    -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A INPUT -p tcp --dport 80    -m state --state NEW,ESTABLISHED -j ACCEPT
 iptables -A INPUT -p tcp --dport 443   -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A INPUT -p tcp --dport 8443  -m state --state NEW,ESTABLISHED -j ACCEPT
 
 iptables -A INPUT -p tcp -j DROP
 
@@ -46,7 +49,7 @@ iptables -L
 service iptables restart
 ```
 
-## 리셋 
+## iptables reset 
 ```
 iptables -F
 service iptables save

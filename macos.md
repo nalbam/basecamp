@@ -18,6 +18,8 @@ OPTION + SHIFT + 볼륨 : 세밀하게 조절
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+brew update && brew upgrade
+
 brew install zsh wget telnet httpie z
 
 brew install terraform graphviz

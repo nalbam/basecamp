@@ -16,26 +16,13 @@ sudo mkdir /data/site
 sudo chown -R ec2-user.ec2-user /data
 ```
 
-## aws ssh
-```
-ssh -i /Users/nalbam/Dropbox/keys/aws/nalbam-key.pem ec2-user@11.22.33.44
-```
-
-## aws cli
-```
-aws configure
-
-aws s3 sync /data/site/cdn.nalbam.com/ s3://cdn.nalbam.com/ --acl public-read
-aws s3 sync s3://cdn.nalbam.com/ /data/site/cdn.nalbam.com/
-```
-
-## log
+## eb log
 ```
 cat /var/log/eb-activity.log
 tail -f -n 1000 /var/log/eb-activity.log
 ```
 
-## awslog
+## awslogs
 ```
 sudo yum install -y awslogs
 

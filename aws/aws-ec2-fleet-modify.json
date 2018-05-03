@@ -1,0 +1,22 @@
+{
+  "LaunchTemplateConfigs": [
+    {
+      "LaunchTemplateSpecification": {
+        "LaunchTemplateId": "lt-0be7c7dae9e01d76b",
+        "Version": "1"
+      },
+      "Overrides": [
+        {
+          "InstanceType": "t2.medium",
+          "WeightedCapacity": 2
+        }
+      ]
+    }
+  ],
+  "TargetCapacitySpecification": {
+    "TotalTargetCapacity": 4,
+    "OnDemandTargetCapacity": 0,
+    "SpotTargetCapacity": 4,
+    "DefaultTargetCapacityType": "spot"
+  }
+}

@@ -19,7 +19,6 @@ aws s3 sync s3://cdn.nalbam.com/ /data/site/cdn.nalbam.com/
 ## aws ec2 fleet
 ```
 FleetId=$(aws ec2 create-fleet --cli-input-json file://basecamp/aws/aws-ec2-fleet-create.json | grep FleetId | cut -d'"' -f4)
-echo "FleetId = ${FleetId}"
 
 aws ec2 describe-fleets --fleet-id ${FleetId}
 

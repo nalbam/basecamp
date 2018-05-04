@@ -30,4 +30,5 @@ terraform destroy -auto-approve
 ```
 
 ## reference
+* https://registry.terraform.io/browse?provider=aws
 * https://github.com/terraform-aws-modules

@@ -4,7 +4,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 brew update && brew upgrade
 
-brew install zsh wget telnet httpie z
+brew install zsh wget telnet httpie git-secrets
 
 brew install terraform graphviz
 brew install kubernetes-cli kubernetes-helm kops

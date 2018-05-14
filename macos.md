@@ -8,12 +8,14 @@ brew install zsh wget telnet httpie git-secrets
 
 brew install terraform graphviz
 brew install kubernetes-cli kubernetes-helm kops
+brew install openshift-cli
 
 brew cask install iterm2
-brew cask install java intellij-idea
+brew cask install intellij-idea
+brew cask install java
 
-brew cask install minikube kubernetes-cli kubernetes-helm
-brew cask install minishift openshift-cli
+brew cask install minikube
+brew cask install minishift
 
 brew cask install rdm
 ```

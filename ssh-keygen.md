@@ -1,6 +1,6 @@
 ## keygen
 ```
-ssh-keygen -f id_rsa -N '' -C "me@nalbam.com"
+ssh-keygen -q -f ~/.ssh/id_rsa -N 'nalbam'
 ```
 
 ## copy

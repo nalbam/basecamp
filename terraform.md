@@ -22,6 +22,7 @@ terraform apply -var 'key=value'
 
 terraform graph
 terraform graph | dot -Tpng > graph.png
+terraform graph | dot -Tsvg > graph.svg
 
 terraform state rm module.foo
 

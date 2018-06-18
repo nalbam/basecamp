@@ -37,6 +37,7 @@ sudo docker exec -it nalbam bash
 ```
 sudo docker rm nalbam
 sudo docker rm $(sudo docker ps -a -q)
+sudo docker rm $(sudo docker ps -a -q -f status=exited)
 
 sudo docker rmi -f nalbam:latest
 sudo docker rmi -f $(sudo docker images -q)

@@ -1,16 +1,21 @@
-## Visual Studio Code
-* https://code.visualstudio.com/
+# Visual Studio Code
 
-### Extension
+* <https://code.visualstudio.com/>
+
+## Extension
+
 Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
-```
+
+```bash
 ext install dracula-theme.theme-dracula
 ext install robertohuertasm.vscode-icons
 ```
-* https://marketplace.visualstudio.com/publishers/Microsoft
 
-### Settings
-```
+* <https://marketplace.visualstudio.com/publishers/Microsoft>
+
+## Settings
+
+```json
 {
     "workbench.colorTheme": "Dracula",
     "workbench.iconTheme": "vscode-icons",

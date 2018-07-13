@@ -18,14 +18,19 @@ ext install PeterJausovec.vscode-docker
 ### Settings
 ```
 {
-    "workbench.iconTheme": "vscode-icons",
-    "editor.fontSize": 14,
-    "window.zoomLevel": 1.5,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
     "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "vscode-icons",
+
+    "window.zoomLevel": 1.5,
+    "editor.fontSize": 14,
+
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
     "git.autofetch": true,
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
 }
 ```

@@ -63,6 +63,8 @@ sudo apt-get -y install python-rpi.gpio
 sudo apt-get -y install bluetooth blueman bluez
 sudo apt-get -y install python-serial
 sudo apt-get -y install python-bluez
+
+sudo apt-get -y install arp-scan
 ```
 
 ## nalbam-rpi

@@ -67,10 +67,21 @@ sudo apt-get -y install python-bluez
 
 ## nalbam-rpi
 ```
-git clone https://github.com/nalbam/nalbam-rpi.git
+git clone https://github.com/nalbam/rpi.git
 ```
 
-## 5inch LCD
+## LCD 3.5
+ * http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
+```
+cd LCD-show/
+
+./LCD-hdmi
+
+./LCD-35show
+./LCD-35show 90
+```
+
+## LCD 5
 ```
 sudo vi /boot/config.txt
 ```
@@ -221,15 +232,4 @@ sudo vi /etc/X11/xinit/xinitrc
 xset s off         # don’t activate screensaver
 xset -dpms         # disable DPMS (Energy Star) features.
 xset s noblank     # don’t blank the video device
-```
-
-## LCD 3.5
- * http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
-```
-cd LCD-show/
-
-./LCD-hdmi
-
-./LCD-show
-./LCD-show 90
 ```

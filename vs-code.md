@@ -18,7 +18,7 @@ ext install pkief.material-icon-theme
 ```json
 {
     "workbench.colorTheme": "Dracula",
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
 
     "window.zoomLevel": 1.5,
     "editor.fontSize": 14,

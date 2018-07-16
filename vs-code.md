@@ -31,5 +31,7 @@ ext install pkief.material-icon-theme
     "git.autofetch": true,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
+
+    "jshint.options": { "esversion": 6 },
 }
 ```

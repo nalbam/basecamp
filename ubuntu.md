@@ -1,8 +1,11 @@
 ## prepare
 ```
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install git curl wget zip awscli docker.io golang-go
+curl -sL toast.sh/helper/bastion.sh | bash
+```
+
+## sodo
+```
+sudo usermod -a -G sudo nalbam
 ```
 
 ## Hangul

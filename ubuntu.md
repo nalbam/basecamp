@@ -5,8 +5,6 @@ curl -sL toast.sh/helper/bastion.sh | bash
 
 ## sodo
 ```
-sudo usermod -a -G sudo nalbam
-
 sudo visudo
 ```
 

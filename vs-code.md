@@ -27,6 +27,7 @@ ext install pkief.material-icon-theme
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "files.eol": "\n",
 
     "git.autofetch": true,
     "git.enableSmartCommit": true,

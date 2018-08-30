@@ -72,3 +72,13 @@ sudo service lightdm stop
 rm -rf ~/.config/dconf/user
 sudo service lightdm start
 ```
+
+## remove oracle java
+```
+sudo dpkg --list | grep -i jdk
+
+sudo apt-get -y purge oracle-java8-installer
+sudo apt-get -y autoremove
+
+sudo dpkg --list | grep -i jdk
+```

@@ -1,6 +1,6 @@
 ## prepare
 ```
-curl -sL toast.sh/helper/bastion.sh | bash
+curl -sL toast.sh/install | bash
 ```
 
 ## sodo
@@ -59,16 +59,16 @@ DOCKER_IP=`docker-machine ip spinnaker` docker-compose up -d
 ```
  * https://github.com/spinnaker/spinnaker/tree/master/experimental/docker-compose
 
-## java
-```
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt update
-sudo apt install oracle-java8-installer
-```
-
 ## nvidia
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 sudo apt install nvidia-390
+```
+
+## reset
+```
+sudo service lightdm stop
+rm -rf ~/.config/dconf/user
+sudo service lightdm start
 ```

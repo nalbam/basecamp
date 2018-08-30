@@ -20,7 +20,6 @@ ext install pkief.material-icon-theme
     "workbench.colorTheme": "Dracula",
     "workbench.iconTheme": "material-icon-theme",
 
-    "window.zoomLevel": 1.5,
     "editor.fontSize": 14,
 
     "files.autoSave": "onFocusChange",

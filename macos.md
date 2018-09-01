@@ -4,13 +4,15 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 brew update && brew upgrade
 
-brew install zsh wget telnet httpie git-secrets
+brew install zsh wget telnet httpie git-secrets jq
 
 brew install terraform graphviz
 brew install kubernetes-cli kubernetes-helm kops
 brew install openshift-cli
 
 brew cask install iterm2
+brew cask install visual-studio-code
+brew cask install istat-menus
 brew cask install intellij-idea
 brew cask install java
 

@@ -14,7 +14,8 @@
 choco install -y git
 choco install -y 7zip
 
-choco install -y googlechrome
+choco install -y vscode
+
 choco install -y firefox
 choco install -y slack
 

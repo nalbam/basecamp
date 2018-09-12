@@ -1,6 +1,6 @@
 # Chocolatey
 
-* <https://chocolatey.org/install>
+* <https://chocolatey.org/>
 
 ## Install with cmd.exe (Administrator)
 

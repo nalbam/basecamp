@@ -19,4 +19,6 @@ choco install -y firefox
 choco install -y slack
 
 choco install -y docker
+
+choco install -y dropbox
 ```

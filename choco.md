@@ -11,11 +11,11 @@
 ## Package
 
 ```
-choco install git
-choco install 7zip
+choco install -y git
+choco install -y 7zip
 
-choco install googlechrome
-choco install firefox
+choco install -y googlechrome
+choco install -y firefox
 
-choco install docker
+choco install -y docker
 ```

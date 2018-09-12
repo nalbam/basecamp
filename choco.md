@@ -16,6 +16,7 @@ choco install -y 7zip
 
 choco install -y googlechrome
 choco install -y firefox
+choco install -y slack
 
 choco install -y docker
 ```

@@ -20,5 +20,5 @@ choco install -y slack
 choco install -y dropbox
 
 choco install -y docker
-choco install -y kubernetes-cli draft
+choco install -y kubernetes-cli kubernetes-helm draft
 ```

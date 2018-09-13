@@ -11,15 +11,14 @@
 ## Package
 
 ```
-choco install -y git
-choco install -y 7zip
+choco install -y git 7zip
 
 choco install -y vscode
 
 choco install -y firefox
 choco install -y slack
+choco install -y dropbox
 
 choco install -y docker
-
-choco install -y dropbox
+choco install -y kubernetes-cli draft
 ```

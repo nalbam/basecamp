@@ -22,6 +22,11 @@ brew cask install minishift
 brew cask install rdm
 ```
 
+## startup sound
+```
+sudo nvram SystemAudioVolume=%10
+```
+
 ## docker-machine
 ```
 brew install docker-machine-driver-xhyve

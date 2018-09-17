@@ -14,7 +14,7 @@
 choco install -y git 7zip
 
 choco install -y vscode
-choco install -y zulu maven
+choco install -y maven
 choco install -y nodejs
 
 choco install -y firefox

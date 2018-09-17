@@ -23,4 +23,5 @@ choco install -y dropbox
 
 choco install -y docker
 choco install -y kubernetes-cli kubernetes-helm draft
+choco install -y terraform
 ```

@@ -13,15 +13,20 @@
 ```
 choco install -y git 7zip
 
-choco install -y vscode
-choco install -y maven
-choco install -y nodejs
-
 choco install -y firefox
 choco install -y slack
 choco install -y dropbox
 
+choco install -y vscode
+choco install -y jdk8 maven
+choco install -y nodejs
+
 choco install -y docker
 choco install -y kubernetes-cli kubernetes-helm draft
 choco install -y terraform
+```
+
+* 설치 결로
+```
+C:\ProgramData\chocolatey\bin
 ```

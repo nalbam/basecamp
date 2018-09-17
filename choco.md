@@ -26,7 +26,7 @@ choco install -y kubernetes-cli kubernetes-helm draft
 choco install -y terraform
 ```
 
-* 설치 결로
+* 설치 경로
 ```
 C:\ProgramData\chocolatey\bin
 ```

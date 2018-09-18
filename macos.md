@@ -24,7 +24,7 @@ brew cask install rdm
 
 ## startup sound
 ```
-sudo nvram SystemAudioVolume=%10
+sudo nvram SystemAudioVolume=%20
 ```
 
 ## docker-machine

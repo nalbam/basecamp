@@ -1,17 +1,19 @@
-## 설정 
+# git
+
+## config 
 ```
+git config --list
+
+git config --global core.autocrlf input
+
 git config --global user.name "nalbam"
 git config --global user.email "me@nalbam.com"
 
 git config --global user.name "Jungyoul Yu"
 git config --global user.email "jungyoul.yu@bespinglobal.com"
-
-git config --global push.default simple
-
-git config --list
 ```
 
-## 사용법 
+## usage
 ```
 git clone https://github.com/nalbam/nalbam-common.git
 

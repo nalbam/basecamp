@@ -5,6 +5,7 @@
 git config --list
 
 git config --global core.autocrlf input
+git config --global pager.branch false
 
 git config --global user.name "nalbam"
 git config --global user.email "me@nalbam.com"

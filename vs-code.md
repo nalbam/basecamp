@@ -21,6 +21,8 @@ ext install pkief.material-icon-theme
     "workbench.iconTheme": "material-icon-theme",
 
     "editor.fontSize": 14,
+    "editor.fontFamily": "'monospace', monospace",
+    "editor.formatOnSave": true,
 
     "files.autoSave": "onFocusChange",
     "files.insertFinalNewline": true,

@@ -27,7 +27,7 @@ sudo apt-get install -qy kubeadm
 ```
 
 ```bash
-sudo kubeadm init --apiserver-advertise-address=192.168.170.2
+sudo kubeadm init
 ```
 
 ```bash
@@ -37,7 +37,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 ```bash
-sudo kubeadm join --token $TOKEN 192.168.1.100:6443 --discovery-token-ca-cert-hash $HASH
+sudo kubeadm join --token $TOKEN 192.168.1.89:6443 --discovery-token-ca-cert-hash $HASH
 ```
 
 ```bash

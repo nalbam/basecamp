@@ -27,17 +27,17 @@ sudo apt-get install -y kubelet kubeadm kubectl
 ```
 
 ```bash
-sudo kubeadm init --apiserver-advertise-address=192.168.170.2
+sudo kubeadm init
 ```
 
 ```bash
 mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo cp -if /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 ```bash
-sudo kubeadm join --token $TOKEN 192.168.1.100:6443 --discovery-token-ca-cert-hash $HASH
+sudo kubeadm join --token $TOKEN 192.168.1.89:6443 --discovery-token-ca-cert-hash $HASH
 ```
 
 ```bash

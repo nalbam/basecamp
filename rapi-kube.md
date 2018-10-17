@@ -35,3 +35,14 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
+
+```bash
+sudo kubeadm join --token $TOKEN 192.168.1.100:6443 --discovery-token-ca-cert-hash $HASH
+```
+
+```bash
+kubectl apply -f https://git.io/weave-kube
+```
+
+* <https://www.hanselman.com/blog/HowToBuildAKubernetesClusterWithARMRaspberryPiThenRunNETCoreOnOpenFaas.aspx>
+* <https://kubecloud.io/setup-a-kubernetes-1-9-0-raspberry-pi-cluster-on-raspbian-using-kubeadm-f8b3b85bc2d1>

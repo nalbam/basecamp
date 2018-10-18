@@ -27,7 +27,7 @@ sudo apt-get install -y kubelet kubeadm kubectl
 ```
 
 ```bash
-sudo kubeadm init
+sudo kubeadm init --apiserver-advertise-address=192.168.1.89
 ```
 
 ```bash

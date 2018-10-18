@@ -40,9 +40,6 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 sudo kubeadm join --token $TOKEN 192.168.1.89:6443 --discovery-token-ca-cert-hash $HASH
 ```
 
-```bash
-kubectl apply -f https://git.io/weave-kube
-```
-
+* <https://kubernetes.io/ko/docs/setup/independent/create-cluster-kubeadm/>
 * <https://www.hanselman.com/blog/HowToBuildAKubernetesClusterWithARMRaspberryPiThenRunNETCoreOnOpenFaas.aspx>
 * <https://kubecloud.io/setup-a-kubernetes-1-9-0-raspberry-pi-cluster-on-raspbian-using-kubeadm-f8b3b85bc2d1>

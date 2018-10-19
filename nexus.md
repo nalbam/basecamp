@@ -1,6 +1,8 @@
+# Nexus
 
 ## api
-```
+
+```bash
 cat <<EOF > developer.json
 {
   "name": "developer",
@@ -15,10 +17,12 @@ curl -u admin:admin123 -X GET http://nexus.apps.nalbam.com/service/rest/v1/scrip
 
 curl -u admin:admin123 -X POST --header 'Content-Type: text/plain' http://nexus.apps.nalbam.com/service/rest/v1/script/developer/run
 ```
-* https://help.sonatype.com/repomanager3/rest-and-integration-api/script-api
+
+* <https://help.sonatype.com/repomanager3/rest-and-integration-api/script-api>
 
 ## proxy
-```
+
+```text
 maven-proxy
 https://repo1.maven.org/maven2
 
@@ -31,4 +35,5 @@ https://repo.spring.io/milestone/
 npm-proxy
 https://registry.npmjs.org/
 ```
-* https://help.sonatype.com/repomanager3/quick-start-guide-proxying-maven-and-npm
+
+* <https://help.sonatype.com/repomanager3/quick-start-guide-proxying-maven-and-npm>

@@ -31,8 +31,9 @@ sudo kubeadm init --apiserver-advertise-address=192.168.1.89
 ```
 
 ```bash
+rm -rf $HOME/.kube
 mkdir -p $HOME/.kube
-sudo cp -if /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 

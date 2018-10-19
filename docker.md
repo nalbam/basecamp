@@ -1,16 +1,35 @@
-## install 
-```
-sudo yum install -y docker
+# docker
 
-sudo systemctl enable docker
-sudo systemctl start docker
+## install
 
-sudo groupadd docker
-sudo usermod -aG docker $USER
+```bash
+sudo apt-get remove docker docker-engine docker.io
+
+sudo apt-get update
+
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo apt-key fingerprint 0EBFCD88
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt-get update
+
+sudo apt-get install docker-ce
 ```
 
-## docker 
-```
+## usage
+
+```bash
 sudo docker pull mysql
 sudo docker pull redis
 
@@ -34,7 +53,8 @@ sudo docker exec -it nalbam bash
 ```
 
 ## cleanup
-```
+
+```bash
 sudo docker rm nalbam
 sudo docker rm $(sudo docker ps -a -q)
 sudo docker rm $(sudo docker ps -a -q -f status=dead)
@@ -49,11 +69,6 @@ sudo docker volume prune
 sudo docker network prune
 ```
 
-## elk
-```
-sudo docker pull sebp/elk
-sudo docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk sebp/elk
-```
-
- * https://www.docker.com/
- * https://registry.hub.docker.com/u/nalbam/
+* <https://www.docker.com/>
+* <https://hub.docker.com/u/nalbam/>
+* <https://docs.docker.com/install/linux/docker-ce/ubuntu/>

@@ -31,7 +31,7 @@ choco install -y terraform
 ```
 choco list --local-only
 
-choco install -y git 7zip jq firefox slack dropbox
+choco upgrade -y git 7zip jq firefox slack dropbox
 
 choco upgrade -y vscode jdk8 maven nodejs
 

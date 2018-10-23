@@ -12,17 +12,12 @@
 
 ```
 choco install -y git 7zip jq
+choco install -y firefox slack dropbox
 
-choco install -y firefox
-choco install -y slack
-choco install -y dropbox
-
-choco install -y vscode
-choco install -y jdk8 maven
-choco install -y nodejs
+choco install -y vscode jdk8 maven nodejs
 
 choco install -y docker
-choco install -y kubernetes-cli kubernetes-helm draft
+choco install -y awscli kubernetes-cli kubernetes-helm draft
 choco install -y terraform
 ```
 
@@ -35,7 +30,7 @@ choco upgrade -y git 7zip jq firefox slack dropbox
 
 choco upgrade -y vscode jdk8 maven nodejs
 
-choco upgrade -y docker kubernetes-cli kubernetes-helm draft terraform
+choco upgrade -y docker awscli kubernetes-cli kubernetes-helm draft terraform
 ```
 
 ## path

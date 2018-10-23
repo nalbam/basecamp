@@ -8,10 +8,10 @@
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 ```
 
-## Package
+## install
 
 ```
-choco install -y git 7zip
+choco install -y git 7zip jq
 
 choco install -y firefox
 choco install -y slack
@@ -26,7 +26,20 @@ choco install -y kubernetes-cli kubernetes-helm draft
 choco install -y terraform
 ```
 
-* 설치 경로
+## upgrade
+
+```
+choco list --local-only
+
+choco install -y git 7zip jq firefox slack dropbox
+
+choco upgrade -y vscode jdk8 maven nodejs
+
+choco upgrade -y docker kubernetes-cli kubernetes-helm draft terraform
+```
+
+## path
+
 ```
 C:\ProgramData\chocolatey\bin
 ```

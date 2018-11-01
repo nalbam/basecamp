@@ -11,6 +11,11 @@ sudo visudo
 ## Hangul
 * http://hochulshin.com/ubuntu-1604-hangul/
 
+## backgroubd
+```
+sudo apt-get install -y wallch
+```
+
 ## KVM
 ```
 uname -m

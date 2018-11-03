@@ -1,3 +1,5 @@
+# respberrypi
+
 ## account
 ```
 pi
@@ -39,32 +41,22 @@ network={
 }
 ```
 
-## zero otg
- * https://gist.github.com/gbaman/50b6cca61dd1c3f88f41
- * https://gist.github.com/gbaman/975e2db164b3ca2b51ae11e45e8fd40a
-```
-echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
-echo "dwc2" | sudo tee -a /etc/modules
-echo "g_ether" | sudo tee -a /etc/modules
-echo "g_hid" | sudo tee -a /etc/modules
-```
-
 ## update
 ```
-sudo apt-get -y update
-sudo apt-get -y upgrade
+sudo apt -y update
+sudo apt -y upgrade
 
-sudo apt-get -y install vim git dialog fbi wiringpi
+sudo apt -y install vim git dialog fbi wiringpi
 
-sudo apt-get -y install ttf-unfonts-core
+sudo apt -y install ttf-unfonts-core
 
-sudo apt-get -y install python-rpi.gpio
+sudo apt -y install python-rpi.gpio
 
-sudo apt-get -y install bluetooth blueman bluez
-sudo apt-get -y install python-serial
-sudo apt-get -y install python-bluez
+sudo apt -y install bluetooth blueman bluez
+sudo apt -y install python-serial
+sudo apt -y install python-bluez
 
-sudo apt-get -y install arp-scan
+sudo apt -y install arp-scan
 ```
 
 ## nalbam-rpi
@@ -73,7 +65,7 @@ git clone https://github.com/nalbam/rpi.git
 ```
 
 ## LCD 3.5
- * http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
+* http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
 ```
 cd LCD-show/
 
@@ -103,7 +95,7 @@ hdmi_ignore_edid_audio=1
 
 ## image
 ```
-sudo apt-get -y install fbi
+sudo apt -y install fbi
 ```
 ```
 fbi image.jpg
@@ -141,7 +133,7 @@ arecord -D plughw:0,0 hi.wav
 
 ## espeak
 ```
-sudo apt-get -y install espeak
+sudo apt -y install espeak
 
 espeak "hi, pi"
 espeak "hi, pi" -w hi.wav
@@ -149,7 +141,7 @@ espeak "hi, pi" -w hi.wav
 
 ## mp3
 ```
-sudo apt-get -y install mpg321
+sudo apt -y install mpg321
 
 mpg321 -o alsa -a plughw:0,0 /usr/share/scratch/Media/Sounds/Vocals/Sing-me-a-song.mp3
 ```
@@ -159,7 +151,7 @@ mpg321 -o alsa -a plughw:0,0 /usr/share/scratch/Media/Sounds/Vocals/Sing-me-a-so
 omxplayer /opt/vc/src/hello_pi/hello_video/test.h264
  -b : blank
  -o : output [local,hdmi,both]
- 
+
  not support usb audio
 ```
 
@@ -179,7 +171,7 @@ gcc motor.c -o motor -lwiringPi
 
 ## apm
 ```
-sudo apt-get -y install apache2 php5 mysql-server mysql-client php5-mysql phpmyadmin
+sudo apt -y install apache2 php5 mysql-server mysql-client php5-mysql phpmyadmin
 
 sudo service apache2 restart
 
@@ -198,7 +190,7 @@ sudo cp -R * /usr/local/
 
 ## kiosk
 ```
-sudo apt-get -y install x11-xserver-utils matchbox unclutter
+sudo apt -y install x11-xserver-utils matchbox unclutter
 ```
 ```
 vi ~/kiosk.sh
@@ -234,4 +226,21 @@ sudo vi /etc/X11/xinit/xinitrc
 xset s off         # don’t activate screensaver
 xset -dpms         # disable DPMS (Energy Star) features.
 xset s noblank     # don’t blank the video device
+```
+
+## qr
+```
+sudo apt install zbar-tools
+
+raspistill -o image.jpg && zbarimg image.jpg
+```
+
+## zero otg
+* https://gist.github.com/gbaman/50b6cca61dd1c3f88f41
+* https://gist.github.com/gbaman/975e2db164b3ca2b51ae11e45e8fd40a
+```
+echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
+echo "dwc2" | sudo tee -a /etc/modules
+echo "g_ether" | sudo tee -a /etc/modules
+echo "g_hid" | sudo tee -a /etc/modules
 ```

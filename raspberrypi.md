@@ -1,40 +1,49 @@
 # raspberrypi
 
 ## account
-```
+
+```bash
 pi
 raspberry
 ```
 
 ## ssh enable
-```
-sudo raspi-config
 
-- Interfacing Options
-- SSH enable
+```bash
+sudo raspi-config
 ```
+
+* Interfacing Options
+  * Camera enable
+  * SSH enable
 
 ## keyboard
-```
-sudo vi /etc/default/keyboard
 
+```bash
+sudo vi /etc/default/keyboard
+```
+
+```bash
 XKBLAYOUT="us"
 ```
 
 ## usb / module
-```
+
+```bash
 lsusb
 lsmod
 ```
 
 ## network
-```
+
+```bash
 sudo iwconfig
 sudo iwlist wlan0 scan
-```
-```
-sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
 
+sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
+```
+
+```bash
 network={
   ssid="SSID"
   psk="PASSWORD"
@@ -42,31 +51,35 @@ network={
 ```
 
 ## update
-```
+
+```bash
 sudo apt -y update
 sudo apt -y upgrade
 
-sudo apt -y install vim git dialog fbi wiringpi
+sudo apt install -y vim git dialog fbi wiringpi
 
-sudo apt -y install ttf-unfonts-core
+sudo apt install -y ttf-unfonts-core
 
-sudo apt -y install python-rpi.gpio
+sudo apt install -y python-rpi.gpio
 
-sudo apt -y install bluetooth blueman bluez
-sudo apt -y install python-serial
-sudo apt -y install python-bluez
+sudo apt install -y bluetooth blueman bluez
+sudo apt install -y python-serial
+sudo apt install -y python-bluez
 
-sudo apt -y install arp-scan
+sudo apt install -y arp-scan
 ```
 
 ## nalbam-rpi
-```
+
+```bash
 git clone https://github.com/nalbam/rpi.git
 ```
 
 ## LCD 3.5
-* http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
-```
+
+* <http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz>
+
+```bash
 cd LCD-show/
 
 ./LCD-hdmi
@@ -76,10 +89,12 @@ cd LCD-show/
 ```
 
 ## LCD 5
-```
+
+```bash
 sudo vi /boot/config.txt
 ```
-```
+
+```bash
 # uncomment if hdmi display is not detected and composite is being output
 hdmi_force_hotplug=1
 
@@ -93,24 +108,13 @@ hdmi_drive=1
 hdmi_ignore_edid_audio=1
 ```
 
-## image
-```
-sudo apt -y install fbi
-```
-```
-fbi image.jpg
- -noverbose : 하단 설명 없앰
- -a : autozoom
- -u : random
- -t 10 : timeout
- -d /dev/fb0 : 화면 지정
-```
-
 ## usb-audio
-```
+
+```bash
 sudoi vi /etc/modprobe.d/alsa-base.conf
 ```
-```
+
+```bash
 # This sets the index value of the cards but doesn't reorder.
 options snd_usb_audio index=0
 options snd_bcm2835 index=1
@@ -120,7 +124,8 @@ options snd slots=snd-usb-audio,snd-bcm2835
 ```
 
 ## sound
-```
+
+```bash
 alsamixer
 
 aplay -l
@@ -132,113 +137,76 @@ arecord -D plughw:0,0 hi.wav
 ```
 
 ## espeak
-```
-sudo apt -y install espeak
+
+```bash
+sudo apt install -y espeak
 
 espeak "hi, pi"
 espeak "hi, pi" -w hi.wav
 ```
 
 ## mp3
-```
-sudo apt -y install mpg321
+
+```bash
+sudo apt install -y mpg321
 
 mpg321 -o alsa -a plughw:0,0 /usr/share/scratch/Media/Sounds/Vocals/Sing-me-a-song.mp3
 ```
 
 ## video
-```
+
+```bash
 omxplayer /opt/vc/src/hello_pi/hello_video/test.h264
- -b : blank
- -o : output [local,hdmi,both]
-
- not support usb audio
+# -b : blank
+# -o : output [local,hdmi,both]
 ```
 
-## bluetooth
-```
-sudo hcitool scan
+## image
+
+```bash
+sudo apt install -y fbi
 ```
 
-## gpio
-```
-gpio readall
-gpio -g read 18
-```
-```
-gcc motor.c -o motor -lwiringPi
-```
-
-## apm
-```
-sudo apt -y install apache2 php5 mysql-server mysql-client php5-mysql phpmyadmin
-
-sudo service apache2 restart
-
-cd /etc/apache2/
-```
-
-## node.js
-```
-wget https://nodejs.org/dist/v4.4.1/node-v4.4.1-linux-armv7l.tar.gz
-tar -xvf node-v4.4.1-linux-armv7l.tar.gz
-cd node-v4.4.1-linux-armv7l
-```
-```
-sudo cp -R * /usr/local/
-```
-
-## kiosk
-```
-sudo apt -y install x11-xserver-utils matchbox unclutter
-```
-```
-vi ~/kiosk.sh
-
-unclutter &
-matchbox-window-manager &
-chromium-browser --noerrdialogs --incognito \
-                 --disable-session-crashed-bubble \
-                 --disable-infobars \
-                 --kiosk http://kiosk.nalbam.com/index.php?location=LOCATION
-
-chmod 755 ~/kiosk.sh
-```
-```
-sudo vi ~/.config/lxsession/LXDE-pi/autostart
-
-@xset s off
-@xset -dpms
-@xset s noblank
-@/home/pi/kiosk.sh
-```
-
-## screensaver
-```
-sudo vi /etc/lightdm/lightdm.conf
-
-[SeatDefaults]
-xserver-command=X -s 0 -dpms
-```
-```
-sudo vi /etc/X11/xinit/xinitrc
-
-xset s off         # don’t activate screensaver
-xset -dpms         # disable DPMS (Energy Star) features.
-xset s noblank     # don’t blank the video device
+```bash
+fbi image.jpg
+# -noverbose : 하단 설명 없앰
+# -a : autozoom
+# -u : random
+# -t 10 : timeout
+# -d /dev/fb0 : 화면 지정
 ```
 
 ## qr
-```
-sudo apt install zbar-tools
+
+```bash
+sudo apt install -y zbar-tools
 
 raspistill -o image.jpg && zbarimg image.jpg
 ```
 
-## zero otg
-* https://gist.github.com/gbaman/50b6cca61dd1c3f88f41
-* https://gist.github.com/gbaman/975e2db164b3ca2b51ae11e45e8fd40a
+## bluetooth
+
+```bash
+sudo hcitool scan
 ```
+
+## gpio
+
+```bash
+gpio readall
+gpio -g read 18
+```
+
+```bash
+gcc motor.c -o motor -lwiringPi
+```
+
+## zero otg
+
+* <https://gist.github.com/gbaman/50b6cca61dd1c3f88f41>
+* <https://gist.github.com/gbaman/975e2db164b3ca2b51ae11e45e8fd40a>
+
+```bash
 echo "dtoverlay=dwc2" | sudo tee -a /boot/config.txt
 echo "dwc2" | sudo tee -a /etc/modules
 echo "g_ether" | sudo tee -a /etc/modules

@@ -176,6 +176,27 @@ fbi image.jpg
 # -d /dev/fb0 : 화면 지정
 ```
 
+## camera
+
+```bash
+raspistill -o image.jpg
+raspistill -w 960 -h 720 -t 500 -n -th none -x none -o image.jpg
+
+# -p, --preview           미리보기 창 설정 <'x,y,w,h'>
+# -f, --fullscreen        전체화면 미리보기 모드
+# -n, --nopreview         미리보기 창을 표시하지 않음
+# -po, --opacity          미리보기 창 투명도 설정
+
+# -w, --width             이미지 폭 설정<크기>
+# -h, --height            이미지 높이 설정<크기>
+# -q, --quality           JPEG 품질 설정<0에서 100>
+# -o, --output            출력 파일명<파일명>
+# -t, --timeout           카메라가 촬영하고 꺼질 때까지의 시간
+# -tl, --timelapse        타임랩스 모드
+# -th, --thumb            썸네일 파라미터 설정(x:y:quality)
+# -x, --exif              캡처에 적용할 EXIF 태그('키=값' 형식)
+```
+
 ## qr
 
 ```bash

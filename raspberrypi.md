@@ -1,9 +1,9 @@
-# respberrypi
+# raspberrypi
 
 ## account
 ```
 pi
-respberry
+raspberry
 ```
 
 ## ssh enable

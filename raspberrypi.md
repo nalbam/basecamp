@@ -224,13 +224,27 @@ gcc motor.c -o motor -lwiringPi
 
 ## face recognition
 
+* <https://www.pyimagesearch.com/2018/09/26/install-opencv-4-on-your-raspberry-pi/>
+* <https://www.pyimagesearch.com/2018/06/25/raspberry-pi-face-recognition/>
+
 ```bash
-sudo apt install -y cmake
+sudo apt-get -y purge wolfram-engine
+sudo apt-get -y purge libreoffice*
+sudo apt-get clean
+sudo apt-get autoremove
+
+sudo apt install -y build-essential git cmake pkg-config
+sudo apt install -y libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+sudo apt install -y libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+sudo apt install -y libxvidcore-dev libx264-dev
+sudo apt install -y libgtk2.0-dev
+sudo apt install -y libatlas-base-dev gfortran
+sudo apt install -y python2.7-dev python3-dev
 
 sudo pip install dlib
 sudo pip install face_recognition
 sudo pip install imutils
-sudo pip install opencv-python
+sudo pip install opencv
 
 python face_encode.py --dataset dataset --encodings encodings.pickle --detection-method hog
 python face_recognition.py --cascade haarcascade_frontalface_default.xml --encodings encodings.pickle

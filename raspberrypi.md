@@ -222,6 +222,20 @@ gpio -g read 18
 gcc motor.c -o motor -lwiringPi
 ```
 
+## face recognition
+
+```bash
+sudo apt install -y cmake
+
+sudo pip install dlib
+sudo pip install face_recognition
+sudo pip install imutils
+sudo pip install opencv-python
+
+python face_encode.py --dataset dataset --encodings encodings.pickle --detection-method hog
+python face_recognition.py --cascade haarcascade_frontalface_default.xml --encodings encodings.pickle
+```
+
 ## zero otg
 
 * <https://gist.github.com/gbaman/50b6cca61dd1c3f88f41>

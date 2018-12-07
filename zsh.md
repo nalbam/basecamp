@@ -22,3 +22,5 @@ ZSH_THEME="dpoggi"
 
 source ~/.bash_aliases
 ```
+
+* <https://draculatheme.com/iterm/>

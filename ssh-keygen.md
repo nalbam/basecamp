@@ -1,6 +1,6 @@
 ## keygen
 ```
-ssh-keygen -q -f ~/.ssh/id_rsa -N 'nalbam'
+ssh-keygen -q -f ~/.ssh/id_rsa -N ''
 ```
 
 ## copy

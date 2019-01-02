@@ -1,6 +1,10 @@
-## Homebrew - http://brew.sh/
+# MacOS
 
-```
+## Homebrew
+
+* <http://brew.sh/>
+
+```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew update && brew upgrade
@@ -23,23 +27,15 @@ brew cask install minishift
 brew cask install rdm
 ```
 
-## iTerm2 badge
-
-* Preferences>Profiles>General>Badge
-
-```
-\(session.username)@\(session.hostname)
-```
-
 ## startup sound
 
-```
+```bash
 sudo nvram SystemAudioVolume=%20
 ```
 
 ## docker-machine
 
-```
+```bash
 brew install docker-machine-driver-xhyve
 
 or
@@ -53,10 +49,11 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-
 
 ## ₩ -> `
 
-```
+```bash
 vi /Users/nalbam/Library/KeyBindings/DefaultkeyBinding.dict
 ```
-```
+
+```dict
 {
     "₩" = ("insertText:", "`");
 }
@@ -64,13 +61,13 @@ vi /Users/nalbam/Library/KeyBindings/DefaultkeyBinding.dict
 
 ## find mv
 
-```
+```bash
 find . -iname "*.mp3" -exec mv {} mp3 \;
 ```
 
 ## SD Card
 
-```
+```bash
 diskutil list
 
 diskutil unmountDisk /dev/disk2
@@ -80,12 +77,4 @@ sudo dd bs=1m if=2017-11-29-raspbian-stretch.img of=/dev/disk2
 sudo dd bs=1m if=retropie-4.0.2-rpi2_rpi3.img of=/dev/disk3
 
 # status : ctrl + t
-```
-
-## macOS Sierra USB
-```
-sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia \
-    --volume /Volumes/macOS\ Sierra \
-    --applicationpath /Applications/Install\ macOS\ Sierra.app \
-    --nointeraction
 ```

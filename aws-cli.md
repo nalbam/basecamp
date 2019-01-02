@@ -1,22 +1,24 @@
 # awscli
 
-## install
-
-```bash
-wget https://s3.amazonaws.com/aws-cli/awscli-bundle.zip
-
-unzip -q awscli-bundle.zip
-
-sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/bin/aws
-
-sudo rm -rf /usr/local/bin/aws
-sudo ln -s /usr/bin/aws /usr/local/bin/aws
-```
-
-## aws ec2 log
+## aws init log
 
 ```bash
 cat /var/log/cloud-init-output.log
+```
+
+## aws ec2 ami
+
+```bash
+aws ec2 describe-instances --filters "Name=instance-type,Values=t2.nano" | \
+    jq '.Reservations[].Instances[] | {Id:.InstanceId,Type:.InstanceType,State:.State.Name,Tags:.Tags}'
+
+aws ec2 create-image --instance-id i-0f5da04c56afc315f \
+    --name "SEOUL-A-SRE-K8S-BASTION-20190101" \
+    --description "SEOUL-A-SRE-K8S-BASTION-20190101" \
+    --block-device-mappings "[{\"DeviceName\": \"/dev/xvda\",\"Ebs\":{\"VolumeSize\":10}}]"
+
+aws ec2 describe-images --owner "self" --filters "Name=name,Values=*-BASTION-*" | \
+    jq '.Images[] | {Id:.ImageId,Name:.Name}'
 ```
 
 ## aws s3 sync

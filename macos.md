@@ -20,6 +20,8 @@ brew install zsh wget telnet httpie git-lfs git-secrets jq
 brew cask install iterm2
 brew cask install istat-menus
 brew cask install visual-studio-code
+
+brew cask install java
 ```
 
 ## startup sound

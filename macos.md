@@ -1,5 +1,11 @@
 # MacOS
 
+## Xcode
+
+```bash
+xcode-select --install
+```
+
 ## Homebrew
 
 * <http://brew.sh/>

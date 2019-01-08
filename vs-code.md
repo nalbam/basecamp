@@ -9,6 +9,11 @@ Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter
 ```bash
 ext install dracula-theme.theme-dracula
 ext install pkief.material-icon-theme
+
+ext install mauve.terraform
+ext install peterjausovec.vscode-docker
+ext install vscjava.vscode-java-pack
+ext install hookyqr.beautify
 ```
 
 * <https://marketplace.visualstudio.com/publishers/Microsoft>

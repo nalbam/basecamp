@@ -24,7 +24,7 @@ aws ec2 describe-images --owner "self" --filters "Name=name,Values=*-BASTION-*" 
 ## aws s3 sync
 
 ```bash
-aws s3 sync /data/site/cdn.nalbam.com/ s3://cdn.nalbam.com/ --acl public-read
+aws s3 sync /Volumes/RETROPIE/roms/ s3://roms.nalbam.com/ --acl public-read
 aws s3 sync s3://cdn.nalbam.com/ /data/site/cdn.nalbam.com/
 ```
 

@@ -35,12 +35,13 @@ rsync -av pi@192.168.150.158:/home/pi/RetroPie/roms/ /Users/nalbam/Downloads/rom
 
 ## scraper
 
-```
-sudo ./RetroPie-Setup/retripie_setup.sh
+* <https://github.com/muldjord/skyscraper>
 
-Manage Packages > Manage Optional Packages > scraper > install
+```bash
+mkdir ~/skysource && cd ~/skysource
+wget -q -O - https://raw.githubusercontent.com/muldjord/skyscraper/master/update_skyscraper.sh | bash
 
-Manage Packages > Manage Optional Packages > Choose an option for scraper
+Skyscraper
 ```
 
 ## shader

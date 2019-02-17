@@ -2,10 +2,11 @@
 
 ## wifi
 
-```
+```bash
 sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
 ```
-```
+
+```conf
 country=US
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
@@ -17,20 +18,25 @@ network={
 
 ## rpi
 
-```
+```bash
 git clone https://github.com/nalbam/rpi
-```
 
-```
 ./rpi/init.sh
 ./rpi/init.sh arcade
 ```
 
-## rsync
+## roms
+
+```bash
+rsync -av /Volumes/CacheDisk/roms/ pi@192.168.21.25:/home/pi/RetroPie/roms/
+
+aws s3 sync /Volumes/CacheDisk/roms/ s3://roms.nalbam.com/
+```
+
+## shader
 
 ```
-rsync -av /Users/nalbam/Downloads/roms/ pi@192.168.150.158:/home/pi/RetroPie/roms/
-rsync -av pi@192.168.150.158:/home/pi/RetroPie/roms/ /Users/nalbam/Downloads/roms/
+
 ```
 
 ## scraper
@@ -43,5 +49,3 @@ wget -q -O - https://raw.githubusercontent.com/muldjord/skyscraper/master/update
 
 Skyscraper
 ```
-
-## shader

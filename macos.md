@@ -24,6 +24,14 @@ brew cask install visual-studio-code
 brew cask install java
 ```
 
+## DS_Store
+
+```bash
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+sudo find / -name “.DS_Store” -depth -exec rm {} \;
+```
+
 ## startup sound
 
 ```bash

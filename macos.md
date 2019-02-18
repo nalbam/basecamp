@@ -29,7 +29,7 @@ brew cask install java
 ```bash
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
-sudo find / -name “.DS_Store” -depth -exec rm {} \;
+sudo find / -name ".DS_Store" -depth -exec rm {} \;
 ```
 
 ## startup sound

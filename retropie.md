@@ -21,8 +21,8 @@ network={
 ```bash
 git clone https://github.com/nalbam/rpi
 
-./rpi/init.sh
-./rpi/init.sh arcade
+./rpi/run.sh
+./rpi/run.sh arcade
 ```
 
 ## roms

@@ -28,7 +28,7 @@ git clone https://github.com/nalbam/rpi
 ## roms
 
 ```bash
-rsync -av /Volumes/CacheDisk/roms/ pi@192.168.21.25:/home/pi/RetroPie/roms/
+rsync -av /Volumes/CacheDisk/roms/ pi@retropie.local:/home/pi/RetroPie/roms/
 
 aws s3 sync /Volumes/CacheDisk/roms/ s3://roms.nalbam.com/
 ```

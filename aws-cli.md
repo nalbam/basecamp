@@ -48,8 +48,8 @@ aws ce get-cost-and-usage \
 
 cat <<EOF > /tmp/filters.json
 {
-    "Dimensions": {
-        "Key": "SERVICE", "Values": ["AWS RoboMaker"]
+    "Tags": {
+        "Key": "KubernetesCluster", "Values": ["seoul-dev-demo-eks"]
     }
 }
 EOF

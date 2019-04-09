@@ -33,8 +33,23 @@ aws s3 sync s3://cdn.nalbam.com/ /data/site/cdn.nalbam.com/
 ```bash
 # get-tags
 aws ce get-tags --time-period Start=2019-04-01,End=2019-05-01
+aws ce get-tags --time-period Start=2019-04-01,End=2019-05-01 --tag-key KubernetesCluster
 
-# get-cost-and-usage MONTHLY
+    # --time-period Start=2019-03-01,End=2019-05-01 \
+    # --granularity MONTHLY \
+    # --granularity DAILY \
+    # --metrics "UnblendedCost" \
+    # --group-by Type=DIMENSION,Key=SERVICE \
+    # --filter file:///tmp/filters.json \
+
+cat <<EOF > /tmp/filters.json
+{
+    "Dimensions": {
+        "Key": "SERVICE", "Values": ["Amazon Elastic Container Service for Kubernetes"]
+    }
+}
+EOF
+
 cat <<EOF > /tmp/filters.json
 {
     "Tags": {
@@ -42,27 +57,20 @@ cat <<EOF > /tmp/filters.json
     }
 }
 EOF
+
+# get-cost-and-usage MONTHLY
 aws ce get-cost-and-usage \
-    --time-period Start=2019-04-01,End=2019-05-01 \
+    --time-period Start=2019-03-01,End=2019-05-01 \
     --granularity MONTHLY \
     --metrics "UnblendedCost" \
-    --group-by Type=DIMENSION,Key=SERVICE \
     --filter file:///tmp/filters.json \
     | jq '.'
 
 # get-cost-and-usage DAILY
-cat <<EOF > /tmp/filters.json
-{
-    "Tags": {
-        "Key": "KubernetesCluster", "Values": ["seoul-dev-spot-eks"]
-    }
-}
-EOF
 aws ce get-cost-and-usage \
     --time-period Start=2019-04-07,End=2019-04-10 \
     --granularity DAILY \
     --metrics "UnblendedCost" \
-    --group-by Type=DIMENSION,Key=SERVICE \
     --filter file:///tmp/filters.json \
     | jq '.'
 ```

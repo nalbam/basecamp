@@ -78,7 +78,7 @@ diskutil list
 
 diskutil unmountDisk /dev/disk6
 
-sudo dd bs=1m if=2019-06-20-raspbian-buster.img of=/dev/disk6
+sudo dd bs=1m if=2018-11-13-raspbian-stretch.img of=/dev/disk6
 sudo dd bs=1m if=retropie-4.0.2-rpi2_rpi3.img of=/dev/disk6
 
 # status : ctrl + t

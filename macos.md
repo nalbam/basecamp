@@ -43,7 +43,7 @@ sudo nvram SystemAudioVolume=%20
 ```bash
 brew install docker-machine-driver-xhyve
 
-or
+# or
 
 curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-hyperkit && \
   chmod +x docker-machine-driver-hyperkit && \
@@ -76,11 +76,10 @@ find . -iname "*.mp3" -exec mv {} mp3 \;
 ```bash
 diskutil list
 
-diskutil unmountDisk /dev/disk2
-diskutil unmountDisk /dev/disk3
+diskutil unmountDisk /dev/disk6
 
-sudo dd bs=1m if=2017-11-29-raspbian-stretch.img of=/dev/disk2
-sudo dd bs=1m if=retropie-4.0.2-rpi2_rpi3.img of=/dev/disk3
+sudo dd bs=1m if=2019-06-20-raspbian-buster.img of=/dev/disk6
+sudo dd bs=1m if=retropie-4.0.2-rpi2_rpi3.img of=/dev/disk6
 
 # status : ctrl + t
 ```

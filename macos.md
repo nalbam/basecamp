@@ -15,7 +15,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 brew update && brew upgrade
 
-brew install zsh wget telnet httpie git-lfs git-secrets jq
+brew install zsh wget telnet httpie git-lfs git-secrets jq yq
 
 brew cask install iterm2
 brew cask install istat-menus

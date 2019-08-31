@@ -23,7 +23,7 @@ sudo raspi-config
 sudo vi /etc/default/keyboard
 ```
 
-```bash
+```conf
 XKBLAYOUT="us"
 ```
 
@@ -43,7 +43,7 @@ sudo iwlist wlan0 scan
 sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-```bash
+```conf
 network={
   ssid="SSID"
   psk="PASSWORD"
@@ -102,7 +102,7 @@ cd LCD-show/
 sudo vi /boot/config.txt
 ```
 
-```bash
+```conf
 # uncomment if hdmi display is not detected and composite is being output
 hdmi_force_hotplug=1
 
@@ -116,13 +116,24 @@ hdmi_drive=1
 hdmi_ignore_edid_audio=1
 ```
 
+## no sleep
+
+```bash
+sudo vi /etc/lightdm/lightdm.conf
+```
+
+```conf
+# don't sleep the screen
+xserver-command=X -s 0 dpms
+```
+
 ## usb-audio
 
 ```bash
 sudoi vi /etc/modprobe.d/alsa-base.conf
 ```
 
-```bash
+```conf
 # This sets the index value of the cards but doesn't reorder.
 options snd_usb_audio index=0
 options snd_bcm2835 index=1

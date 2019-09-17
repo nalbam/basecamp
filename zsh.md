@@ -23,7 +23,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 vi .zshrc
 
-ZSH_THEME="dpoggi"
+# ZSH_THEME="dpoggi"
 
 source ~/.zshrc
 ```

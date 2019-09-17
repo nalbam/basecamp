@@ -22,23 +22,25 @@ ext install hookyqr.beautify
 
 ```json
 {
-    "workbench.colorTheme": "Dracula",
-    "workbench.iconTheme": "material-icon-theme",
-
-    "editor.fontSize": 14,
     "editor.fontFamily": "'monaco', monaco",
+    "editor.fontSize": 14,
     "editor.formatOnSave": true,
-
+    "editor.suggestSelection": "first",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
     "files.autoSave": "onFocusChange",
+    "files.eol": "\n",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "files.eol": "\n",
-
     "git.autofetch": true,
-    "git.enableSmartCommit": true,
     "git.confirmSync": false,
-
-    "jshint.options": { "esversion": 6 },
+    "git.enableSmartCommit": true,
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
 }
 ```

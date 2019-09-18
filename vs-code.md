@@ -38,9 +38,24 @@ ext install hookyqr.beautify
     "git.enableSmartCommit": true,
     "java.configuration.checkProjectSettingsExclusions": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "scm.alwaysShowProviders": true,
+    "scm.providers.visible": 100,
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Dracula",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "newUntitledFile",
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "enabled": false,
+        "args": []
+    },
 }
 ```

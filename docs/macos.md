@@ -21,6 +21,7 @@ brew cask install iterm2
 brew cask install dropbox
 brew cask install istat-menus
 brew cask install visual-studio-code
+brew cask install google-chrome
 
 brew cask install java
 ```

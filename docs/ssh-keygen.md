@@ -1,5 +1,8 @@
-## keygen
-```
+# keygen
+
+## ssh keygen
+
+```bash
 ssh-keygen -q -f ~/.ssh/id_rsa -N ''
 ```
 

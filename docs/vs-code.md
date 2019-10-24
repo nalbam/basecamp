@@ -39,7 +39,7 @@ ext install hookyqr.beautify
     "java.configuration.checkProjectSettingsExclusions": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "scm.alwaysShowProviders": true,
-    "scm.providers.visible": 100,
+    "scm.providers.visible": 20,
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Dracula",
     "workbench.iconTheme": "material-icon-theme",

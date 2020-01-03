@@ -37,43 +37,43 @@ docker push nalbam/sample-timcat
 ## usage
 
 ```bash
-sudo docker pull mysql
-sudo docker pull redis
+docker pull mysql
+docker pull redis
 
-sudo docker pull nalbam/sample-tomcat
+docker pull nalbam/sample-tomcat
 
-sudo docker images
+docker images
 
-sudo docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
-sudo docker run --name redis -p 6379:6379 -d redis:latest
+docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+docker run --name redis -p 6379:6379 -d redis:latest
 
-sudo docker run --name sample-tomcat -p 8080:8080 -d nalbam/sample-tomcat
+docker run --name sample-tomcat -p 8080:8080 -d nalbam/sample-tomcat
 
-sudo docker ps
-sudo docker ps -a
+docker ps
+docker ps -a
 
-sudo docker stop sample-tomcat
-sudo docker start sample-tomcat
-sudo docker attach sample-tomcat
+docker stop sample-tomcat
+docker start sample-tomcat
+docker attach sample-tomcat
 
-sudo docker exec -it sample-tomcat bash
+docker exec -it sample-tomcat bash
 ```
 
 ## cleanup
 
 ```bash
-sudo docker rm nalbam
-sudo docker rm $(sudo docker ps -a -q)
-sudo docker rm $(sudo docker ps -a -q -f status=dead)
+docker rm nalbam
+docker rm $(docker ps -a -q)
+docker rm $(docker ps -a -q -f status=dead)
 
-sudo docker rmi -f nalbam:latest
-sudo docker rmi -f $(sudo docker images -q)
+docker rmi -f nalbam:latest
+docker rmi -f $(docker images -q)
 
-sudo docker system prune
-sudo docker container prune
-sudo docker image prune
-sudo docker volume prune
-sudo docker network prune
+docker system prune
+docker container prune
+docker image prune
+docker volume prune
+docker network prune
 ```
 
 * <https://www.docker.com/>

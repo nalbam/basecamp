@@ -27,29 +27,36 @@ sudo apt-get update
 sudo apt-get install docker-ce
 ```
 
+## build
+
+```bash
+docker build -t nalbam/sample-timcat .
+docker push nalbam/sample-timcat
+```
+
 ## usage
 
 ```bash
 sudo docker pull mysql
 sudo docker pull redis
 
-sudo docker pull nalbam/docker
+sudo docker pull nalbam/sample-tomcat
 
 sudo docker images
 
 sudo docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
 sudo docker run --name redis -p 6379:6379 -d redis:latest
 
-sudo docker run --name nalbam -p 80:80 -d nalbam/docker /bin/bash
+sudo docker run --name sample-tomcat -p 8080:8080 -d nalbam/sample-tomcat
 
 sudo docker ps
 sudo docker ps -a
 
-sudo docker stop nalbam
-sudo docker start nalbam
-sudo docker attach nalbam
+sudo docker stop sample-tomcat
+sudo docker start sample-tomcat
+sudo docker attach sample-tomcat
 
-sudo docker exec -it nalbam bash
+sudo docker exec -it sample-tomcat bash
 ```
 
 ## cleanup

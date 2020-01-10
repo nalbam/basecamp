@@ -22,10 +22,13 @@ ext install hookyqr.beautify
 
 ```json
 {
+    "C_Cpp.updateChannel": "Insiders",
+    "cmake.configureOnOpen": false,
     "editor.fontFamily": "'monaco', monaco",
     "editor.fontSize": 14,
     "editor.formatOnSave": true,
     "editor.suggestSelection": "first",
+    "editor.wordWrapColumn": 320,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "onFocusChange",
@@ -36,8 +39,12 @@ ext install hookyqr.beautify
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
+    "go.useLanguageServer": true,
     "java.configuration.checkProjectSettingsExclusions": false,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/nalbam/.vscode/extensions/gabrielbb.vscode-lombok-0.9.9/server/lombok.jar\"",
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "python.jediEnabled": false,
     "scm.alwaysShowProviders": true,
     "scm.providers.visible": 20,
     "window.zoomLevel": 0,

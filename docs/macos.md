@@ -78,9 +78,9 @@ find . -iname "*.mp3" -exec mv {} mp3 \;
 ```bash
 diskutil list
 
-diskutil unmountDisk /dev/disk6
+diskutil unmountDisk /dev/disk2
 
-sudo dd bs=1m if=2018-11-13-raspbian-stretch.img of=/dev/disk6
+sudo dd bs=1m if=2020-02-05-raspbian-buster.img of=/dev/disk2
 sudo dd bs=1m if=retropie-4.0.2-rpi2_rpi3.img of=/dev/disk6
 
 # status : ctrl + t

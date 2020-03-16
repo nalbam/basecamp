@@ -81,7 +81,7 @@ diskutil list
 diskutil unmountDisk /dev/disk2
 
 sudo dd bs=1m if=2020-02-13-raspbian-buster.img of=/dev/disk2
-sudo dd bs=1m if=retropie-4.0.2-rpi2_rpi3.img of=/dev/disk6
+sudo dd bs=1m if=retropie-4.5.1-rpi2_rpi3.img of=/dev/disk2
 
 # status : ctrl + t
 ```

@@ -31,7 +31,9 @@ git clone https://github.com/nalbam/rpi
 ```bash
 rsync -av /Volumes/CacheDisk/roms/ pi@retropie.local:/home/pi/RetroPie/roms/
 
-aws s3 sync /Volumes/CacheDisk/roms/ s3://roms.nalbam.com/
+aws s3 sync /Volumes/CacheDisk/roms/ s3://roms.nalbam.backup/
+
+aws s3 sync s3://roms.nalbam.backup/ /home/pi/RetroPie/roms/
 ```
 
 ## shader

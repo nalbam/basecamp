@@ -50,3 +50,12 @@ wget -q -O - https://raw.githubusercontent.com/muldjord/skyscraper/master/update
 
 Skyscraper
 ```
+
+## autologin
+
+```
+at command prompt, type sudo raspi-config
+select option 3 in menu (Boot Options)
+select option B1 (Desktopp/CLI)
+select option B2 (Console Autologin)
+```

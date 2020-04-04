@@ -7,9 +7,10 @@ sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 ```conf
-country=US
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
+country=US
+
 network={
   ssid="nalbam-bs"
   psk="01067684010"

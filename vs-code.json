@@ -1,5 +1,4 @@
 {
-  "C_Cpp.updateChannel": "Insiders",
   "cmake.configureOnOpen": false,
   "editor.fontFamily": "'monaco', monaco",
   "editor.fontSize": 14,
@@ -24,16 +23,12 @@
   "java.configuration.checkProjectSettingsExclusions": false,
   "java.configuration.updateBuildConfiguration": "automatic",
   "java.errors.incompleteClasspath.severity": "ignore",
-  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/nalbam/.vscode/extensions/gabrielbb.vscode-lombok-0.9.9/server/lombok.jar\"",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/nalbam/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "python.formatting.provider": "black",
   "python.jediEnabled": false,
   "scm.alwaysShowProviders": true,
   "scm.providers.visible": 20,
-  "window.zoomLevel": 0,
-  "workbench.colorTheme": "Dracula Soft",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
   "terraform.indexing": {
     "enabled": false,
     "liveIndexing": false,
@@ -46,5 +41,9 @@
   "terraform.languageServer": {
     "enabled": false,
     "args": []
-  }
+  },
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Dracula"
 }

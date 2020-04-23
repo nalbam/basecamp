@@ -50,7 +50,7 @@ git rebase --continue
 ```bash
 git branch -a
 git remote rm origin
-git remote add origin git@github.com:mzcdev/terraform-env-mzdev
+git remote add origin git@github.com:<username>/<reponame>
 git push origin --all
 ```
 

@@ -2,7 +2,7 @@
 
 ## config
 
-```
+```bash
 git config --list
 
 git config --global core.autocrlf input
@@ -21,7 +21,7 @@ git config --global user.email "jyyu@mz.co.kr"
 
 ## usage
 
-```
+```bash
 git clone https://github.com/nalbam/nalbam-common.git
 
 git remote add --track master upstream https://github.com/nalbam/nalbam-common.git
@@ -35,7 +35,7 @@ git push origin master
 
 ## rebase
 
-```
+```bash
 git log --pretty=oneline
 
 git rebase -i HEAD~3
@@ -43,6 +43,15 @@ git rebase -i HEAD~3
 2,$s/pick/s/i
 
 git rebase --continue
+```
+
+## repo move
+
+```bash
+git branch -a
+git remote rm origin
+git remote add origin git@github.com:mzcdev/terraform-env-mzdev
+git push origin --all
 ```
 
 * <https://git-scm.com/book/ko/v2>

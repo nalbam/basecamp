@@ -1,18 +1,15 @@
+# Terraform
+
 ## install
-```
+
+```bash
 # OSX
 brew update && brew install terraform
-
-# Linux
-VERSION="0.11.7"
-wget https://releases.hashicorp.com/terraform/${VERSION}/terraform_${VERSION}_linux_amd64.zip
-unzip terraform_${VERSION}_linux_amd64.zip
-mv terraform /usr/local/bin/terraform
 ```
-* https://www.terraform.io/downloads.html
 
 ## usage
-```
+
+```bash
 terraform init
 
 terraform plan
@@ -30,6 +27,16 @@ terraform destroy
 terraform destroy -auto-approve
 ```
 
+```bash
+pip3 install blastradius
+brew install graphviz
+
+tfg > graph.json
+cat graph.json | dot -Tsvg > graph.svg
+```
+
 ## reference
+
 * https://registry.terraform.io/browse?provider=aws
 * https://github.com/terraform-aws-modules
+* https://28mm.github.io/blast-radius-docs/

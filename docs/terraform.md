@@ -31,8 +31,7 @@ terraform destroy -auto-approve
 pip3 install blastradius
 brew install graphviz
 
-tfg > graph.json
-cat graph.json | dot -Tsvg > graph.svg
+tfg | dot -Tsvg > graph.svg
 ```
 
 ## reference

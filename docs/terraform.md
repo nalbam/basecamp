@@ -7,6 +7,15 @@
 brew update && brew install terraform
 ```
 
+## terraformrc
+
+```bash
+vi ~/.terraformrc
+
+plugin_cache_dir   = "$HOME/.terraform.d/plugin-cache"
+disable_checkpoint = true
+```
+
 ## usage
 
 ```bash

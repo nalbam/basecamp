@@ -11,6 +11,7 @@ git config --global core.quotepath false
 git config --global pager.branch false
 git config --global pager.config false
 git config --global pager.tag false
+git config --global pull.ff only
 
 git config --global user.name "nalbam"
 git config --global user.email "me@nalbam.com"

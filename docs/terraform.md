@@ -41,6 +41,8 @@ pip3 install blastradius
 brew install graphviz
 
 tfg | dot -Tsvg > graph.svg
+
+blast-radius --serve ./
 ```
 
 ## reference

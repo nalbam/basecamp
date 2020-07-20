@@ -11,11 +11,11 @@ xcode-select --install
 * <http://brew.sh/>
 
 ```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# brew update && brew upgrade
+# brew install zsh wget telnet httpie git-lfs git-secrets jq yq
 
-brew update && brew upgrade
-
-brew install zsh wget telnet httpie git-lfs git-secrets jq yq
+curl -sL opspresso.github.io/toaster/install.sh | bash
 
 brew cask install iterm2
 brew cask install dropbox

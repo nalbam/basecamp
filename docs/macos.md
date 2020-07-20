@@ -21,7 +21,8 @@ brew cask install google-chrome
 brew cask install dropbox
 brew cask install istat-menus
 brew cask install visual-studio-code
-brew cask install slack
+
+brew cask install slack -> app store
 
 curl -sL opspresso.github.io/toaster/install.sh | bash
 

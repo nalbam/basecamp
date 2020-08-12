@@ -43,7 +43,7 @@
     "args": []
   },
   "window.zoomLevel": 0,
+  "workbench.colorTheme": "Dracula",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Dracula"
+  "workbench.startupEditor": "newUntitledFile"
 }

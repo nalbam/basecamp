@@ -1,43 +1,27 @@
-## tar 
-```
-URL5=http://download.oracle.com/otn-pub/java/jdk/8u101-b13/server-jre-8u101-linux-x64.tar.gz
+# java
 
-wget -q -N --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" ${URL5}
+## AdoptOpenJDK 8
 
-tar xzf server-jre-8u101-linux-x64.tar.gz
-
-sudo mv jdk1.8.0_101 /usr/local/
-
-sudo ln -s /usr/local/jdk1.8.0_101/bin/java /usr/bin/java
-sudo ln -s /usr/local/jdk1.8.0_101/bin/javac /usr/bin/javac
-sudo ln -s /usr/local/jdk1.8.0_101/bin/jar /usr/bin/jar
+```bash
+brew tap AdoptOpenJDK/openjdk
+brew cask install adoptopenjdk8
 ```
 
-## rpm 
-```
-# rpm -ivh --force jdk-8u101-linux-x64.rpm
+## jenv
 
-/usr/java/jdk1.8.0_101
-```
+```bash
+brew install jenv
 
-## JAVA_HOME 
-```
-# vi /etc/profile
+echo 'export PATH=$PATH:$HOME/.jenv/bin' >> ~/.zshrc
+echo 'eval "$(jenv init -)"' >> ~/.zshrc
 
-export JAVA_HOME="/usr/local/jdk1.8.0_101"
+source ~/.zshrc
 
-PATH=$JAVA_HOME/bin:$PATH
-```
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+# jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
+# jenv add /Library/Java/JavaVirtualMachines/openjdk-12.0.1.jdk/Contents/Home
 
-## security
-```
-sudo cp -rf local_policy.jar.bin /usr/local/jdk1.8.0_101/jre/lib/security/
-sudo cp -rf US_export_policy.jar.bin /usr/local/jdk1.8.0_101/jre/lib/security/
-```
+jenv global 1.8
 
-## mac path 
-```
-/Library/Java/JavaVirtualMachines/jdk1.8/Contents/Home
-/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
-/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home
+# jenv local 1.8
 ```

@@ -5,6 +5,12 @@
 ```bash
 brew install pyenv
 
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+
+source ~/.zshrc
+```
+
+```bash
 pyenv install --list
 
 pyenv install 2.7.14

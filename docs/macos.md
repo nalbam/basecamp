@@ -22,6 +22,8 @@ brew cask install dropbox
 brew cask install istat-menus
 brew cask install visual-studio-code
 
+brew install youtube-dl ffmpeg
+
 brew cask install slack -> app store
 
 curl -sL opspresso.github.io/toaster/install.sh | bash
@@ -74,6 +76,14 @@ vi /Users/nalbam/Library/KeyBindings/DefaultkeyBinding.dict
 
 ```bash
 find . -iname "*.mp3" -exec mv {} mp3 \;
+```
+
+## download youtube
+
+```bash
+youtube-dl -F https://youtu.be/xxxxx
+
+youtube-dl -f 313+252 --recode-video https://youtu.be/xxxxx
 ```
 
 ## SD Card

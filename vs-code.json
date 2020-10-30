@@ -1,5 +1,4 @@
 {
-  "cmake.configureOnOpen": false,
   "editor.fontFamily": "'monaco', monaco",
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
@@ -26,21 +25,12 @@
   "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/nalbam/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "python.formatting.provider": "black",
-  "python.jediEnabled": false,
-  "scm.alwaysShowProviders": true,
-  "scm.providers.visible": 20,
-  "terraform.indexing": {
-    "enabled": false,
-    "liveIndexing": false,
-    "delay": 500,
-    "exclude": [
-      ".terraform/**/*",
-      "**/.terraform/**/*"
-    ]
-  },
+  "python.languageServer": "Microsoft",
   "terraform.languageServer": {
-    "enabled": false,
-    "args": []
+    "external": true,
+    "args": [
+      "serve"
+    ]
   },
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Dracula",

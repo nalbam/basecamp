@@ -1,4 +1,5 @@
 {
+  "editor.detectIndentation": false,
   "editor.fontFamily": "'monaco', monaco",
   "editor.fontSize": 14,
   "editor.formatOnSave": true,

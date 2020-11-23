@@ -6,8 +6,6 @@
 # sudo rm -rf /Library/Developer/CommandLineTools
 
 xcode-select --install
-
-/usr/bin/xcodebuild -version
 ```
 
 ## Homebrew

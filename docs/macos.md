@@ -63,13 +63,13 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-
 ## ₩ -> `
 
 ```bash
-mkdir -p /Users/nalbam/Library/KeyBindings/
-vi /Users/nalbam/Library/KeyBindings/DefaultkeyBinding.dict
+mkdir -p ~/Library/KeyBindings/
+vi ~/Library/KeyBindings/DefaultkeyBinding.dict
 ```
 
 ```dict
 {
-    "₩" = ("insertText:", "`");
+  "₩" = ("insertText:", "`");
 }
 ```
 

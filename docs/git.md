@@ -15,9 +15,6 @@ git config --global pull.ff only
 
 git config --global user.name "nalbam"
 git config --global user.email "me@nalbam.com"
-
-git config --global user.name "Jungyoul Yu"
-git config --global user.email "jyyu@mz.co.kr"
 ```
 
 ## usage

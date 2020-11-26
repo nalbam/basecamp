@@ -16,8 +16,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update && brew upgrade
 brew install zsh wget telnet httpie git-lfs git-secrets jq yq
 
-brew cask install iterm2
 brew cask install google-chrome
+brew cask install slack
+brew cask install iterm2
 brew cask install dropbox
 brew cask install istat-menus
 brew cask install visual-studio-code

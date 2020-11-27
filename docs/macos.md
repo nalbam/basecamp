@@ -78,15 +78,7 @@ vi ~/Library/KeyBindings/DefaultkeyBinding.dict
 find . -iname "*.mp3" -exec mv {} mp3 \;
 ```
 
-## download youtube
-
-```bash
-youtube-dl -F https://youtu.be/xxxxx
-
-youtube-dl -f 313+252 --recode-video https://youtu.be/xxxxx
-```
-
-## SD Card
+## bake SD Card
 
 ```bash
 diskutil list
@@ -98,4 +90,12 @@ sudo dd bs=1m of=/dev/disk2 if=retropie-4.5.1-rpi2_rpi3.img
 sudo dd bs=1m of=/dev/disk2 if=sd-blob-b01.img
 
 # status : ctrl + t
+```
+
+## download youtube
+
+```bash
+youtube-dl -F https://youtu.be/xxxx
+
+youtube-dl -f 313+252 --recode-video https://youtu.be/xxxx
 ```

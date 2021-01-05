@@ -28,7 +28,8 @@ brew cask install slack -> app store
 
 curl -sL opspresso.github.io/toaster/install.sh | bash
 
-brew cask install java
+# brew cask install java
+brew install maven
 ```
 
 ## DS_Store

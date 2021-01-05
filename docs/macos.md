@@ -16,19 +16,23 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update && brew upgrade
 brew install zsh wget telnet httpie git-lfs git-secrets jq yq
 
+brew install youtube-dl ffmpeg
+
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install dropbox
 brew cask install istat-menus
 brew cask install visual-studio-code
 
-brew install youtube-dl ffmpeg
-
-brew cask install slack -> app store
+# brew cask install slack -> app store
 
 curl -sL opspresso.github.io/toaster/install.sh | bash
 
-# brew cask install java
+# brew install --cask adoptopenjdk
+
+# brew tap AdoptOpenJDK/openjdk
+# brew cask install adoptopenjdk8
+
 brew install maven
 ```
 

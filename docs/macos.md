@@ -9,6 +9,7 @@ xcode-select --install
 ## Homebrew
 
 * <http://brew.sh/>
+* <https://noahpeeters.de/posts/apple-silicon/homebrew-setup/>
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

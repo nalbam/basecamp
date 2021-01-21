@@ -18,11 +18,11 @@ brew install zsh wget telnet httpie git-lfs git-secrets jq yq
 
 brew install youtube-dl ffmpeg
 
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install dropbox
-brew cask install istat-menus
-brew cask install visual-studio-code
+brew install --cask google-chrome
+brew install --cask iterm2
+brew install --cask dropbox
+brew install --cask istat-menus
+brew install --cask visual-studio-code
 
 # brew cask install slack -> app store
 

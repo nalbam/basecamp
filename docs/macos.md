@@ -29,10 +29,8 @@ brew install --cask visual-studio-code
 
 curl -sL opspresso.github.io/toaster/install.sh | bash
 
-# brew install --cask adoptopenjdk
-
-# brew tap AdoptOpenJDK/openjdk
-# brew cask install adoptopenjdk8
+brew install --cask adoptopenjdk # 15
+brew install --cask adoptopenjdk8
 
 brew install maven
 ```

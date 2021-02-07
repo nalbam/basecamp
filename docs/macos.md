@@ -89,7 +89,7 @@ diskutil list
 
 diskutil unmountDisk /dev/disk2
 
-sudo dd bs=1m of=/dev/disk2 if=2020-02-13-raspbian-buster.img
+sudo dd bs=1m of=/dev/disk2 if=2021-01-11-raspios-buster-armhf-full.img
 sudo dd bs=1m of=/dev/disk2 if=retropie-4.5.1-rpi2_rpi3.img
 sudo dd bs=1m of=/dev/disk2 if=sd-blob-b01.img
 

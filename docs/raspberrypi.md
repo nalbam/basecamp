@@ -58,7 +58,7 @@ sudo apt -y upgrade
 
 sudo apt install -y vim git dialog fbi wiringpi
 
-sudo apt install -y ttf-unfonts-core
+sudo apt install -y fonts-unfonts-core ibus ibus-hangul
 
 sudo apt install -y python-rpi.gpio
 

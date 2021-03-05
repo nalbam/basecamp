@@ -13,11 +13,11 @@ $ kubectl get configmap coredns -n kube-system -o yaml |grep upstream
 $ kubectl edit configmap coredns -n kube-system -o yaml
 
 # upstream 라인을 삭제
-
-eks upgrade to 1.15
 ```
 
-## 위 파일에서 버전을 1.15 로 변경
+## eks upgrade to 1.15
+
+* tf 파일에서 버전을 1.15 로 변경
 
 ```
 cluster_version = "1.15"

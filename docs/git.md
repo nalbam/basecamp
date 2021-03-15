@@ -37,7 +37,7 @@ git push origin master
 
 ```bash
 # new branch(v0.3.x) from tag(v0.3.16)
-git checkout -b v0.3.x v0.3.16
+git checkout -b v0.3.15-hotfix v0.3.15
 
 git tag v0.3.17
 git push origin v0.3.17

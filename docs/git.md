@@ -36,12 +36,12 @@ git push origin master
 # tag
 
 ```bash
-# new branch(v0.3.19-hotfix) from tag(v0.3.19)
-git checkout -b v0.3.19-hotfix v0.3.19
+# new branch(v0.3.24-hotfix) from tag(v0.3.24)
+git checkout -b v0.3.24-hotfix v0.3.24
 
 # new tag
-# git tag v0.3.19-2
-# git push origin v0.3.19-2
+git tag v0.3.24-2
+git push origin v0.3.24-2
 ```
 
 ## rebase

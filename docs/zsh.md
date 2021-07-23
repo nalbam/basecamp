@@ -21,7 +21,7 @@ chsh -s /bin/zsh
 ```bash
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-vi .zshrc
+vi ~/.zshrc
 
 # ZSH_THEME="dpoggi"
 

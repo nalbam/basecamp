@@ -28,4 +28,22 @@ vi .zshrc
 source ~/.zshrc
 ```
 
+## plugin
+
+```bash
+brew install kube-ps1
+brew install zsh-syntax-highlighting
+```
+
+```bash
+# vi ~/.zshrc
+
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
+
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+
 * <https://draculatheme.com/iterm/>

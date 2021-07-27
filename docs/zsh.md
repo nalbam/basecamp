@@ -38,6 +38,14 @@ brew install zsh-syntax-highlighting
 ```bash
 # vi ~/.zshrc
 
+if [ -f ~/.toast_aliases ]; then
+  source ~/.toast_aliases
+fi
+
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+
+#eval "$(pyenv init -)"
+
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 

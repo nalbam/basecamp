@@ -21,11 +21,11 @@ cd qemu
 git checkout 3c93dfa42c394fdd55684f2fbf24cf2f39b97d47
 
 # Apply patch series v8 by Alexander Graf
-curl https://patchwork.kernel.org/series/485309/mbox/ | git am
+curl -sL https://patchwork.kernel.org/series/485309/mbox/ | git am
 
 # Building qemu installer
 mkdir build && cd build
-../configure --target-list=aarch64-softmmu --enable-hvf --enable-cocoa  --disable-gnutls
+../configure --target-list=aarch64-softmmu --enable-hvf --enable-cocoa --disable-gnutls
 sudo make install
 
 # Cleaning up
@@ -48,3 +48,4 @@ podman machine start
 * <https://github.com/qemu/qemu>
 * <https://www.cloudassembler.com/post/podman-machine-mac-m1/>
 * <https://gist.github.com/nrjdalal/e70249bb5d2e9d844cc203fd11f74c55>
+* <https://github.com/simnalamburt/homebrew-x>

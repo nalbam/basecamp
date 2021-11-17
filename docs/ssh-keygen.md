@@ -3,7 +3,7 @@
 ## ssh keygen
 
 ```bash
-ssh-keygen -q -f ~/.ssh/id_rsa -N ''
+ssh-keygen -q -t ed25519 -N ''
 ```
 
 ## copy

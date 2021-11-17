@@ -3,7 +3,7 @@
 ## ssh keygen
 
 ```bash
-ssh-keygen -q -t ed25519 -N ''
+ssh-keygen -q -t ed25519 -f ~/.ssh/id_ed25519 -N ''
 ```
 
 ## copy

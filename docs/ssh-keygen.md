@@ -7,6 +7,7 @@ ssh-keygen -q -t ed25519 -N ''
 ```
 
 ## copy
+
 ```
 scp s1:/home/nalbam/.ssh/id_ed25519.pub.s1 ~/.ssh/
 scp ~/.ssh/id_ed25519.pub.s2 s1:/home/nalbam/.ssh/

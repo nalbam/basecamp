@@ -39,5 +39,5 @@ choco install -y obs-studio
 choco install -y sidequest
 choco install -y plexmediaserver
 choco install -y steam-client
-choco install -y gom-player
+choco install -y potplayer
 ```

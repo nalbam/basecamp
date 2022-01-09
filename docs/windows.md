@@ -8,6 +8,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install -y 7zip
 choco install -y curl
 choco install -y git
+choco install -y fzf
 choco install -y dotnetfx
 choco install -y python
 choco install -y pyenv-win

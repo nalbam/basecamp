@@ -9,7 +9,7 @@ choco install -y 7zip
 choco install -y curl
 choco install -y git
 choco install -y dotnetfx
-choco install -y python --version=3.8.10
+choco install -y python
 choco install -y pyenv-win
 choco install -y awscli
 choco install -y jre8

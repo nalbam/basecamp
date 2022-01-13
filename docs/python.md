@@ -1,6 +1,6 @@
 # python
 
-## pyenv
+## pyenv install
 
 ```bash
 brew install pyenv
@@ -10,20 +10,18 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
+## pyenv shell
+
 ```bash
 pyenv install --list
 
-pyenv install 2.7.14
-pyenv install 3.6.5
-pyenv install 3.7.6
+pyenv install 3.8.10
 
 pyenv versions
 
-# pyenv global 2.7.14 3.6.5 3.7.6
+pyenv global 3.8.10
 
-pyenv shell 2.7.14
-pyenv shell 3.6.5
-pyenv shell 3.7.6
+pyenv shell 3.8.10
 
 python --version
 ```

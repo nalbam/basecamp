@@ -17,6 +17,10 @@ choco install -y jre8
 choco install -y nodejs
 choco install -y autoruns
 
+choco install -y dejavufonts
+choco install -y nanumfont
+choco install -y nanum-gothic-coding-font
+
 choco install -y nvidia-display-driver
 
 choco install -y vscode

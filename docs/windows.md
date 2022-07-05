@@ -45,3 +45,14 @@ choco install -y nanum-gothic-coding-font
 # choco install -y kubernetes-helm
 # choco install -y k9s
 ```
+
+## wsl
+
+* https://docs.microsoft.com/ko-kr/windows/wsl/install
+
+```PowerShell
+wsl --install
+
+wsl -l -v
+
+```

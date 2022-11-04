@@ -3,7 +3,7 @@
 ## prepare
 
 ```bash
-curl -sL toast.sh/install | bash
+curl -sL toaster.run/install | bash
 ```
 
 ## sudo

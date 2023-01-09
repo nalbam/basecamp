@@ -21,6 +21,18 @@ aws ec2 describe-images --owner "self" --filters "Name=name,Values=*-BASTION-*" 
     | jq '.Images[] | {Id:.ImageId,Name:.Name}'
 ```
 
+## aws ec2 tag
+
+```bash
+CLUSTER_NAME="eks-demo"
+
+aws ec2 describe-instances --filters "Name=tag:KubernetesCluster,Values=$CLUSTER_NAME" \
+  --query "Reservations[].Instances[].InstanceId" | jq '.[]' -r
+
+aws ec2 create-tags \
+    --resources i-0a780c6f743f4bad1 --tags Key=aws-node-termination-handler/${CLUSTER_NAME},Value=true
+```
+
 ## aws s3 sync
 
 ```bash

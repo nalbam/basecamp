@@ -1,37 +1,21 @@
-## setup
-```
-sudo passwd
-sudo passwd ec2-user
+# aws
 
-sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+## amazon linux 2
 
-sudo yum update -y
-sudo yum install -y git vim wget zsh
+### python 3.9
 
-sudo mkdir /data
-sudo mkdir /data/apps
-sudo mkdir /data/logs
-sudo mkdir /data/site
+```bash
+sudo yum install gcc openssl-devel bzip2-devel libffi-devel
 
-sudo chown -R ec2-user.ec2-user /data
-```
+wget https://www.python.org/ftp/python/3.9.16/Python-3.9.16.tgz
+sudo tar xzf Python-3.9.16.tgz
 
-## eb log
-```
-cat /var/log/eb-activity.log
-tail -f -n 1000 /var/log/eb-activity.log
-```
+cd Python-3.9.16
+sudo ./configure --enable-optimizations
+sudo make altinstall
 
-## awslogs
-```
-sudo yum install -y awslogs
+python3.9 --version
+python3.9 -m venv env
 
-sudo vi /etc/awslogs/awscli.conf
-
-region = ap-northeast-2
-aws_access_key_id = <YOUR ACCESS KEY>
-aws_secret_access_key = <YOUR SECRET KEY>
-
-sudo service awslogs start
-sudo chkconfig awslogs on
+source env/bin/activate
 ```

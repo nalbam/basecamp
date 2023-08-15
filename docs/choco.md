@@ -11,8 +11,12 @@
 ## install
 
 ```
-choco install -y git 7zip jq
-choco install -y firefox slack dropbox
+choco install -y git jq curl fzf
+choco install -y nanum-gothic-coding-font dejavufonts
+choco install -y nvidia-display-driver
+choco install -y 1password 7zip GoogleChrome potplayer steam-client
+choco install -y slack dropbox zoom
+choco install -y obs-studio paint.net
 
 choco install -y vscode jdk8 maven nodejs
 
@@ -24,13 +28,9 @@ choco install -y terraform
 ## upgrade
 
 ```
-choco list --local-only
+choco list
 
-choco upgrade -y git 7zip jq firefox slack dropbox
-
-choco upgrade -y vscode jdk8 maven nodejs
-
-choco upgrade -y docker awscli kubernetes-cli kubernetes-helm draft terraform
+choco upgrade -y all
 ```
 
 ## path

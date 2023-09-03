@@ -56,3 +56,7 @@ wsl --install
 wsl -l -v
 
 ```
+
+## GoodbyeDPI
+
+* https://github.com/ValdikSS/GoodbyeDPI

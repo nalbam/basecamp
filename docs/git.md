@@ -36,12 +36,12 @@ git push origin master
 # tag
 
 ```bash
-# new branch(v0.3.24-hotfix) from tag(v0.3.24)
-git checkout -b 1.12.1-ds 1.12.1
+# new branch(v1.2.3-hotfix) from tag(v1.2.3)
+git checkout -b v1.2.3-hotfix v1.2.3
 
 # new tag
-git tag v0.3.24-2
-git push origin v0.3.24-2
+git tag v1.2.3-hotfix
+git push origin v1.2.3-hotfix
 
 # fetch tag
 git fetch -t istio

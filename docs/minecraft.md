@@ -1,4 +1,7 @@
+# minecraft
+
 ## server.properties
+
 ```
 pvp=false
 
@@ -10,6 +13,7 @@ motd=nalbam server
 ```
 
 ## start
+
 ```
 screen -S "minecraft server"
 java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
@@ -20,6 +24,7 @@ CTRL + A + D
 ```
 
 ## command
+
 ```
 /op nalbam
 
@@ -42,6 +47,7 @@ CTRL + A + D
 ```
 
 ## seed
+
 ```
 -3521882891014546064
 -1106252858905799396
@@ -50,6 +56,7 @@ CTRL + A + D
 ```
 
 ## items
+
 ```
 /give @p diamond_sword 1 0 {ench:[{id:16,lvl:30000}]}
 

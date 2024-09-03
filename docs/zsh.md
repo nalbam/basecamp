@@ -44,7 +44,7 @@ fi
 
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 
-#eval "$(pyenv init -)"
+eval "$(pyenv init -)"
 
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1

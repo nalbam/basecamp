@@ -16,17 +16,17 @@ choco install -y 1password
 
 choco install -y nvidia-display-driver
 
-choco install -y paint.net
-choco install -y zoom
 choco install -y dropbox
+choco install -y potplayer
+choco install -y plexmediaserver
+choco install -y steam-client
+choco install -y paint.net
 choco install -y slack
+choco install -y zoom
 
 choco install -y cura-new
 choco install -y obs-studio
 choco install -y sidequest
-choco install -y plexmediaserver
-choco install -y steam-client
-choco install -y potplayer
 
 choco install -y vscode
 choco install -y dejavufonts

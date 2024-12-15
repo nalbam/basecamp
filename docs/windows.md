@@ -7,7 +7,7 @@
 ```PowerShell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-choco install -y 7zip
+choco install -y 7zip.install
 choco install -y curl
 choco install -y fzf
 choco install -y dotnetfx

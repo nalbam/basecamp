@@ -11,7 +11,6 @@ choco install -y 7zip
 choco install -y curl
 choco install -y fzf
 choco install -y dotnetfx
-choco install -y autoruns
 
 choco install -y googlechrome
 choco install -y 1password
@@ -33,6 +32,9 @@ choco install -y sidequest
 choco install -y vscode
 choco install -y dejavufonts
 choco install -y nanum-gothic-coding-font
+
+choco install -y autoruns
+choco install -y ccleaner
 
 # choco install -y git
 # choco install -y python --version=3.8.10

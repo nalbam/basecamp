@@ -11,16 +11,15 @@ choco install -y fzf
 choco install -y dotnetfx
 choco install -y autoruns
 
-choco install -y nvidia-display-driver
-
-choco install -y 1password
 choco install -y googlechrome
+choco install -y 1password
+
+choco install -y nvidia-display-driver
 
 choco install -y paint.net
 choco install -y zoom
 choco install -y dropbox
 choco install -y slack
-choco install -y adobereader
 
 choco install -y cura-new
 choco install -y obs-studio

@@ -15,7 +15,7 @@ choco install -y git jq curl fzf
 choco install -y nanum-gothic-coding-font dejavufonts
 choco install -y nvidia-display-driver
 choco install -y 1password 7zip GoogleChrome potplayer steam-client
-choco install -y slack dropbox zoom
+choco install -y slack dropbox zoom googledrive
 choco install -y obs-studio paint.net
 
 choco install -y vscode jdk8 maven nodejs

@@ -12,10 +12,11 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ## install
 
 ```
-choco install -y git jq curl fzf
+choco install -y git jq curl fzf 7zip
 choco install -y nvidia-display-driver
-choco install -y plexmediaserver potplayer steam-client
-choco install -y 1password 7zip googlechrome googledrive
+choco install -y potplayer steam-client
+choco install -y 1password googlechrome googledrive
+choco install -y plexmediaserver
 
 choco install -y slack zoom obs-studio paint.net cura-new
 choco install -y dejavufonts vscode

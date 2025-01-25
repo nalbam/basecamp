@@ -19,8 +19,8 @@ choco install -y 1password googlechrome googledrive
 choco install -y plexmediaserver
 
 choco install -y slack zoom obs-studio paint.net cura-new
-choco install -y dejavufonts vscode
 
+choco install -y dejavufonts vscode
 choco install -y openjdk maven nodejs
 
 choco install -y docker

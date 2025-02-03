@@ -15,13 +15,13 @@ source ~/.zshrc
 ```bash
 pyenv install --list
 
-pyenv install 3.8.10
+pyenv install 3.12.8
 
 pyenv versions
 
-pyenv global 3.8.10
+pyenv global 3.12.8
 
-pyenv shell 3.8.10
+pyenv shell 3.12.8
 
 python --version
 ```

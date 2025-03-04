@@ -6,10 +6,10 @@
 bash -c "$(curl -fsSL nalbam.github.io/dotfiles/run.sh)"
 ```
 
-## toaster
+## toast.sh
 
 ```bash
-bash -c "$(curl -fsSL opspresso.github.io/toaster/install.sh)"
+bash -c "$(curl -fsSL opspresso.github.io/toast.sh/install.sh)"
 ```
 
 ## DS_Store

@@ -3,7 +3,7 @@
 ## prepare
 
 ```bash
-curl -sL toaster.run/install | bash
+bash -c "$(curl -fsSL opspresso.github.io/toast.sh/install.sh)"
 ```
 
 ## sudo

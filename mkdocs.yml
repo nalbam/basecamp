@@ -1,0 +1,191 @@
+# Project information
+site_name: nalbam docs
+site_url: https://nalbam.github.io/docs/
+site_author: nalbam
+site_description: "nalbam의 기술 문서 모음"
+
+# Repository
+repo_name: nalbam/docs
+repo_url: https://github.com/nalbam/docs
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2019 - 2025 nalbam
+
+# Configuration
+theme:
+  name: null
+  custom_dir: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values taken from mkdocs_theme.yml
+  language: en
+  features:
+    - tabs
+    #- instant
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: logo
+  favicon: assets/favicon.png
+
+# Plugins
+plugins:
+  - search
+  # - minify:
+  #     minify_html: true
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/squidfunk
+    - icon: fontawesome/brands/gitter
+      link: https://gitter.im/squidfunk/mkdocs-material
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/squidfunk
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/squidfunk/
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/squidfunk
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  # - pymdownx.emoji:
+  #     emoji_index: ":material:"
+  #     emoji_generator: ":material:"
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
+  - 운영체제(OS):
+    - CentOS: os/centos.md
+    - Cygwin: os/cygwin.md
+    - Linux: os/linux.md
+    - LxRun: os/lxrun.md
+    - macOS: os/macos.md
+    - Ubuntu: os/ubuntu.md
+    - Windows: os/windows.md
+  - 클라우드/AWS:
+    - AWS: cloud/aws.md
+    - AWS CLI: cloud/aws-cli.md
+    - EKS 1.15: cloud/eks-1.15.md
+    - Lambda: cloud/lambda.md
+    - Terraform: cloud/terraform.md
+    - Vault: cloud/vault.md
+  - 데이터베이스:
+    - Elasticsearch: database/elasticsearch.md
+    - MongoDB: database/mongodb.md
+    - MySQL: database/mysql.md
+    - Redis: database/redis.md
+  - 웹 서버/서비스:
+    - htaccess: webserver/htaccess.md
+    - Apache: webserver/httpd.md
+    - mod_jk: webserver/modjk.md
+    - Named: webserver/named.md
+    - NFS: webserver/nfs.md
+    - Nginx: webserver/nginx.md
+  - 개발 도구:
+    - Git: devtools/git.md
+    - IntelliJ: devtools/intellij.md
+    - iTerm2: devtools/iterm2.md
+    - Sublime Text: devtools/sublimetext.md
+    - tmux: devtools/tmux.md
+    - Vim: devtools/vim.md
+    - VS Code: devtools/vs-code.md
+  - 컨테이너/가상화:
+    - Docker: container/docker.md
+    - Podman: container/podman.md
+    - Vagrant: container/vagrant.md
+  - 네트워크/보안:
+    - Certbot: network/certbot.md
+    - iptables: network/iptables.md
+    - LDAP: network/ldap.md
+    - SSH Keygen: network/ssh-keygen.md
+  - 프로그래밍 언어:
+    - Bower: language/bower.md
+    - Java: language/java.md
+    - Node.js: language/nodejs.md
+    - PHP: language/php.md
+    - Python: language/python.md
+  - 모니터링/로깅:
+    - Kibana: monitoring/kibana.md
+    - Logstash: monitoring/logstash.md
+    - Munin: monitoring/munin.md
+    - OpenNMS: monitoring/opennms.md
+    - Zabbix: monitoring/zabbix.md
+  - CI/CD:
+    - Jenkins: cicd/jenkins.md
+    - Nexus: cicd/nexus.md
+  - 메시징/큐:
+    - RabbitMQ: messaging/rabbitmq.md
+  - 하드웨어/임베디드:
+    - Jetson: hardware/jetson.md
+    - Raspberry Pi: hardware/raspberrypi.md
+    - RetroPie: hardware/retropie.md
+  - 유틸리티:
+    - Chocolatey: utility/choco.md
+    - HTTPie: utility/httpie.md
+    - rsync: utility/rsync.md
+    - Sendmail: utility/sendmail.md
+    - youtube-dl: utility/youtube-dl.md
+    - YUM: utility/yum.md
+    - Zsh: utility/zsh.md
+  - 게임/엔터테인먼트:
+    - Longvinter: game/longvinter.md
+    - Minecraft: game/minecraft.md
+  - 기타:
+    - Currency: etc/currency.md
+    - Firefox: etc/firefox.md
+    - Geotag: etc/geotag.md
+    - Jira: etc/jira.md
+    - Ollama: etc/ollama.md
+    - Puppet: etc/puppet.md
+    - Qtum: etc/qtum.md
+    - Rapi-Kube: etc/rapi-kube.md
+    - Startup: etc/startup.md

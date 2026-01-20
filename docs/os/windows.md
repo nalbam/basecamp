@@ -2,6 +2,50 @@
 
 ## powershell (admin)
 
+### winget
+
+```PowerShell
+winget install -e --id 7zip.7zip
+winget install -e --id cURL.cURL
+winget install -e --id junegunn.fzf
+
+winget install -e --id Google.Chrome
+winget install -e --id AgileBits.1Password
+
+winget install -e --id Nvidia.GeForceExperience
+
+winget install -e --id Dropbox.Dropbox
+winget install -e --id Plex.PlexMediaServer
+winget install -e --id Valve.Steam
+winget install -e --id dotPDN.PaintDotNet
+winget install -e --id SlackTechnologies.Slack
+winget install -e --id Zoom.Zoom
+
+winget install -e --id Daum.PotPlayer
+winget install -e --id VideoLAN.VLC
+
+winget install -e --id Ultimaker.Cura
+winget install -e --id OBSProject.OBSStudio
+
+winget install -e --id Microsoft.VisualStudioCode
+
+winget install -e --id Sysinternals.Autoruns
+winget install -e --id Piriform.CCleaner
+
+# winget install -e --id Git.Git
+# winget install -e --id Python.Python.3.8
+# winget install -e --id Amazon.AWSCLI
+# winget install -e --id Oracle.JavaRuntimeEnvironment
+# winget install -e --id OpenJS.NodeJS
+# winget install -e --id Docker.DockerDesktop
+# winget install -e --id Hashicorp.Terraform
+# winget install -e --id Kubernetes.kubectl
+# winget install -e --id Helm.Helm
+# winget install -e --id Derailed.k9s
+```
+
+### chocolatey
+
 * ~https://chocolatey.org/install~
 
 ```PowerShell
